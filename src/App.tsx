@@ -1,9 +1,9 @@
-import React from "react";
-import { RootRouter } from "./RootRouter";
+import React from 'react';
+import { RootRouter } from './RootRouter';
 
 export const App: React.FC = () => {
   return (
-    <div className="App">
+    <div className='App'>
       <RootRouter />
     </div>
   );

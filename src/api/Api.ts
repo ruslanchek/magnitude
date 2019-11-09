@@ -1,5 +1,5 @@
-import axios, { Method } from "axios";
-import { cookieSettings } from "../common/constants";
+import axios, { Method } from 'axios';
+import { cookieStorage } from '../common/cookie';
 
 interface IApiFieldError<TInputModel> {
   property: keyof TInputModel;
@@ -18,21 +18,21 @@ interface IApiResult<TInputModel, TOutputModel> {
 }
 
 export abstract class Api {
-  private static getToken(): string | undefined {
-    return parseCookies().token;
+  private static getToken(): string | null {
+    return cookieStorage.getItem('token');
   }
 
-  protected static setToken(token?: string) {
-    setCookie(undefined, "token", token || "", cookieSettings);
+  protected static setToken(token: string) {
+    cookieStorage.setItem('token', token);
   }
 
   protected static clearToken() {
-    destroyCookie("token", cookieSettings);
+    cookieStorage.removeItem('token');
   }
 
   private static getAuthHeaders(token: string): IApiAuthHeaders {
     return {
-      Authorization: `Bearer ${token}`
+      Authorization: `Bearer ${token}`,
     };
   }
 
@@ -40,7 +40,7 @@ export abstract class Api {
     url: string,
     method: Method,
     data?: TInputModel,
-    needAuth?: boolean
+    needAuth?: boolean,
   ): Promise<IApiResult<TInputModel, TOutputModel>> {
     try {
       let headers = {};
@@ -51,13 +51,13 @@ export abstract class Api {
         if (!token) {
           return {
             error: true,
-            generalError: "NO_TOKEN"
+            generalError: 'NO_TOKEN',
           };
         }
 
         headers = {
           ...headers,
-          ...this.getAuthHeaders(token)
+          ...this.getAuthHeaders(token),
         };
       }
 
@@ -65,19 +65,17 @@ export abstract class Api {
         url,
         method,
         data,
-        headers
+        headers,
       });
 
       return {
         error: false,
-        data: result.data.data
+        data: result.data.data,
       };
     } catch (e) {
       const result = e.response;
       const generalError = this.parseGeneralError(result.data.message);
-      const fieldsErrors = this.parseFieldsErrors<TInputModel>(
-        result.data.message
-      );
+      const fieldsErrors = this.parseFieldsErrors<TInputModel>(result.data.message);
 
       if (e.response.status < 200 || e.response.status >= 400) {
         this.clearToken();
@@ -86,23 +84,21 @@ export abstract class Api {
       return {
         error: true,
         fieldsErrors,
-        generalError
+        generalError,
       };
     }
   }
 
   protected static parseGeneralError(message: any): string | undefined {
-    if (message && typeof message === "string") {
+    if (message && typeof message === 'string') {
       return message;
     } else {
       return undefined;
     }
   }
 
-  protected static parseFieldsErrors<TInputModel>(
-    messages: any
-  ): Array<IApiFieldError<TInputModel>> | undefined {
-    if (messages && typeof messages === "object") {
+  protected static parseFieldsErrors<TInputModel>(messages: any): Array<IApiFieldError<TInputModel>> | undefined {
+    if (messages && typeof messages === 'object') {
       return messages.map((message: any) => {
         const { property, constraints } = message;
         const errors = [];
@@ -117,7 +113,7 @@ export abstract class Api {
 
         return {
           property,
-          errors
+          errors,
         };
       });
     } else {
