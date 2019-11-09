@@ -1,17 +1,21 @@
 import { useStore } from 'react-stores';
 import { authStore } from '../stores/authStore';
 import { useEffect } from 'react';
-import { useRouteMatch } from 'react-router-dom';
-import { PROTECTED_PATHS } from '../constants/paths';
-import { ApiAuth } from "../api/ApiAuth";
+import { useRouteMatch, useHistory } from 'react-router-dom';
+import { PATHS, PROTECTED_PATHS } from '../constants/paths';
 
-export function useAuthorized() {
+export function useAuthorized(): boolean {
   const { authorized } = useStore(authStore);
   const match = useRouteMatch();
+  const history = useHistory();
+  const protectedPath = PROTECTED_PATHS.indexOf((match && match.path) || '') >= 0;
+  const accessGrant = !protectedPath || (protectedPath && authorized);
 
   useEffect(() => {
-    if (!authorized && PROTECTED_PATHS.indexOf(match?.path || '') >= 0) {
-      ApiAuth.redirectToAuth();
+    if (!accessGrant) {
+      history.replace(PATHS.AUTH_LOGIN);
     }
-  }, [authorized, match]);
+  }, [accessGrant, history]);
+
+  return accessGrant;
 }

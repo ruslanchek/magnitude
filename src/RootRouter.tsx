@@ -1,15 +1,26 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch, Link, useRouteMatch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 import { PATHS } from './constants/paths';
 import { useAuthorized } from './hooks/useAuthorized';
 
-const Page1 = () => <div>Home</div>;
+const Page1: React.FC = () => {
+  const authorized = useAuthorized();
+
+  if (!authorized) {
+    return null;
+  }
+
+  return <div style={{ backgroundColor: 'red' }}>Home</div>;
+};
 
 const Page2: React.FC = () => {
-  const m = useRouteMatch();
-  useAuthorized();
+  const authorized = useAuthorized();
 
-  return <div>Page: {m && m.path}</div>;
+  if (!authorized) {
+    return null;
+  }
+
+  return <div>Page</div>;
 };
 
 export const RootRouter: React.FC = () => {
