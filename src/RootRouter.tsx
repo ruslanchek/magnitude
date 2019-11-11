@@ -2,6 +2,8 @@ import React from 'react';
 import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 import { PATHS } from './constants/paths';
 import { useAuthorized } from './hooks/useAuthorized';
+import { GlobalStyles } from './components/GlobalStyles';
+import { Header } from './components/Header';
 
 const Page1: React.FC = () => {
   const authorized = useAuthorized();
@@ -26,6 +28,8 @@ const Page2: React.FC = () => {
 export const RootRouter: React.FC = () => {
   return (
     <BrowserRouter>
+      <GlobalStyles />
+      <Header />
       <ul>
         <li>
           <Link to={PATHS.HOME}>Home</Link>
