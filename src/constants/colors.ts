@@ -3,6 +3,7 @@ import Color from 'color';
 export const COLORS = {
   WHITE: Color('#fff'),
   BACKGROUND: Color('#fff'),
+  BACKGROUND_TINT: Color('#F4F5F9'),
 
   ACTIVE: Color('#4980FF'),
 

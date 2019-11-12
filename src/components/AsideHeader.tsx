@@ -5,7 +5,7 @@ import { UI_CONSTANTS } from '../constants/ui-constants';
 
 interface IProps {}
 
-export const Header: React.FC<IProps> = props => {
+export const AsideHeader: React.FC<IProps> = props => {
   const {} = props;
 
   return (
@@ -18,7 +18,6 @@ export const Header: React.FC<IProps> = props => {
 const styles = {
   root: css`
     height: ${UI_CONSTANTS.HEADER_HEIGHT}px;
-    background-color: rgb(var(--BACKGROUND));
     display: flex;
     align-items: center;
     padding: 0 ${UI_CONSTANTS.PADDING_SIDE_GLOBAL}px;
