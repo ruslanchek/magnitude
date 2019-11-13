@@ -17,15 +17,6 @@ SocketApi.onConnectionChanged(connected => {
   }
 });
 
-(async () => {
-  await ApiAuth.login({
-    email: 'rshashkov@icloud.com',
-    password: 'tukzara',
-  });
-
-  await ApiAuth.validateUser();
-})();
-
 export const HomeScreen: React.FC = () => {
   return (
     <PageWrapper>
