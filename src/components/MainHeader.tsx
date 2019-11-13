@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
 import React from 'react';
-import { UI_CONSTANTS } from '../constants/ui-constants';
 
 export const MainHeader: React.FC = () => {
   return <div css={styles.root}>MainHeader</div>;
@@ -9,9 +8,9 @@ export const MainHeader: React.FC = () => {
 
 const styles = {
   root: css`
-    height: ${UI_CONSTANTS.HEADER_HEIGHT}px;
+    height: var(--HEADER_HEIGHT);
     display: flex;
     align-items: center;
-    padding: 0 ${UI_CONSTANTS.PADDING_SIDE_GLOBAL}px;
+    padding: 0 var(--PADDING_HORIZONTAL_GLOBAL);
   `,
 };

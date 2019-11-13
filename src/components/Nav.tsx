@@ -4,7 +4,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { PATHS } from '../constants/paths';
 import { FiHome } from 'react-icons/fi';
-import { UI_CONSTANTS } from '../constants/ui-constants';
+import { EOLocale } from 'eo-locale';
 
 interface ILink {
   path: string;
@@ -14,12 +14,12 @@ interface ILink {
 const LINKS: ILink[] = [
   {
     path: PATHS.HOME,
-    title: 'Home',
+    title: 'Nav::Home',
   },
 
   {
     path: PATHS.ME,
-    title: 'Home',
+    title: 'Nav::Projects',
   },
 ];
 
@@ -44,7 +44,7 @@ export const Nav: React.FC = () => {
     <div css={styles.root}>
       {LINKS.map(link => (
         <NavLink key={link.path} to={link.path} exact className='link' activeClassName='active'>
-          <Icon path={link.path} /> {link.title}
+          <Icon path={link.path} /> <EOLocale.Text id={link.title} />
         </NavLink>
       ))}
     </div>
@@ -53,7 +53,7 @@ export const Nav: React.FC = () => {
 
 const styles = {
   root: css`
-    padding: 0 ${UI_CONSTANTS.PADDING_SIDE_GLOBAL}px;
+    padding: 0 var(--PADDING_HORIZONTAL_GLOBAL);
 
     .link {
       color: rgb(var(--TEXT));
@@ -71,6 +71,5 @@ const styles = {
 
   linkIcon: css`
     margin-right: 15px;
-    position: relative;
   `,
 };

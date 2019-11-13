@@ -8,6 +8,7 @@ import { UI_CONSTANTS } from '../constants/ui-constants';
 export const GlobalStyles: React.FC = () => {
   const colors: string[] = [];
   const breakpoints: string[] = [];
+  const uiConstants: string[] = [];
 
   for (const color in COLORS) {
     const rgb = (COLORS as any)[color];
@@ -25,6 +26,10 @@ export const GlobalStyles: React.FC = () => {
     breakpoints.push(`--${breakpoint}: ${(BREAKPOINTS as any)[breakpoint]}px`);
   }
 
+  for (const uiConstant in UI_CONSTANTS) {
+    uiConstants.push(`--${uiConstant}: ${(UI_CONSTANTS as any)[uiConstant]}`);
+  }
+
   return (
     <Global
       styles={[
@@ -33,6 +38,7 @@ export const GlobalStyles: React.FC = () => {
           :root {
             ${colors.join(';')};
             ${breakpoints.join(';')};
+            ${uiConstants.join(';')};
           }
         `,
       ]}
@@ -42,12 +48,12 @@ export const GlobalStyles: React.FC = () => {
 
 const styles = css`
   body {
-    font-family: ${UI_CONSTANTS.FONT_FAMILY};
+    font-family: var(--FONT_FAMILY);
     margin: 0;
     background-color: rgb(var(--BACKGROUND));
     color: rgb(var(--TEXT));
-    font-size: ${UI_CONSTANTS.FONT_SIZE_BASE};
-    line-height: ${UI_CONSTANTS.GLOBAL_LINE_HEIGHT};
+    font-size: var(--FONT_SIZE_BASE);
+    line-height: var(--GLOBAL_LINE_HEIGHT);
   }
 
   a,

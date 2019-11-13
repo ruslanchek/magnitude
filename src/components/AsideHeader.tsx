@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
 import React from 'react';
-import { UI_CONSTANTS } from '../constants/ui-constants';
 
 export const AsideHeader: React.FC = () => {
   return (
@@ -13,10 +12,10 @@ export const AsideHeader: React.FC = () => {
 
 const styles = {
   root: css`
-    height: ${UI_CONSTANTS.HEADER_HEIGHT}px;
+    height: var(--HEADER_HEIGHT);
     display: flex;
     align-items: center;
-    padding: 0 ${UI_CONSTANTS.PADDING_SIDE_GLOBAL}px;
+    padding: 0 var(--PADDING_HORIZONTAL_GLOBAL);
   `,
 
   logo: css`
@@ -26,5 +25,7 @@ const styles = {
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: 100%;
+    position: relative;
+    left: 13px;
   `,
 };

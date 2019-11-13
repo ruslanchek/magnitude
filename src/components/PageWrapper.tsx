@@ -5,7 +5,6 @@ import { GlobalStyles } from './GlobalStyles';
 import { MainHeader } from './MainHeader';
 import { Nav } from './Nav';
 import { AsideHeader } from './AsideHeader';
-import { UI_CONSTANTS } from '../constants/ui-constants';
 
 interface IProps {}
 
@@ -32,7 +31,7 @@ export const PageWrapper: React.FC<IProps> = props => {
 const styles = {
   root: css`
     display: grid;
-    grid-template-columns: ${UI_CONSTANTS.ASIDE_WIDTH}px 1fr;
+    grid-template-columns: var(--ASIDE_WIDTH) 1fr;
     width: 100vw;
     height: 100vh;
     background-color: rgb(var(--BACKGROUND));

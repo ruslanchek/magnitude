@@ -1,34 +1,32 @@
 /** @jsx jsx */
-import { jsx, css } from '@emotion/core';
-import React, { useEffect } from 'react';
+import { css, jsx } from '@emotion/core';
+import React from 'react';
 import { PageWrapper } from '../components/PageWrapper';
-import openSocket from 'socket.io-client';
+import { ESocketEvent, SocketApi } from '../api/SocketApi';
+import { ApiAuth } from '../api/ApiAuth';
 
-interface IProps {}
+SocketApi.connect();
 
-export const HomeScreen: React.FC<IProps> = () => {
-  useEffect(() => {
-    const socket = openSocket(process.env.REACT_APP_WS_API_URL as string);
+SocketApi.on(ESocketEvent.Authorize, data => {
+  console.log(data);
+});
 
-    socket.on('connection', () => {
-      console.log('connection');
-    });
+SocketApi.onConnectionChanged(connected => {
+  if (connected) {
+    SocketApi.send(ESocketEvent.Authorize);
+  }
+});
 
-    socket.on('disconnect', () => {
-      console.log('disconnect');
-    });
-
-    socket.on('message', (e: any, data: any) => {
-      console.log(e, data);
-    });
-
-    setInterval(() => {
-      socket.emit('events', { name: 'Nest' }, () => {
-        console.log('xxx');
-      });
-    }, 1000);
+(async () => {
+  await ApiAuth.login({
+    email: 'rshashkov@icloud.com',
+    password: 'tukzara',
   });
 
+  await ApiAuth.validateUser();
+})();
+
+export const HomeScreen: React.FC = () => {
   return (
     <PageWrapper>
       <div css={styles.root}>xxx</div>

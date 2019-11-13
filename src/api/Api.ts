@@ -18,7 +18,7 @@ interface IApiResult<TInputModel, TOutputModel> {
 }
 
 export abstract class Api {
-  private static getToken(): string | null {
+  public static getToken(): string | null {
     return cookieStorage.getItem('token');
   }
 
@@ -34,6 +34,11 @@ export abstract class Api {
     return {
       Authorization: `Bearer ${token}`,
     };
+  }
+
+  public static logout() {
+    this.clearToken();
+    console.log('Logout!');
   }
 
   public static async fetch<TInputModel = any, TOutputModel = any>(

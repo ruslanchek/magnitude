@@ -1,7 +1,5 @@
 import { Api } from './Api';
 import { authStore } from '../stores/authStore';
-import { redirectTo } from '../common/router';
-import { PATHS } from '../constants/paths';
 import { API_URLS } from '../constants/urls';
 
 export interface IApiAuthRegisterModel {
@@ -19,6 +17,8 @@ export interface IApiAuthMe {
   email: string;
 }
 
+export type TApiValidateUser = boolean;
+
 export interface IApiAuthToken {
   token: string;
 }
@@ -32,7 +32,7 @@ export class ApiAuth extends Api {
       await this.getMe();
     }
 
-    return result;
+    return result.data;
   }
 
   public static async register(model: IApiAuthRegisterModel) {
@@ -56,5 +56,16 @@ export class ApiAuth extends Api {
     }
 
     return result;
+  }
+
+  public static async validateUser(): Promise<boolean> {
+    const result = await this.fetch<{}, TApiValidateUser>(API_URLS.AUTH_VALIDATE_USER, 'get', undefined, true);
+
+    if (result && result.data === true) {
+      return true;
+    } else {
+      this.logout();
+      return false;
+    }
   }
 }
