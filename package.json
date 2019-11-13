@@ -17,6 +17,7 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0",
     "react-stores": "^3.0.3",
+    "socket.io-client": "^2.3.0",
     "typescript": "3.7.2"
   },
   "scripts": {
@@ -42,6 +43,8 @@
   },
   "devDependencies": {
     "@types/color": "^3.0.0",
-    "@types/react-router-dom": "^5.1.2"
+    "@types/react-router-dom": "^5.1.2",
+    "@types/socket.io": "^2.1.4",
+    "@types/socket.io-client": "^1.4.32"
   }
 }

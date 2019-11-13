@@ -3,11 +3,7 @@ import { jsx, css } from '@emotion/core';
 import React from 'react';
 import { UI_CONSTANTS } from '../constants/ui-constants';
 
-interface IProps {}
-
-export const AsideHeader: React.FC<IProps> = props => {
-  const {} = props;
-
+export const AsideHeader: React.FC = () => {
   return (
     <div css={styles.root}>
       <div css={styles.logo} />

@@ -4,13 +4,16 @@
     <list default="true" id="69224d6a-5b1f-4d26-bb75-97b043e3094d" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/../magnitude-api/src/events/events.gateway.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../magnitude-api/src/events/events.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../magnitude-api/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../magnitude-api/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../magnitude-api/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../magnitude-api/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../magnitude-api/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../magnitude-api/src/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../magnitude-api/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../magnitude-api/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/screens/HomeScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/screens/HomeScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RootRouter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/RootRouter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/screens/HomeScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/HomeScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AsideHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AsideHeader.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainHeader.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Nav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
@@ -20,7 +23,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../magnitude-api" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1THm6PLuNBmZFkj7MIGQ4J1rSLv" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -48,6 +51,9 @@
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/../magnitude-api" />
       <recent name="$PROJECT_DIR$" />
@@ -58,7 +64,7 @@
       <package-json value="$PROJECT_DIR$/../magnitude-api/package.json" />
       <command value="run" />
       <scripts>
-        <script value="start" />
+        <script value="start:dev" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -100,7 +106,7 @@
       <updated>1573125218641</updated>
       <workItem from="1573125221081" duration="635000" />
       <workItem from="1573127268624" duration="13988000" />
-      <workItem from="1573637027273" duration="1119000" />
+      <workItem from="1573637027273" duration="4845000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <created>1573139642022</created>
@@ -148,25 +154,29 @@
     <option name="LAST_COMMIT_MESSAGE" value="Update" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1573638218216">
+    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1573643106993">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1573638218216" />
-    <state width="1419" height="231" key="GridCell.Tab.0.bottom" timestamp="1573638438623">
+    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1573643106993" />
+    <state width="1419" height="220" key="GridCell.Tab.0.bottom" timestamp="1573643223613">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="231" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1573638438623" />
-    <state width="1419" height="231" key="GridCell.Tab.0.center" timestamp="1573638438619">
+    <state width="1419" height="220" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1573643223613" />
+    <state width="1419" height="220" key="GridCell.Tab.0.center" timestamp="1573643223611">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="231" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1573638438619" />
-    <state width="1419" height="231" key="GridCell.Tab.0.left" timestamp="1573638438613">
+    <state width="1419" height="220" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1573643223611" />
+    <state width="1419" height="220" key="GridCell.Tab.0.left" timestamp="1573643223604">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="231" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1573638438613" />
-    <state width="1419" height="231" key="GridCell.Tab.0.right" timestamp="1573638438621">
+    <state width="1419" height="220" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1573643223604" />
+    <state width="1419" height="220" key="GridCell.Tab.0.right" timestamp="1573643223612">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="231" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1573638438621" />
+    <state width="1419" height="220" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1573643223612" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1573639688731">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1573639688731" />
   </component>
 </project>

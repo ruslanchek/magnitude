@@ -23,8 +23,6 @@ const LINKS: ILink[] = [
   },
 ];
 
-interface IProps {}
-
 const Icon: React.FC<{ path: string }> = props => {
   switch (props.path) {
     case PATHS.HOME: {
@@ -41,9 +39,7 @@ const Icon: React.FC<{ path: string }> = props => {
   }
 };
 
-export const Nav: React.FC<IProps> = props => {
-  const {} = props;
-
+export const Nav: React.FC = () => {
   return (
     <div css={styles.root}>
       {LINKS.map(link => (
