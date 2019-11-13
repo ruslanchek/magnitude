@@ -25,14 +25,18 @@ const LINKS: ILink[] = [
 
 interface IProps {}
 
-const Icon = (path: string) => {
-  switch (path) {
+const Icon: React.FC<{ path: string }> = props => {
+  switch (props.path) {
     case PATHS.HOME: {
-      return <FiHome />;
+      return <FiHome css={styles.linkIcon} />;
     }
 
     case PATHS.ME: {
-      return <FiHome />;
+      return <FiHome css={styles.linkIcon} />;
+    }
+
+    default: {
+      return null;
     }
   }
 };
@@ -44,7 +48,7 @@ export const Nav: React.FC<IProps> = props => {
     <div css={styles.root}>
       {LINKS.map(link => (
         <NavLink key={link.path} to={link.path} exact className='link' activeClassName='active'>
-          {link.title}
+          <Icon path={link.path} /> {link.title}
         </NavLink>
       ))}
     </div>
@@ -70,7 +74,7 @@ const styles = {
   `,
 
   linkIcon: css`
-    margin-right: 12px;
+    margin-right: 15px;
     position: relative;
   `,
 };

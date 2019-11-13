@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="69224d6a-5b1f-4d26-bb75-97b043e3094d" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="69224d6a-5b1f-4d26-bb75-97b043e3094d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../magnitude-api/src/events/events.gateway.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../magnitude-api/src/events/events.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../magnitude-api/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../magnitude-api/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../magnitude-api/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../magnitude-api/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../magnitude-api/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../magnitude-api/src/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../magnitude-api/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../magnitude-api/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/screens/HomeScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/screens/HomeScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Nav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +25,11 @@
   <component name="ProjectId" id="1THm6PLuNBmZFkj7MIGQ4J1rSLv" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
@@ -29,7 +45,7 @@
     <property name="prettierjs.PrettierConfiguration.Package" value="$USER_HOME$/.nvm/versions/node/v10.16.3/lib/node_modules/prettier" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-    <property name="ts.external.directory.path" value="$PROJECT_DIR$/../magnitude-api/node_modules/typescript/lib" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -37,29 +53,43 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager">
-    <configuration name="run api" type="js.build_tools.npm">
+  <component name="RunManager" selected="npm.API">
+    <configuration name="API" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/../magnitude-api/package.json" />
       <command value="run" />
       <scripts>
-        <script value="start:dev" />
+        <script value="start" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="Frontend" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="npm.API" />
+      <item itemvalue="npm.Frontend" />
+    </list>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -70,6 +100,7 @@
       <updated>1573125218641</updated>
       <workItem from="1573125221081" duration="635000" />
       <workItem from="1573127268624" duration="13988000" />
+      <workItem from="1573637027273" duration="1119000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <created>1573139642022</created>
@@ -115,5 +146,27 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Update" />
     <option name="LAST_COMMIT_MESSAGE" value="Update" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1573638218216">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1573638218216" />
+    <state width="1419" height="231" key="GridCell.Tab.0.bottom" timestamp="1573638438623">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="231" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1573638438623" />
+    <state width="1419" height="231" key="GridCell.Tab.0.center" timestamp="1573638438619">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="231" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1573638438619" />
+    <state width="1419" height="231" key="GridCell.Tab.0.left" timestamp="1573638438613">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="231" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1573638438613" />
+    <state width="1419" height="231" key="GridCell.Tab.0.right" timestamp="1573638438621">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="231" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1573638438621" />
   </component>
 </project>
