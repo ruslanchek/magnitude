@@ -40,6 +40,8 @@ export class SocketApi extends Api {
   static connect() {
     this.socket = io(process.env.REACT_APP_WS_API_URL);
 
+    (window as any)['socket'] = this.socket;
+
     this.socket.on('connect', () => {
       this.connectionChanged(true);
     });
@@ -49,6 +51,7 @@ export class SocketApi extends Api {
     });
 
     this.socket.on('message', (event: ESocketEvent, data: any) => {
+      console.log(event, data);
       if (data === UNAUTHORIZED_MESSAGE_DATA) {
         this.logout();
       } else {
@@ -61,7 +64,8 @@ export class SocketApi extends Api {
     });
   }
 
-  static send<T>(event: ESocketEvent, data?: T) {
+  static send<T>(event: string, data?: T) {
+    console.log('xxx');
     this.socket.emit(event, this.formPacket(data));
   }
 

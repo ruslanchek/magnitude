@@ -2,31 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69224d6a-5b1f-4d26-bb75-97b043e3094d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/api/SocketApi.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/locales/en.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/NoMatchPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../magnitude-api/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../magnitude-api/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../magnitude-api/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../magnitude-api/src/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../magnitude-api/src/auth/auth.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../magnitude-api/src/auth/auth.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../magnitude-api/src/auth/auth.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../magnitude-api/src/auth/auth.controller.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../magnitude-api/src/auth/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../magnitude-api/src/auth/auth.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../magnitude-api/src/events/events.gateway.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../magnitude-api/src/socket/socket.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../magnitude-api/src/events/events.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../magnitude-api/src/socket/socket.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../magnitude-api/src/socket/socket.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../magnitude-api/src/socket/socket.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../magnitude-api/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../magnitude-api/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../magnitude-api/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../magnitude-api/yarn.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RootRouter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/RootRouter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/Api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/Api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/ApiAuth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/ApiAuth.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/cookie.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/cookie.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AsideHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AsideHeader.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/GlobalStyles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GlobalStyles.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MainHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainHeader.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Nav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PageWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PageWrapper.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/ui-constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/ui-constants.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/urls.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/urls.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/HomeScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/HomeScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/SocketApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/SocketApi.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +31,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../magnitude-api" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../magnitude-api/src/auth" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -66,6 +49,7 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../magnitude-api/src/auth" />
       <recent name="$PROJECT_DIR$/../magnitude-api" />
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -117,7 +101,7 @@
       <updated>1573125218641</updated>
       <workItem from="1573125221081" duration="635000" />
       <workItem from="1573127268624" duration="13988000" />
-      <workItem from="1573637027273" duration="13996000" />
+      <workItem from="1573637027273" duration="19880000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <created>1573139642022</created>
@@ -147,7 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573643790956</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Socket.io">
+      <created>1573662615790</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1573662615790</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,37 +168,37 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1573643106993" />
-    <state x="297" y="52" key="CommitChangelistDialog2" timestamp="1573643790468">
+    <state x="297" y="52" key="CommitChangelistDialog2" timestamp="1573662615397">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="297" y="52" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1573643790468" />
-    <state width="1419" height="309" key="GridCell.Tab.0.bottom" timestamp="1573662590399">
+    <state x="297" y="52" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1573662615397" />
+    <state width="1419" height="309" key="GridCell.Tab.0.bottom" timestamp="1573668476494">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="309" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1573662590399" />
-    <state width="1419" height="309" key="GridCell.Tab.0.center" timestamp="1573662590396">
+    <state width="1419" height="309" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1573668476494" />
+    <state width="1419" height="309" key="GridCell.Tab.0.center" timestamp="1573668476492">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="309" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1573662590396" />
-    <state width="1419" height="309" key="GridCell.Tab.0.left" timestamp="1573662590395">
+    <state width="1419" height="309" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1573668476492" />
+    <state width="1419" height="309" key="GridCell.Tab.0.left" timestamp="1573668476489">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="309" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1573662590395" />
-    <state width="1419" height="309" key="GridCell.Tab.0.right" timestamp="1573662590398">
+    <state width="1419" height="309" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1573668476489" />
+    <state width="1419" height="309" key="GridCell.Tab.0.right" timestamp="1573668476493">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="309" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1573662590398" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1573643792555">
+    <state width="1419" height="309" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1573668476493" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1573662617731">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1573643792555" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1573662617731" />
     <state x="378" y="212" width="683" height="476" key="find.popup" timestamp="1573656128755">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="378" y="212" width="683" height="476" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1573656128755" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1573662057129">
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1573662795358">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1573662057129" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1573662795358" />
   </component>
 </project>
