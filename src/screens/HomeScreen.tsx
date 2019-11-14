@@ -2,17 +2,18 @@
 import { css, jsx } from '@emotion/core';
 import React from 'react';
 import { PageWrapper } from '../components/PageWrapper';
-import { ESocketEvent, SocketApi } from '../api/SocketApi';
+import { SocketApi } from '../api/SocketApi';
+import { ESocketAction } from '@ruslanchek/magnitude-shared';
 
 SocketApi.connect();
 
-SocketApi.on(ESocketEvent.Authorize, data => {
+SocketApi.on(ESocketAction.Authorize, data => {
   console.log(data);
 });
 
 SocketApi.onConnectionChanged(connected => {
   if (connected) {
-    SocketApi.send<string>('message', 'eee');
+    SocketApi.send<{}>(ESocketAction.Authorize, {});
   }
 });
 

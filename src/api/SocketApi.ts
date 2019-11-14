@@ -1,24 +1,14 @@
 // @ts-ignore
 import * as io from 'socket.io-client';
 import { Api } from './Api';
-
-interface ISocketApiPacket<T> {
-  data: T;
-  token: string | null;
-}
-
-export enum ESocketEvent {
-  Authorize = 'Authorize',
-}
-
-const UNAUTHORIZED_MESSAGE_DATA = 'unauthorized';
+import { UNAUTHORIZED_MESSAGE_DATA, ESocketAction, ISocketApiPacket } from '@ruslanchek/magnitude-shared';
 
 type TSocketCallback = (data: any) => void;
 
 export class SocketApi extends Api {
   private static socket: any = null;
   private static connected: boolean = false;
-  private static eventPool = new Map<ESocketEvent, TSocketCallback>();
+  private static eventPool = new Map<ESocketAction, TSocketCallback>();
   private static onConnectionChangedCallback = (connected: boolean) => {};
 
   private static connectionChanged(connected: boolean) {
@@ -50,7 +40,7 @@ export class SocketApi extends Api {
       this.connectionChanged(false);
     });
 
-    this.socket.on('message', (event: ESocketEvent, data: any) => {
+    this.socket.on('message', (event: ESocketAction, data: any) => {
       if (data === UNAUTHORIZED_MESSAGE_DATA) {
         this.logout();
       } else {
@@ -63,11 +53,11 @@ export class SocketApi extends Api {
     });
   }
 
-  static send<T>(event: string, data: T) {
+  static send<T>(event: ESocketAction, data: T) {
     this.socket.emit(event, this.formPacket<T>(data));
   }
 
-  static on<T>(event: ESocketEvent, callback: (data: T) => void) {
+  static on<T>(event: ESocketAction, callback: (data: T) => void) {
     this.eventPool.set(event, callback);
   }
 }
