@@ -3,17 +3,14 @@ import { css, jsx } from '@emotion/core';
 import React from 'react';
 import { PageWrapper } from '../components/PageWrapper';
 import { SocketApi } from '../api/SocketApi';
-import { ESocketAction } from '@ruslanchek/magnitude-shared';
+import { AuthApi } from '../api/AuthApi';
 
 SocketApi.connect();
 
-SocketApi.on(ESocketAction.Authorize, data => {
-  console.log(data);
-});
-
 SocketApi.onConnectionChanged(connected => {
   if (connected) {
-    SocketApi.send<{}>(ESocketAction.Authorize, {});
+    // AuthApi.authorize();
+    AuthApi.register('rshashkov@icloud.com', 'tukzara1');
   }
 });
 

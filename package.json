@@ -1,10 +1,10 @@
 {
-  "name": "magnitude",
+  "name": "@ruslanchek/magnitude",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@emotion/core": "^10.0.22",
-    "@ruslanchek/magnitude-shared": "^0.0.7",
+    "@ruslanchek/magnitude-shared": "^0.0.24",
     "@types/jest": "24.0.22",
     "@types/node": "12.12.6",
     "@types/react": "16.9.11",

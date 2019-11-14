@@ -1,33 +1,37 @@
 // @ts-ignore
 import * as io from 'socket.io-client';
 import { Api } from './Api';
-import { UNAUTHORIZED_MESSAGE_DATA, ESocketAction, ISocketApiPacket } from '@ruslanchek/magnitude-shared';
-
-type TSocketCallback = (data: any) => void;
+import { ISocketClientPacket, ESocketAction, ISocketServerPacket, ESocketError } from '@ruslanchek/magnitude-shared';
 
 export class SocketApi extends Api {
-  private static socket: any = null;
-  private static connected: boolean = false;
-  private static eventPool = new Map<ESocketAction, TSocketCallback>();
-  private static onConnectionChangedCallback = (connected: boolean) => {};
+  protected static socket: any = null;
+  protected static connected: boolean = false;
+  protected static onConnectionChangedCallback = (connected: boolean) => {};
+  private static currentNs: number = 0;
+
+  public static onConnectionChanged(callback: (connected: boolean) => void) {
+    this.onConnectionChangedCallback = callback;
+  }
+
+  protected static formAskPacket<T>(data: T): ISocketClientPacket<T> {
+    return {
+      data,
+      token: this.getToken(),
+      ns: this.generateNs(),
+    };
+  }
 
   private static connectionChanged(connected: boolean) {
     this.connected = connected;
     this.onConnectionChangedCallback(this.connected);
   }
 
-  private static formPacket<T>(data: T): ISocketApiPacket<T> {
-    return {
-      data,
-      token: this.getToken(),
-    };
+  private static generateNs(): string {
+    this.currentNs++;
+    return this.currentNs.toString();
   }
 
-  static onConnectionChanged(callback: (connected: boolean) => void) {
-    this.onConnectionChangedCallback = callback;
-  }
-
-  static connect() {
+  public static connect() {
     this.socket = io(process.env.REACT_APP_WS_API_URL);
 
     (window as any)['io'] = this.socket;
@@ -39,25 +43,34 @@ export class SocketApi extends Api {
     this.socket.on('disconnect', () => {
       this.connectionChanged(false);
     });
+  }
 
-    this.socket.on('message', (event: ESocketAction, data: any) => {
-      if (data === UNAUTHORIZED_MESSAGE_DATA) {
-        this.logout();
-      } else {
-        const eventPoolItem = this.eventPool.get(event);
+  public static on<ServerDto>(action: ESocketAction, callback: (packet: ISocketServerPacket<ServerDto>) => void) {
+    this.socket.on(action, callback);
+  }
 
-        if (eventPoolItem) {
-          eventPoolItem(data);
+  public static off(action: ESocketAction) {
+    this.socket.off(action);
+  }
+
+  public static ask<ClientDto, ServerDto>(
+    action: ESocketAction,
+    packet: ClientDto,
+  ): Promise<ISocketServerPacket<ServerDto>> {
+    return new Promise(resolve => {
+      const askPacket = this.formAskPacket<ClientDto>(packet);
+      const askAction = `${action}_${askPacket.ns}`;
+
+      this.socket.on(askAction, (data: ISocketServerPacket<ServerDto>) => {
+        if (data.error && data.error.code === ESocketError.InvalidToken) {
+          return this.logout();
         }
-      }
+
+        this.socket.off(askAction);
+        resolve(data);
+      });
+
+      this.socket.emit(action, askPacket);
     });
-  }
-
-  static send<T>(event: ESocketAction, data: T) {
-    this.socket.emit(event, this.formPacket<T>(data));
-  }
-
-  static on<T>(event: ESocketAction, callback: (data: T) => void) {
-    this.eventPool.set(event, callback);
   }
 }
