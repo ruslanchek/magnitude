@@ -1,5 +1,9 @@
 import { Store } from 'react-stores';
-import { IApiAuthMe } from '../api/ApiAuth';
+
+interface IApiAuthMe {
+  userId: string;
+  email: string;
+}
 
 interface IState {
   me: IApiAuthMe | null;

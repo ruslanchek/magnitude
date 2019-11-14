@@ -1203,6 +1203,11 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
 
+"@ruslanchek/magnitude-shared@^0.0.4":
+  version "0.0.4"
+  resolved "https://npm.pkg.github.com/download/@ruslanchek/magnitude-shared/0.0.4/4e34044f345b6d57e78bebb1df13ff5637328ec23c03d6e3ea3463e09ee8607b#c2d08162aaeb392216820c9e2406a8868c3e4418"
+  integrity sha512-8ATfpcQd0/gHVrxhH696a/Vt7i+2+d+xRpVPOzMEw9oDzVRIjgw5Lpf/imnXlB8EHbzx/Kksfc9tL8aWsTNIgQ==
+
 "@svgr/babel-plugin-add-jsx-attribute@^4.2.0":
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/@svgr/babel-plugin-add-jsx-attribute/-/babel-plugin-add-jsx-attribute-4.2.0.tgz#dadcb6218503532d6884b210e7f3c502caaa44b1"

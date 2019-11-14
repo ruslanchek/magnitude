@@ -3,7 +3,6 @@ import { css, jsx } from '@emotion/core';
 import React from 'react';
 import { PageWrapper } from '../components/PageWrapper';
 import { ESocketEvent, SocketApi } from '../api/SocketApi';
-import { ApiAuth } from '../api/ApiAuth';
 
 SocketApi.connect();
 
@@ -13,7 +12,7 @@ SocketApi.on(ESocketEvent.Authorize, data => {
 
 SocketApi.onConnectionChanged(connected => {
   if (connected) {
-    SocketApi.send(ESocketEvent.Authorize);
+    SocketApi.send<string>('message', 'eee');
   }
 });
 
