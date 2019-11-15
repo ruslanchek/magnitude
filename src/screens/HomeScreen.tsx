@@ -10,7 +10,7 @@ SocketApi.connect();
 SocketApi.onConnectionChanged(connected => {
   if (connected) {
     // AuthApi.authorize();
-    AuthApi.register('rshashkov@icloud.com', 'tukzara1');
+    AuthApi.register('rshashkov+2@icloud.com', 'tukzara1');
   }
 });
 
