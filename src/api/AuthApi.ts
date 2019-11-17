@@ -7,6 +7,8 @@ import {
   IServerDtoAuthRegister,
   IClientDtoAuthLogin,
   IServerDtoAuthLogin,
+  IClientDtoAuthMe,
+  IServerDtoAuthMe,
 } from '@ruslanchek/magnitude-shared';
 
 export class AuthApi extends SocketApi {
@@ -20,6 +22,10 @@ export class AuthApi extends SocketApi {
       email,
       password,
     });
+
+    if (result.data) {
+      this.setToken(result.data.token);
+    }
     console.log(result);
   }
 
@@ -28,6 +34,15 @@ export class AuthApi extends SocketApi {
       email,
       password,
     });
+
+    if (result.data) {
+      this.setToken(result.data.token);
+    }
+    console.log(result);
+  }
+
+  static async me() {
+    const result = await this.ask<IClientDtoAuthMe, IServerDtoAuthMe>(ESocketAction.AuthMe, {});
     console.log(result);
   }
 }

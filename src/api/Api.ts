@@ -10,7 +10,7 @@ export abstract class Api {
   }
 
   protected static clearToken() {
-    cookieStorage.removeItem('token');
+    // cookieStorage.removeItem('token');
   }
 
   public static logout() {
