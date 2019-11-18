@@ -17,7 +17,7 @@ SocketApi.onConnectionChanged(connected => {
     // AuthApi.authorize();
     // AuthApi.register('rshashkov+10@icloud.com', 'tukzara1');
     AuthApi.login('rshashkov+10@icloud.com', 'tukzara1');
-    // AuthApi.me();
+    AuthApi.me();
   }
 });
 

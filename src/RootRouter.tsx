@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { PATHS } from './constants/paths';
 import { HomeScreen } from './screens/HomeScreen';
 import { NoMatchPage } from './screens/NoMatchPage';
+import { TestScreen } from './screens/TestPage';
 
 export const RootRouter: React.FC = () => {
   return (
@@ -11,7 +12,7 @@ export const RootRouter: React.FC = () => {
         {/*<Route exact path={PATHS.AUTH_LOGIN} component={Page2} />*/}
         {/*<Route exact path={PATHS.AUTH_REGISTER} component={Page2} />*/}
         <Route exact path={PATHS.HOME} component={HomeScreen} />
-        {/*<Route exact path={PATHS.ME} component={Page2} />*/}
+        <Route exact path={PATHS.ME} component={TestScreen} />
         <Route component={NoMatchPage} />
       </Switch>
     </BrowserRouter>
