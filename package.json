@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@emotion/core": "^10.0.22",
+    "@monaco-editor/react": "^2.3.0",
     "@ruslanchek/magnitude-shared": "^0.0.29",
     "@types/jest": "24.0.22",
     "@types/node": "12.12.6",
@@ -15,12 +16,13 @@
     "eo-locale": "^7.0.5",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
+    "react-hotkeys": "^2.0.0",
     "react-icons": "^3.8.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0",
     "react-stores": "^3.0.3",
     "socket.io-client": "^2.3.0",
-    "swagger-client": "^3.9.6",
+    "ts-events": "^3.3.1",
     "typescript": "3.7.2"
   },
   "scripts": {
