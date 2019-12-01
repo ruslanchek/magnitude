@@ -9,12 +9,13 @@ import {
   IServerDtoAuthLogin,
   IClientDtoAuthMe,
   IServerDtoAuthMe,
+  IEntityUserShared,
 } from '@ruslanchek/magnitude-shared';
 
 export class AuthApi extends SocketApi {
-  static async authorize() {
+  static async authorize(): Promise<boolean> {
     const result = await this.ask<IClientDtoAuthAuthorize, IServerDtoAuthAuthorize>(ESocketAction.AuthAuthorize, {});
-    console.log(result);
+    return !result?.error;
   }
 
   static async register(email: string, password: string) {
@@ -41,8 +42,13 @@ export class AuthApi extends SocketApi {
     console.log(result);
   }
 
-  static async me() {
-    const result = await this.ask<IClientDtoAuthMe, IServerDtoAuthMe>(ESocketAction.AuthMe, {});
-    console.log(result);
+  static async me(): Promise<IEntityUserShared | null> {
+    try {
+      const result = await this.ask<IClientDtoAuthMe, IServerDtoAuthMe>(ESocketAction.AuthMe, {});
+      return result?.data?.user ?? null;
+    } catch (e) {
+      console.log(e);
+      return null;
+    }
   }
 }

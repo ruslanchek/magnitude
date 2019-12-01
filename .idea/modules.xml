@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/magnitude.iml" filepath="$PROJECT_DIR$/.idea/magnitude.iml" />
       <module fileurl="file://$PROJECT_DIR$/../magnitude-api/.idea/magnitude-api.iml" filepath="$PROJECT_DIR$/../magnitude-api/.idea/magnitude-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../magnitude-shared/.idea/magnitude-shared.iml" filepath="$PROJECT_DIR$/../magnitude-shared/.idea/magnitude-shared.iml" />
     </modules>
   </component>
 </project>

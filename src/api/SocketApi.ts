@@ -4,12 +4,12 @@ import { Api } from './Api';
 import { ISocketClientPacket, ESocketAction, ISocketServerPacket, ESocketError } from '@ruslanchek/magnitude-shared';
 
 export class SocketApi extends Api {
-  protected static socket: any = null;
-  protected static connected: boolean = false;
-  protected static onConnectionChangedCallback = (connected: boolean) => {};
+  protected static socket: any = io(process.env.REACT_APP_API_URL);
+  protected static isConnected: boolean = false;
+  protected static onConnectionChangedCallback = (isConnected: boolean) => {};
   private static currentNs: number = 0;
 
-  public static onConnectionChanged(callback: (connected: boolean) => void) {
+  public static onConnectionChanged(callback: (isConnected: boolean) => void) {
     this.onConnectionChangedCallback = callback;
   }
 
@@ -22,8 +22,8 @@ export class SocketApi extends Api {
   }
 
   private static connectionChanged(connected: boolean) {
-    this.connected = connected;
-    this.onConnectionChangedCallback(this.connected);
+    this.isConnected = connected;
+    this.onConnectionChangedCallback(this.isConnected);
   }
 
   private static generateNs(): string {
@@ -32,10 +32,6 @@ export class SocketApi extends Api {
   }
 
   public static connect() {
-    this.socket = io(process.env.REACT_APP_API_URL);
-
-    (window as any)['io'] = this.socket;
-
     this.socket.on('connect', () => {
       this.connectionChanged(true);
     });
@@ -66,7 +62,7 @@ export class SocketApi extends Api {
           return this.logout();
         }
 
-        this.socket.off(askAction);
+        this.socket.off(askAction as ESocketAction);
         resolve(data);
       });
 

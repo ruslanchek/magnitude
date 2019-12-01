@@ -1,9 +1,10 @@
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core';
 import React from 'react';
-import { PageWrapper } from '../components/PageWrapper';
-import { SwaggerView } from '../components/doc-views/SwaggerView';
-import { MonacoEditorView } from '../components/doc-views/MonacoEditorView';
+import { PageWrapper } from '../PageWrapper';
+import { SwaggerView } from '../doc-views/SwaggerView';
+import { MonacoEditorView } from '../doc-views/MonacoEditorView';
+import { useAuthorized } from "../../hooks/useAuthorized";
 
 export const TestScreen: React.FC = () => {
   return (

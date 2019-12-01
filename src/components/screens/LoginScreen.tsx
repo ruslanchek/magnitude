@@ -1,12 +1,14 @@
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core';
 import React from 'react';
-import { PageWrapper } from '../components/PageWrapper';
+import { PageWrapper } from '../PageWrapper';
 
-export const NoMatchPage: React.FC = () => {
+export const LoginScreen: React.FC = () => {
   return (
     <PageWrapper>
-      <div css={styles.root}>NoMatchPage</div>
+      <div css={styles.root}>
+        Login
+      </div>
     </PageWrapper>
   );
 };

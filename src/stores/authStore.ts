@@ -1,16 +1,12 @@
 import { Store } from 'react-stores';
-
-interface IApiAuthMe {
-  userId: string;
-  email: string;
-}
+import {IEntityUserShared} from "@ruslanchek/magnitude-shared";
 
 interface IState {
-  me: IApiAuthMe | null;
-  authorized: boolean;
+  me: IEntityUserShared | null;
+  isAuthorized: boolean;
 }
 
 export const authStore = new Store<IState>({
   me: null,
-  authorized: false,
+  isAuthorized: false,
 });

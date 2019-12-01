@@ -1,37 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="69224d6a-5b1f-4d26-bb75-97b043e3094d" name="Default Changelist" comment="">
+    <list default="true" id="623d3edf-0097-4e2f-bf2b-f411e4681eb2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/RootWrapper.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/screens/LoginScreen.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/screens/RegisterScreen.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/AppController.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hooks/useAppReady.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/stores/appStore.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../magnitude-api/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../magnitude-api/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../magnitude-api/.npmrc" beforeDir="false" afterPath="$PROJECT_DIR$/../magnitude-api/.npmrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../magnitude-api/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../magnitude-api/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../magnitude-api/src/auth/auth.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../magnitude-api/src/auth/auth.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../magnitude-api/src/auth/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../magnitude-api/src/auth/auth.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../magnitude-api/src/socket/socket.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../magnitude-api/src/socket/socket.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../magnitude-api/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../magnitude-api/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../magnitude-api/src/helpers/db.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../magnitude-api/src/helpers/db.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../magnitude-api/src/helpers/server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../magnitude-api/src/helpers/server.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../magnitude-api/src/models/UserModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../magnitude-api/src/models/UserModel.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../magnitude-api/src/services/SocketService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../magnitude-api/src/services/SocketService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../magnitude-api/src/socket/auth/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../magnitude-api/src/socket/auth/auth.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../magnitude-api/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../magnitude-api/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../magnitude-shared/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../magnitude-shared/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../magnitude-shared/.npmrc" beforeDir="false" afterPath="$PROJECT_DIR$/../magnitude-shared/.npmrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../magnitude-shared/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../magnitude-shared/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../magnitude-shared/src/dto/server.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../magnitude-shared/src/dto/server.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../magnitude-shared/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../magnitude-shared/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/user.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/magnitude.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/magnitude.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.npmrc" beforeDir="false" afterPath="$PROJECT_DIR$/.npmrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RootRouter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/RootRouter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/Api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/Api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/AuthApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/AuthApi.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/SocketApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/SocketApi.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useAuthorized.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useAuthorized.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/HomeScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/screens/HomeScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/NoMatchPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/screens/NoMatchPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/TestPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/screens/TestPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stores/authStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/stores/authStore.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript JSX File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../magnitude-api" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1THm6PLuNBmZFkj7MIGQ4J1rSLv" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="1UOTjmZ60HCybsqh7xyEaSAEi8o" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../magnitude-api/src/auth" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/hooks" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -39,33 +75,34 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="prettierjs.PrettierConfiguration.Package" value="$USER_HOME$/.nvm/versions/node/v10.16.3/lib/node_modules/prettier" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/../magnitude-api/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/controllers" />
+      <recent name="$PROJECT_DIR$/src/components" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/../magnitude-api/src/auth" />
-      <recent name="$PROJECT_DIR$/../magnitude-api" />
-      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/hooks" />
+      <recent name="$PROJECT_DIR$/src/components/screens" />
+      <recent name="$PROJECT_DIR$/src/stores" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.API">
-    <configuration name="API" type="js.build_tools.npm">
+  <component name="RunManager" selected="npm.backend">
+    <configuration name="backend" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/../magnitude-api/package.json" />
       <command value="run" />
       <scripts>
-        <script value="start:dev" />
+        <script value="dev" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="Frontend" type="js.build_tools.npm">
+    <configuration name="frontend" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
@@ -75,9 +112,20 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="shared" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/../magnitude-shared/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="npm.API" />
-      <item itemvalue="npm.Frontend" />
+      <item itemvalue="npm.frontend" />
+      <item itemvalue="npm.backend" />
+      <item itemvalue="npm.shared" />
     </list>
   </component>
   <component name="ServiceViewManager">
@@ -92,120 +140,61 @@
       </list>
     </option>
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="69224d6a-5b1f-4d26-bb75-97b043e3094d" name="Default Changelist" comment="" />
-      <created>1573125218641</created>
+      <changelist id="623d3edf-0097-4e2f-bf2b-f411e4681eb2" name="Default Changelist" comment="" />
+      <created>1575226778572</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1573125218641</updated>
-      <workItem from="1573125221081" duration="635000" />
-      <workItem from="1573127268624" duration="13988000" />
-      <workItem from="1573637027273" duration="19895000" />
+      <updated>1575226778572</updated>
+      <workItem from="1575226784484" duration="1364000" />
+      <workItem from="1575228457459" duration="7264000" />
     </task>
-    <task id="LOCAL-00001" summary="Update">
-      <created>1573139642022</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1573139642022</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Update">
-      <created>1573142681568</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1573142681568</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Update">
-      <created>1573150092784</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1573150092784</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Socket.io">
-      <created>1573643790956</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1573643790956</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Socket.io">
-      <created>1573662615790</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1573662615790</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Socket.io">
-      <created>1573670852076</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1573670852076</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Update" />
-    <MESSAGE value="Socket.io" />
-    <option name="LAST_COMMIT_MESSAGE" value="Socket.io" />
-  </component>
   <component name="WindowStateProjectService">
-    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1573643106993">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="360" y="222" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1575227280230">
+      <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1573643106993" />
-    <state x="297" y="52" key="CommitChangelistDialog2" timestamp="1573670851677">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="360" y="222" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1575227280230" />
+    <state width="1771" height="318" key="GridCell.Tab.0.bottom" timestamp="1575236375189">
+      <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="297" y="52" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1573670851677" />
-    <state width="1419" height="309" key="GridCell.Tab.0.bottom" timestamp="1573670862557">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1771" height="318" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1575236375189" />
+    <state width="1771" height="318" key="GridCell.Tab.0.center" timestamp="1575236375188">
+      <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1419" height="309" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1573670862557" />
-    <state width="1419" height="309" key="GridCell.Tab.0.center" timestamp="1573670862556">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1771" height="318" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1575236375188" />
+    <state width="1771" height="318" key="GridCell.Tab.0.left" timestamp="1575236375187">
+      <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1419" height="309" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1573670862556" />
-    <state width="1419" height="309" key="GridCell.Tab.0.left" timestamp="1573670862556">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1771" height="318" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1575236375187" />
+    <state width="1771" height="318" key="GridCell.Tab.0.right" timestamp="1575236375188">
+      <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1419" height="309" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1573670862556" />
-    <state width="1419" height="309" key="GridCell.Tab.0.right" timestamp="1573670862557">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1771" height="318" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1575236375188" />
+    <state x="397" y="199" key="SettingsEditor" timestamp="1575228438375">
+      <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1419" height="309" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1573670862557" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1573670853770">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="397" y="199" key="SettingsEditor/0.0.1792.1120@0.0.1792.1120" timestamp="1575228438375" />
+    <state x="100" y="100" width="1592" height="920" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1575236301578">
+      <screen x="0" y="23" width="1792" height="1025" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1573670853770" />
-    <state x="378" y="212" width="683" height="476" key="find.popup" timestamp="1573656128755">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="100" y="100" width="1592" height="920" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1575236269934" />
+    <state x="100" y="100" width="1592" height="920" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1792.1025@0.23.1792.1025" timestamp="1575236301578" />
+    <state x="554" y="203" width="683" height="714" key="find.popup" timestamp="1575235357854">
+      <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="378" y="212" width="683" height="476" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1573656128755" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1573662795358">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="554" y="203" width="683" height="714" key="find.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1575235357854" />
+    <state x="561" y="251" width="670" height="676" key="search.everywhere.popup" timestamp="1575232682730">
+      <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1573662795358" />
+    <state x="561" y="251" width="670" height="676" key="search.everywhere.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1575232682730" />
   </component>
 </project>

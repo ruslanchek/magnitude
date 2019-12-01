@@ -1,4 +1,5 @@
 import { cookieStorage } from '../common/cookie';
+import { authStore } from "../stores/authStore";
 
 export abstract class Api {
   public static getToken(): string | null {
@@ -10,11 +11,15 @@ export abstract class Api {
   }
 
   protected static clearToken() {
-    // cookieStorage.removeItem('token');
+    cookieStorage.removeItem('token');
   }
 
   public static logout() {
     this.clearToken();
-    console.log('Logout!');
+
+    authStore.setState({
+      isAuthorized: false,
+      me: null,
+    });
   }
 }
