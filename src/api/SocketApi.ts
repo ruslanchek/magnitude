@@ -32,7 +32,7 @@ export class SocketApi extends Api {
   }
 
   public static connect() {
-    this.socket = io(process.env.REACT_APP_WS_API_URL);
+    this.socket = io(process.env.REACT_APP_API_URL);
 
     (window as any)['io'] = this.socket;
 
