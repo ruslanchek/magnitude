@@ -1,7 +1,12 @@
-import React from 'react';
+import React from "react";
 import ReactDOM from 'react-dom';
 import { App } from './App';
+import { AppController } from "./controllers/AppController";
 import * as serviceWorker from './serviceWorker';
+
+(async () => {
+  await AppController.init();
+})();
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

@@ -2,7 +2,7 @@
 import { jsx, css } from '@emotion/core';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { PATHS } from '../constants/paths';
+import { PATHS } from '../../../constants/paths';
 import { FiHome } from 'react-icons/fi';
 import { EOLocale } from 'eo-locale';
 

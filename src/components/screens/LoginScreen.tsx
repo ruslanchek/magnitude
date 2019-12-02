@@ -1,15 +1,15 @@
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core';
 import React from 'react';
-import { PageWrapper } from '../PageWrapper';
+import { ScreenWrapper } from '../ScreenWrapper';
 
 export const LoginScreen: React.FC = () => {
   return (
-    <PageWrapper>
+    <ScreenWrapper raw>
       <div css={styles.root}>
         Login
       </div>
-    </PageWrapper>
+    </ScreenWrapper>
   );
 };
 

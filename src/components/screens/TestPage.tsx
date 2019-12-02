@@ -1,19 +1,19 @@
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core';
 import React from 'react';
-import { PageWrapper } from '../PageWrapper';
+import { ScreenWrapper } from '../ScreenWrapper';
 import { SwaggerView } from '../doc-views/SwaggerView';
 import { MonacoEditorView } from '../doc-views/MonacoEditorView';
-import { useAuthorized } from "../../hooks/useAuthorized";
+import { useAuthorizedRoute } from "../../hooks/useAuthorizedRoute";
 
 export const TestScreen: React.FC = () => {
   return (
-    <PageWrapper>
+    <ScreenWrapper>
       <div css={styles.root}>
         <SwaggerView />
         <MonacoEditorView />
       </div>
-    </PageWrapper>
+    </ScreenWrapper>
   );
 };
 

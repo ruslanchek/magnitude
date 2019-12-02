@@ -13,13 +13,15 @@
     "color": "^3.1.2",
     "cookie-storage": "^5.0.3",
     "eo-locale": "^7.0.5",
+    "eo-react-custom-scrollbars": "^5.2.5",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-hotkeys": "^2.0.0",
     "react-icons": "^3.8.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.3.0-next.62",
     "react-stores": "^3.0.4",
+    "react-transition-group": "^4.3.0",
+    "react-window": "^1.8.5",
     "socket.io-client": "^2.3.0",
     "ts-events": "^3.3.1",
     "typescript": "3.7.2"
@@ -48,6 +50,8 @@
   "devDependencies": {
     "@types/color": "^3.0.0",
     "@types/react-router-dom": "^5.1.3",
+    "@types/react-transition-group": "^4.2.3",
+    "@types/react-window": "^1.8.1",
     "prettier": "^1.19.1"
   }
 }

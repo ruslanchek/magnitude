@@ -1,13 +1,13 @@
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core';
 import React from 'react';
-import { PageWrapper } from '../PageWrapper';
+import { ScreenWrapper } from '../ScreenWrapper';
 
 export const RegisterScreen: React.FC = () => {
   return (
-    <PageWrapper>
+    <ScreenWrapper>
       <div css={styles.root}>Register</div>
-    </PageWrapper>
+    </ScreenWrapper>
   );
 };
 
