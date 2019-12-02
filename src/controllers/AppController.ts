@@ -10,7 +10,9 @@ export class AppController {
       return Promise.resolve();
     }
 
-    await Promise.all([this.initSocket(), this.initSubscriptions(), this.initAuth()]);
+    this.initSocket();
+
+    await Promise.all([this.initSubscriptions(), this.initAuth()]);
 
     appStore.setState({
       isReady: true,
@@ -19,7 +21,7 @@ export class AppController {
 
   private static async initSocket() {
     SocketApi.onConnectionChanged(async (isConnected) => {
-      console.log('jjijij');
+      console.log('isConnected', isConnected);
 
       if (isConnected && appStore.state.isReady) {
         await this.initAuth();

@@ -9,3 +9,5 @@ export const appStore = new Store<IState>({
   isReady: false,
   isReconnecting: false,
 });
+
+(window as any)['appStore'] = appStore;

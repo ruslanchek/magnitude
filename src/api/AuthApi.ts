@@ -15,6 +15,9 @@ import {
 export class AuthApi extends SocketApi {
   static async authorize(): Promise<boolean> {
     const result = await this.ask<IClientDtoAuthAuthorize, IServerDtoAuthAuthorize>(ESocketAction.AuthAuthorize, {});
+
+    console.log(result);
+
     return !result?.error;
   }
 
@@ -27,6 +30,7 @@ export class AuthApi extends SocketApi {
     if (result.data) {
       this.setToken(result.data.token);
     }
+
     console.log(result);
   }
 
@@ -43,12 +47,7 @@ export class AuthApi extends SocketApi {
   }
 
   static async me(): Promise<IEntityUserShared | null> {
-    try {
-      const result = await this.ask<IClientDtoAuthMe, IServerDtoAuthMe>(ESocketAction.AuthMe, {});
-      return result?.data?.user ?? null;
-    } catch (e) {
-      console.log(e);
-      return null;
-    }
+    const result = await this.ask<IClientDtoAuthMe, IServerDtoAuthMe>(ESocketAction.AuthMe, {});
+    return result?.data?.user ?? null;
   }
 }

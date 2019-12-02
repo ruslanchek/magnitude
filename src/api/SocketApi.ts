@@ -59,7 +59,7 @@ export class SocketApi extends Api {
 
       this.socket.on(askAction, (data: ISocketServerPacket<ServerDto>) => {
         if (data.error && data.error.code === ESocketError.InvalidToken) {
-          return this.logout();
+          this.logout();
         }
 
         this.socket.off(askAction as ESocketAction);

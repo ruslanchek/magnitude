@@ -10,3 +10,5 @@ export const authStore = new Store<IState>({
   me: null,
   isAuthorized: false,
 });
+
+(window as any)['authStore'] = authStore;
