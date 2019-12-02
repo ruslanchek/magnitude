@@ -35,7 +35,7 @@ export class AppController {
     SocketApi.connect();
   }
 
-  private static async initAuth() {
+  public static async initAuth() {
     const isAuthorized = await AuthApi.authorize();
     const me = await AuthApi.me();
 

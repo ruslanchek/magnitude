@@ -155,7 +155,7 @@ const styles = {
     border-right: none;
     box-sizing: border-box;
     padding: 0 var(--INPUT_SIDE_PADDING);
-    background-color: rgb(var(--ELEMENT_BG_ACCENT));
+    background-color: rgb(var(--ELEMENT_BACKGROUND_TINT));
     justify-content: center;
     align-items: center;
     display: flex;
@@ -168,7 +168,7 @@ const styles = {
     border-left: none;
     box-sizing: border-box;
     padding: 0 var(--INPUT_SIDE_PADDING);
-    background-color: rgb(var(--ELEMENT_BG_ACCENT));
+    background-color: rgb(var(--ELEMENT_BACKGROUND_TINT));
     justify-content: center;
     align-items: center;
     display: flex;
@@ -181,23 +181,23 @@ const styles = {
     outline: none;
     -webkit-appearance: none;
     border: 1px solid rgb(var(--INPUT_BORDER));
-    background-color: rgb(var(--INPUT_BG));
+    background-color: rgb(var(--WHITE));
     border-radius: var(--BORDER_RADIUS_SMALL);
-    color: rgb(var(--TEXT_ACCENT));
+    color: rgb(var(--TEXT));
     font-family: var(--FONT_FAMILY);
-    padding: 0 var(--INPUT_SIDE_PADDING);
+    padding: 0 var(--INPUT_SIDE_PADDING);   
     box-sizing: border-box;
-    font-size: var(--FONT_SIZE_BASE);
     text-overflow: ellipsis;
-    transition: border-color 0.2s;
+    transition: border-color 0.2s, box-shadow 0.2s;
     box-shadow: none; /* firefox fix for error highlighting */
 
     &:hover {
-      border-color: rgb(var(--INPUT_BORDER_ACCENT));
+      border-color: hsl(var(--INPUT_BORDER_HSL_DARKEN));
     }
 
     &:focus {
-      border-color: rgb(var(--INPUT_BORDER_ACTIVE));
+      border-color: rgb(var(--ACCENT));
+      box-shadow: 0 0 0 3.5px rgba(var(--ACCENT), .2);
     }
 
     &.error {
@@ -226,10 +226,12 @@ const styles = {
   sizes: {
     small: css`
       height: var(--INPUT_HEIGHT_SMALL);
+      font-size: var(--FONT_SIZE_BASE);
     `,
 
     large: css`
       height: var(--INPUT_HEIGHT_LARGE);
+      font-size: var(--FONT_SIZE_MEDIUM);
     `,
   },
 };

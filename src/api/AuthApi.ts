@@ -34,7 +34,7 @@ export class AuthApi extends SocketApi {
     console.log(result);
   }
 
-  static async login(email: string, password: string) {
+  static async login(email: string, password: string): Promise<IServerDtoAuthLogin | null> {
     const result = await this.ask<IClientDtoAuthLogin, IServerDtoAuthLogin>(ESocketAction.AuthLogin, {
       email,
       password,
@@ -43,11 +43,17 @@ export class AuthApi extends SocketApi {
     if (result.data) {
       this.setToken(result.data.token);
     }
-    console.log(result);
+
+    return result.data;
   }
 
   static async me(): Promise<IEntityUserShared | null> {
     const result = await this.ask<IClientDtoAuthMe, IServerDtoAuthMe>(ESocketAction.AuthMe, {});
-    return result?.data?.user ?? null;
+
+    if (result?.data) {
+      return result.data.user;
+    } else {
+      return null;
+    }
   }
 }

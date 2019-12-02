@@ -12,7 +12,7 @@ export const GlobalStyles: React.FC = () => {
 
   for (const color in COLORS) {
     const rgb = (COLORS as any)[color];
-    const lighten = rgb.lighten(0.1).array();
+    const lighten = rgb.lighten(0.2).array();
     const darken = rgb.darken(0.1).array();
 
     colors.push(
@@ -47,6 +47,8 @@ export const GlobalStyles: React.FC = () => {
 };
 
 const styles = css`
+  @import url('https://fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,700,700i,800,900&display=swap');
+
   body {
     font-family: var(--FONT_FAMILY);
     margin: 0;
@@ -56,18 +58,46 @@ const styles = css`
     line-height: var(--GLOBAL_LINE_HEIGHT);
   }
 
+  a.underline {
+    border-bottom: 1px solid;
+  }
+
   a,
   a:link,
   a:visited {
-    color: rgb(var(--TEXT_LINK));
+    color: rgb(var(--ACCENT));
     text-decoration: none;
     outline: none;
+
+    &.underline {
+      border-bottom-color: rgba(var(--ACCENT), 0.35);
+    }
+
+    &.faded {
+      color: rgb(var(--TEXT_FADED));
+
+      &.underline {
+        border-bottom-color: rgba(var(--TEXT_FADED), 0.35);
+      }
+    }
   }
 
   a:hover,
   a:active,
   a:focus {
-    color: rgb(var(--TEXT_LINK_HOVER));
+    color: hsl(var(--ACCENT_HSL_LIGHTEN));
+    
+    &.underline {
+      border-bottom-color: hsla(var(--ACCENT_HSL_LIGHTEN), 0.35);
+    }
+
+    &.faded {
+      color: hsl(var(--TEXT_FADED_HSL_DARKEN));
+      
+      &.underline {
+        border-bottom-color: hsla(var(--TEXT_FADED_HSL_DARKEN), 0.35);
+      }
+    }
   }
 
   ul,
@@ -84,12 +114,12 @@ const styles = css`
   }
 
   ::selection {
-    background: rgb(var(--TEXT_LINK));
+    background: rgb(var(--ACCENT));
     color: rgb(var(--WHITE));
   }
 
   ::-moz-selection {
-    background: rgb(var(--TEXT_LINK));
+    background: rgb(var(--ACCENT));
     color: rgb(var(--WHITE));
   }
 `;

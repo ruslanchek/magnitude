@@ -9,7 +9,6 @@ interface IProps {
   color?: 'default' | 'success' | 'accent' | 'faded' | 'danger' | 'white' | 'facebook' | 'google';
   disabled?: boolean;
   loading?: boolean;
-  strokeOnly?: boolean;
   tabIndex?: number;
   onClick?: () => void;
 }
@@ -24,7 +23,6 @@ export const Button: React.FC<IProps> = props => {
     onClick = () => {},
     tabIndex = 1,
     children,
-    strokeOnly,
   } = props;
 
   const [isFocusMarked, setFocusMarked] = useState(false);
@@ -40,7 +38,7 @@ export const Button: React.FC<IProps> = props => {
       type={type}
       disabled={disabled || loading}
       tabIndex={tabIndex || 1}
-      className={`${isFocusMarked ? 'focus' : ''}${strokeOnly ? ' stroke' : ''}`}
+      className={isFocusMarked ? 'focus' : ''}
       onKeyUp={() => {
         setFocusMarked(true);
       }}
@@ -52,7 +50,7 @@ export const Button: React.FC<IProps> = props => {
       }}
       css={[styles.root, styles.sizes[size || 'large'], styles.colors[color || 'default']]}
       onClick={handleClick}>
-      {loading ? <ActivityIndicator size='small' color={'rgb(var(--BUTTON_TEXT))'} /> : children}
+      {loading ? <ActivityIndicator size='small' color="#fff"/> : children}
     </button>
   );
 };
@@ -61,10 +59,11 @@ const styles = {
   root: css`
     padding: 0 calc(var(--INPUT_SIDE_PADDING) * 1.5);
     font-family: var(--FONT_FAMILY);
+    width: 150px;
     border: none;
     background: none;
     outline: none;
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     user-select: none;
     align-items: center;
@@ -73,15 +72,14 @@ const styles = {
     text-overflow: ellipsis;
     overflow: hidden;
     -webkit-appearance: none;
-    color: rgb(var(--BUTTON_TEXT));
-    font-size: var(--FONT_SIZE_BASE);
-    box-shadow: 0 0 0 0 rgba(var(--BUTTON_DEFAULT), 0);
+    font-size: var(--FONT_SIZE_MEDIUM);
+    font-weight: 600;
     transition: background-color 0.2s, box-shadow 0.2s, transform 0.2s;
     transform: scale(0.99999);
     border-radius: var(--BORDER_RADIUS_SMALL);
 
     &:active {
-      transform: scale(0.98);
+      transform: scale(0.99);
     }
 
     &:disabled {
@@ -98,75 +96,49 @@ const styles = {
 
   colors: {
     default: css`
-      background-color: rgb(var(--BUTTON_DEFAULT));
+      background-color: rgb(var(--ACCENT));
+      color: rgb(var(--WHITE));
 
       &:hover {
-        background-color: hsl(var(--BUTTON_DEFAULT_HSL_DARKEN));
+        background-color: hsl(var(--ACCENT_HSL_DARKEN));
       }
 
       &:active {
-        background-color: hsl(var(--BUTTON_DEFAULT_HSL_LIGHTEN));
-        box-shadow: 0 0 0 0 rgba(var(--BUTTON_DEFAULT), 0);
+        background-color: hsl(var(--ACCENT_HSL_LIGHTEN));
+        box-shadow: 0 0 0 0 rgba(var(--ACCENT), 0);
       }
 
       &.focus {
-        background-color: rgb(var(--BUTTON_DEFAULT));
-        box-shadow: 0 0 0 3px rgba(var(--BUTTON_DEFAULT), 0.33);
+        background-color: rgb(var(--ACCENT));
+        box-shadow: 0 0 0 3px rgba(var(--ACCENT), 0.33);
 
         &:active {
-          background-color: hsl(var(--BUTTON_DEFAULT_HSL_LIGHTEN));
-          box-shadow: 0 0 0 3px rgba(var(--BUTTON_DEFAULT), 0.33), 0 0 0 0 rgba(var(--BUTTON_DEFAULT), 0);
-        }
-      }
-
-      &.stroke {
-        background-color: transparent;
-        border: 1px solid rgb(var(--BUTTON_DEFAULT));
-        color: rgb(var(--BUTTON_DEFAULT));
-
-        &:hover {
-          background-color: rgba(var(--BUTTON_DEFAULT), 0.05);
-        }
-
-        &:active {
-          background-color: rgba(var(--BUTTON_DEFAULT), 0.1);
+          background-color: hsl(var(--ACCENT_HSL_LIGHTEN));
+          box-shadow: 0 0 0 3px rgba(var(--ACCENT), 0.33), 0 0 0 0 rgba(var(--ACCENT), 0);
         }
       }
     `,
 
     success: css`
-      background-color: rgb(var(--BUTTON_SUCCESS));
+      background-color: rgb(var(--SUCCESS));
+      color: rgb(var(--WHITE));
 
       &:hover {
-        background-color: hsl(var(--BUTTON_SUCCESS_HSL_DARKEN));
+        background-color: hsl(var(--SUCCESS_HSL_DARKEN));
       }
 
       &:active {
-        background-color: hsl(var(--BUTTON_SUCCESS_HSL_LIGHTEN));
-        box-shadow: 0 0 0 0 rgba(var(--BUTTON_SUCCESS), 0);
+        background-color: hsl(var(--SUCCESS_HSL_LIGHTEN));
+        box-shadow: 0 0 0 0 rgba(var(--SUCCESS), 0);
       }
 
       &.focus {
-        background-color: rgb(var(--BUTTON_SUCCESS));
-        box-shadow: 0 0 0 3px rgba(var(--BUTTON_SUCCESS), 0.33);
+        background-color: rgb(var(--SUCCESS));
+        box-shadow: 0 0 0 3.5px rgba(var(--SUCCESS), 0.33);
 
         &:active {
-          background-color: hsl(var(--BUTTON_SUCCESS_HSL_LIGHTEN));
-          box-shadow: 0 0 0 3px rgba(var(--BUTTON_SUCCESS), 0.33), 0 0 0 0 rgba(var(--BUTTON_SUCCESS), 0);
-        }
-      }
-
-      &.stroke {
-        background-color: transparent;
-        border: 1px solid rgb(var(--BUTTON_SUCCESS));
-        color: rgb(var(--BUTTON_SUCCESS));
-
-        &:hover {
-          background-color: rgba(var(--BUTTON_SUCCESS), 0.05);
-        }
-
-        &:active {
-          background-color: rgba(var(--BUTTON_SUCCESS), 0.1);
+          background-color: hsl(var(--SUCCESS_HSL_LIGHTEN));
+          box-shadow: 0 0 0 3.5px rgba(var(--SUCCESS), 0.33), 0 0 0 0 rgba(var(--SUCCESS), 0);
         }
       }
     `,
@@ -185,25 +157,11 @@ const styles = {
 
       &.focus {
         background-color: rgb(var(--BUTTON_ACCENT));
-        box-shadow: 0 0 0 3px rgba(var(--BUTTON_ACCENT), 0.33);
+        box-shadow: 0 0 0 3.5px rgba(var(--BUTTON_ACCENT), 0.33);
 
         &:active {
           background-color: hsl(var(--BUTTON_ACCENT_HSL_LIGHTEN));
-          box-shadow: 0 0 0 3px rgba(var(--BUTTON_ACCENT), 0.33), 0 0 0 0 rgba(var(--BUTTON_ACCENT), 0);
-        }
-      }
-
-      &.stroke {
-        background-color: transparent;
-        border: 1px solid rgb(var(--BUTTON_ACCENT));
-        color: rgb(var(--BUTTON_ACCENT));
-
-        &:hover {
-          background-color: rgba(var(--BUTTON_ACCENT), 0.05);
-        }
-
-        &:active {
-          background-color: rgba(var(--BUTTON_ACCENT), 0.1);
+          box-shadow: 0 0 0 3.5px rgba(var(--BUTTON_ACCENT), 0.33), 0 0 0 0 rgba(var(--BUTTON_ACCENT), 0);
         }
       }
     `,
@@ -222,25 +180,11 @@ const styles = {
 
       &.focus {
         background-color: rgb(var(--BUTTON_FADED));
-        box-shadow: 0 0 0 3px rgba(var(--BUTTON_FADED), 0.33);
+        box-shadow: 0 0 0 3.5px rgba(var(--BUTTON_FADED), 0.33);
 
         &:active {
           background-color: hsl(var(--BUTTON_FADED_HSL_LIGHTEN));
-          box-shadow: 0 0 0 3px rgba(var(--BUTTON_FADED), 0.33), 0 0 0 0 rgba(var(--BUTTON_FADED), 0);
-        }
-      }
-
-      &.stroke {
-        background-color: transparent;
-        border: 1px solid rgb(var(--BUTTON_FADED));
-        color: rgb(var(--BUTTON_FADED));
-
-        &:hover {
-          background-color: rgba(var(--BUTTON_FADED), 0.05);
-        }
-
-        &:active {
-          background-color: rgba(var(--BUTTON_FADED), 0.1);
+          box-shadow: 0 0 0 3.5px rgba(var(--BUTTON_FADED), 0.33), 0 0 0 0 rgba(var(--BUTTON_FADED), 0);
         }
       }
     `,
@@ -259,25 +203,11 @@ const styles = {
 
       &.focus {
         background-color: rgb(var(--BUTTON_DANGER));
-        box-shadow: 0 0 0 3px rgba(var(--BUTTON_DANGER), 0.33);
+        box-shadow: 0 0 0 3.5px rgba(var(--BUTTON_DANGER), 0.33);
 
         &:active {
           background-color: hsl(var(--BUTTON_DANGER_HSL_LIGHTEN));
-          box-shadow: 0 0 0 3px rgba(var(--BUTTON_DANGER), 0.33), 0 0 0 0 rgba(var(--BUTTON_DANGER), 0);
-        }
-      }
-
-      &.stroke {
-        background-color: transparent;
-        border: 1px solid hsl(var(--BUTTON_DANGER_HSL_LIGHTEN));
-        color: hsl(var(--BUTTON_DANGER_HSL_LIGHTEN));
-
-        &:hover {
-          background-color: rgba(var(--BUTTON_DANGER), 0.05);
-        }
-
-        &:active {
-          background-color: rgba(var(--BUTTON_DANGER), 0.1);
+          box-shadow: 0 0 0 3.5px rgba(var(--BUTTON_DANGER), 0.33), 0 0 0 0 rgba(var(--BUTTON_DANGER), 0);
         }
       }
     `,
@@ -297,25 +227,11 @@ const styles = {
 
       &.focus {
         background-color: rgb(var(--WHITE));
-        box-shadow: 0 0 0 3px rgba(var(--WHITE), 0.33);
+        box-shadow: 0 0 0 3.5px rgba(var(--WHITE), 0.33);
 
         &:active {
           background-color: hsl(var(--WHITE_HSL_LIGHTEN));
-          box-shadow: 0 0 0 3px rgba(var(--WHITE), 0.33), 0 0 0 0 rgba(var(--WHITE), 0);
-        }
-      }
-
-      &.stroke {
-        background-color: transparent;
-        border: 1px solid rgb(var(--WHITE));
-        color: rgb(var(--WHITE));
-
-        &:hover {
-          background-color: rgba(var(--WHITE), 0.05);
-        }
-
-        &:active {
-          background-color: rgba(var(--WHITE), 0.1);
+          box-shadow: 0 0 0 3.5px rgba(var(--WHITE), 0.33), 0 0 0 0 rgba(var(--WHITE), 0);
         }
       }
     `,
@@ -377,20 +293,6 @@ const styles = {
         &:active {
           background-color: hsl(var(--BUTTON_GOOGLE_HSL_LIGHTEN));
           box-shadow: 0 0 0 3px rgba(var(--BUTTON_GOOGLE), 0.33), 0 0 0 0 rgba(var(--BUTTON_GOOGLE), 0);
-        }
-      }
-
-      &.stroke {
-        background-color: transparent;
-        border: 1px solid rgb(var(--BUTTON_GOOGLE));
-        color: rgb(var(--BUTTON_GOOGLE));
-
-        &:hover {
-          background-color: rgba(var(--BUTTON_GOOGLE), 0.05);
-        }
-
-        &:active {
-          background-color: rgba(var(--BUTTON_GOOGLE), 0.1);
         }
       }
     `,

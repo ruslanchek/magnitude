@@ -3,8 +3,8 @@ import React from 'react';
 import { jsx, css, keyframes } from '@emotion/core';
 
 const SIZES = {
-  small: 20,
-  large: 28,
+  small: 26,
+  large: 42,
 };
 
 interface IProps {

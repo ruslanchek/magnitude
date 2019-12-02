@@ -1,11 +1,15 @@
 export const UI_CONSTANTS = {
-  FONT_FAMILY: '-apple-system, BlinkMacSystemFont, Roboto, Open Sans, Helvetica Neue, sans-serif',
+  FONT_FAMILY: '"Nunito Sans", -apple-system,  sans-serif',
 
   GLOBAL_LINE_HEIGHT: '1.5',
+
+  GRID_GAP_SIZE: '20px',
 
   ELEVATION_SHADOW_1: '0 1px 5px 0 rgba(0, 0, 0, 0.15)',
   ELEVATION_SHADOW_2: '0 2px 10px rgba(0, 0, 0, 0.15)',
   ELEVATION_SHADOW_3: '0 5px 10px rgba(0, 0, 0, 0.15)',
+
+  FONT_SIZE_HERO_LARGE: '46px',
 
   FONT_SIZE_LARGE: '18px',
   FONT_SIZE_MEDIUM: '16px',
@@ -19,4 +23,12 @@ export const UI_CONSTANTS = {
   PADDING_HORIZONTAL_GLOBAL: '25px',
   PADDING_HORIZONTAL_ELEMENT: '20px',
   PADDING_VERTICAL_ELEMENT: '10px',
+
+  INPUT_SIDE_PADDING: '12px',
+  INPUT_HEIGHT_SMALL: '40px',
+  INPUT_HEIGHT_LARGE: '44px',
+
+  BORDER_RADIUS_SMALL: '4px',
+  BORDER_RADIUS_MEDIUM: '8px',
+  BORDER_RADIUS_LARGE: '12px',
 };
