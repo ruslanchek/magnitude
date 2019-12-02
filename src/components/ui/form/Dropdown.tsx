@@ -517,7 +517,7 @@ export function Dropdown<T = any>(props: IProps<T>) {
         <InputErrors
           show={showErrors}
           errors={errors}
-          onDissmiss={() => {
+          onDismiss={() => {
             formContext.clearFieldValidation(name);
           }}
         />

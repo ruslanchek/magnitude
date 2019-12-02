@@ -1,6 +1,8 @@
 export const UI_CONSTANTS = {
   FONT_FAMILY: '"Nunito Sans", -apple-system,  sans-serif',
 
+  LOGO_PROPORTION: '0.167',
+
   GLOBAL_LINE_HEIGHT: '1.5',
 
   GRID_GAP_SIZE: '20px',
@@ -17,8 +19,8 @@ export const UI_CONSTANTS = {
   FONT_SIZE_SMALL: '12px',
   FONT_SIZE_TINY: '10px',
 
-  HEADER_HEIGHT: '60px',
-  ASIDE_WIDTH: '240px',
+  HEADER_HEIGHT: '65px',
+  ASIDE_WIDTH: '255px',
 
   PADDING_HORIZONTAL_GLOBAL: '25px',
   PADDING_HORIZONTAL_ELEMENT: '20px',

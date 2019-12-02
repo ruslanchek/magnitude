@@ -108,7 +108,7 @@ export const Input: React.FC<IProps> = props => {
         <InputErrors
           show={showErrors}
           errors={errors}
-          onDissmiss={() => {
+          onDismiss={() => {
             formContext.clearFieldValidation(name);
           }}
         />
@@ -201,7 +201,7 @@ const styles = {
     }
 
     &.error {
-      border-color: rgb(var(--INPUT_BORDER_ERROR));
+      border-color: rgb(var(--ERROR));
     }
 
     &:disabled {

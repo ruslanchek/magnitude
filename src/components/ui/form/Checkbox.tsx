@@ -91,7 +91,7 @@ export const Checkbox: React.FC<IProps> = props => {
           offsetLeft={type === 'checkbox' ? -9.5 : 0}
           show={showErrors}
           errors={errors}
-          onDissmiss={() => {
+          onDismiss={() => {
             formContext.clearFieldValidation(name);
           }}
         />

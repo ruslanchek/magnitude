@@ -11,9 +11,9 @@ import { PATHS } from '../../constants/paths';
 import { Button } from '../ui/form/Button';
 import { Col } from '../ui/grid/Col';
 import { AuthApi } from '../../api/AuthApi';
-import { AppController } from "../../controllers/AppController";
-import { FormValidatorEmail } from '../ui/form/validators/FormValidator';
-import { useOnlyUnauthorizedRoute } from "../../hooks/useOnlyAuthorizedRoute";
+import { AppController } from '../../controllers/AppController';
+import { FormValidatorEmail, FormValidatorMinLength } from "../ui/form/validators/FormValidator";
+import { useOnlyUnauthorizedRoute } from '../../hooks/useOnlyAuthorizedRoute';
 
 interface IModel {
   email: string;
@@ -28,7 +28,7 @@ export const LoginScreen: React.FC = () => {
     const result = await AuthApi.login(model.email, model.password);
     if (result && result.token) {
       await AppController.initAuth();
-      history.replace(PATHS.ME);
+      history.replace(PATHS.HOME);
     }
     setLoading(false);
   }, []);
@@ -68,7 +68,13 @@ export const LoginScreen: React.FC = () => {
                   </Row>
 
                   <Row>
-                    <Input type='password' name='password' autoComplete='current-password' placeholder='Password' />
+                    <Input
+                      type='password'
+                      name='password'
+                      autoComplete='current-password'
+                      placeholder='Password'
+                      validators={[new FormValidatorMinLength('Password minimal length is 6 symbols', 6)]}
+                    />
                   </Row>
 
                   <Row>
@@ -170,8 +176,8 @@ const styles = {
 
         .logo {
           width: 250px;
-          height: ${250 * 0.167}px;
-          background-image: url(${require('../../assets/images/logo.svg')});
+          height: calc(250px * var(--LOGO_PROPORTION));
+          background-image: url(${require('../../assets/images/logos/logo.svg')});
           background-position: 50% 50%;
           background-repeat: no-repeat;
           background-size: 100%;

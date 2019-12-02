@@ -6,17 +6,17 @@ import { CSSTransition } from 'react-transition-group';
 interface IProps {
   errors: string[];
   show: boolean;
-  onDissmiss: () => void;
+  onDismiss: () => void;
   offsetLeft?: number;
 }
 
 const ANIMATION_TIME = 200;
 
 export const InputErrors: React.FC<IProps> = props => {
-  const { errors, show, onDissmiss, offsetLeft } = props;
+  const { errors, show, onDismiss, offsetLeft } = props;
 
   const handleClick = () => {
-    onDissmiss();
+    onDismiss();
   };
 
   const showErrors = useMemo<boolean>(() => {
@@ -102,7 +102,7 @@ const styles = {
     position: absolute;
 
     > ul {
-      background-color: rgb(var(--INPUT_BG_ERROR));
+      background-color: rgb(var(--ERROR));
       border-radius: var(--BORDER_RADIUS_SMALL);
       margin: 0;
       color: rgb(var(--TEXT_ACCENT));
@@ -112,20 +112,19 @@ const styles = {
 
       > li {
         padding: 0 var(--INPUT_SIDE_PADDING);
-        color: rgb(var(--BUTTON_TEXT));
+        color: rgb(var(--WHITE));
       }
 
       &:after {
         top: 100%;
         left: calc(var(--INPUT_SIDE_PADDING) + 6px);
-        border: solid transparent;
+        border: 5px solid transparent;
         content: ' ';
         height: 0;
         width: 0;
         position: absolute;
         pointer-events: none;
-        border-top-color: rgb(var(--INPUT_BG_ERROR));
-        border-width: 5px;
+        border-top-color: rgb(var(--ERROR));
         margin-left: -5px;
       }
     }

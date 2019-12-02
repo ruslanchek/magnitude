@@ -2,31 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="623d3edf-0097-4e2f-bf2b-f411e4681eb2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/images/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/patterns/topography.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/grid/Col.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/grid/Divider.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/grid/Row.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hooks/useBreakpoint.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hooks/useOnlyAuthorizedRoute.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/AuthApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/AuthApi.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/GlobalStyles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GlobalStyles.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ScreenWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ScreenWrapper.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/logo-full.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/logos/logo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AsideHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AsideHeader.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/screens/LoginScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/screens/LoginScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/form/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/form/Button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/form/Checkbox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/form/Checkbox.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/form/Dropdown.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/form/Dropdown.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ui/form/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/form/Input.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/loading/ActivityIndicator.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/loading/ActivityIndicator.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/typographics/FadedText.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/typographics/H1.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/typographics/H2.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/typographics/H3.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/typographics/Text.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/colors.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/colors.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/paths.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/paths.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/form/InputErrors.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/form/InputErrors.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/constants/ui-constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/ui-constants.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/AppController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/AppController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useAuthorizedRoute.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useAuthorizedRoute.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +57,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets/images/logos" />
       <recent name="$PROJECT_DIR$/src/components/ui" />
       <recent name="$PROJECT_DIR$/src/components/ui/nav" />
       <recent name="$PROJECT_DIR$/src/controllers" />
@@ -145,7 +132,7 @@
       <updated>1575226778572</updated>
       <workItem from="1575226784484" duration="1364000" />
       <workItem from="1575228457459" duration="7264000" />
-      <workItem from="1575307869275" duration="9550000" />
+      <workItem from="1575307869275" duration="10395000" />
     </task>
     <task id="LOCAL-00001" summary="Auth">
       <created>1575278797715</created>
@@ -161,7 +148,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575282689507</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Auth">
+      <created>1575322520908</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1575322520908</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,9 +175,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="698" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080/-1792.0.1792.1120@0.0.1920.1080" timestamp="1575281502786" />
-    <state x="543" y="142" key="CommitChangelistDialog2" timestamp="1575282689337">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="507" y="147" key="CommitChangelistDialog2" timestamp="1575322520694">
+      <screen x="0" y="0" width="1792" height="1120" />
     </state>
+    <state x="507" y="147" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1575322520694" />
     <state x="543" y="142" key="CommitChangelistDialog2/0.0.1920.1080/-1792.0.1792.1120@0.0.1920.1080" timestamp="1575282689337" />
     <state width="1771" height="216" key="GridCell.Tab.0.bottom" timestamp="1575319801038">
       <screen x="0" y="0" width="1792" height="1120" />
@@ -216,24 +211,25 @@
     <state x="397" y="199" key="SettingsEditor/0.0.1792.1120@0.0.1792.1120" timestamp="1575312105138" />
     <state x="425" y="192" key="SettingsEditor/0.0.1920.1080/-1792.0.1792.1120@0.0.1920.1080" timestamp="1575301787517" />
     <state x="425" y="192" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1575273669737" />
-    <state x="560" y="280" key="Vcs.Push.Dialog.v2" timestamp="1575282693105">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="523" y="290" key="Vcs.Push.Dialog.v2" timestamp="1575322523429">
+      <screen x="0" y="0" width="1792" height="1120" />
     </state>
+    <state x="523" y="290" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1575322523429" />
     <state x="560" y="280" key="Vcs.Push.Dialog.v2/0.0.1920.1080/-1792.0.1792.1120@0.0.1920.1080" timestamp="1575282693105" />
     <state x="100" y="100" width="1592" height="920" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1575236301578">
       <screen x="0" y="23" width="1792" height="1025" />
     </state>
     <state x="100" y="100" width="1592" height="920" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1575236269934" />
     <state x="100" y="100" width="1592" height="920" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1792.1025@0.23.1792.1025" timestamp="1575236301578" />
-    <state x="594" y="196" width="732" height="689" key="find.popup" timestamp="1575293860500">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="554" y="203" width="683" height="714" key="find.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1575237781110" />
-    <state x="594" y="196" width="732" height="689" key="find.popup/0.0.1920.1080/-1792.0.1792.1120@0.0.1920.1080" timestamp="1575293860500" />
-    <state x="561" y="251" width="670" height="676" key="search.everywhere.popup" timestamp="1575322236244">
+    <state x="554" y="203" width="837" height="714" key="find.popup" timestamp="1575322637181">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="561" y="251" width="670" height="676" key="search.everywhere.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1575322236244" />
+    <state x="554" y="203" width="837" height="714" key="find.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1575322637181" />
+    <state x="594" y="196" width="732" height="689" key="find.popup/0.0.1920.1080/-1792.0.1792.1120@0.0.1920.1080" timestamp="1575293860500" />
+    <state x="561" y="251" width="670" height="676" key="search.everywhere.popup" timestamp="1575323163070">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="561" y="251" width="670" height="676" key="search.everywhere.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1575323163070" />
     <state x="601" y="242" width="718" height="652" key="search.everywhere.popup/0.0.1920.1080/-1792.0.1792.1120@0.0.1920.1080" timestamp="1575298104497" />
   </component>
 </project>
