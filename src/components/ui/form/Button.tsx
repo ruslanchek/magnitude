@@ -110,11 +110,11 @@ const styles = {
 
       &.focus {
         background-color: rgb(var(--ACCENT));
-        box-shadow: 0 0 0 3px rgba(var(--ACCENT), 0.33);
+        box-shadow: 0 0 0 3.5px rgba(var(--ACCENT), 0.33);
 
         &:active {
           background-color: hsl(var(--ACCENT_HSL_LIGHTEN));
-          box-shadow: 0 0 0 3px rgba(var(--ACCENT), 0.33), 0 0 0 0 rgba(var(--ACCENT), 0);
+          box-shadow: 0 0 0 3.5px rgba(var(--ACCENT), 0.33), 0 0 0 0 rgba(var(--ACCENT), 0);
         }
       }
     `,
@@ -250,11 +250,11 @@ const styles = {
 
       &.focus {
         background-color: rgb(var(--BUTTON_FACEBOOK));
-        box-shadow: 0 0 0 3px rgba(var(--BUTTON_FACEBOOK), 0.33);
+        box-shadow: 0 0 0 3.5px rgba(var(--BUTTON_FACEBOOK), 0.33);
 
         &:active {
           background-color: hsl(var(--BUTTON_FACEBOOK_HSL_LIGHTEN));
-          box-shadow: 0 0 0 3px rgba(var(--BUTTON_FACEBOOK), 0.33), 0 0 0 0 rgba(var(--BUTTON_FACEBOOK), 0);
+          box-shadow: 0 0 0 3.5px rgba(var(--BUTTON_FACEBOOK), 0.33), 0 0 0 0 rgba(var(--BUTTON_FACEBOOK), 0);
         }
       }
 
@@ -288,11 +288,11 @@ const styles = {
 
       &.focus {
         background-color: rgb(var(--BUTTON_GOOGLE));
-        box-shadow: 0 0 0 3px rgba(var(--BUTTON_GOOGLE), 0.33);
+        box-shadow: 0 0 0 3.5px rgba(var(--BUTTON_GOOGLE), 0.33);
 
         &:active {
           background-color: hsl(var(--BUTTON_GOOGLE_HSL_LIGHTEN));
-          box-shadow: 0 0 0 3px rgba(var(--BUTTON_GOOGLE), 0.33), 0 0 0 0 rgba(var(--BUTTON_GOOGLE), 0);
+          box-shadow: 0 0 0 3.5px rgba(var(--BUTTON_GOOGLE), 0.33), 0 0 0 0 rgba(var(--BUTTON_GOOGLE), 0);
         }
       }
     `,

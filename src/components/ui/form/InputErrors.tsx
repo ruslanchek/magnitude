@@ -2,6 +2,7 @@
 import { jsx, css, ClassNames } from '@emotion/core';
 import React, { useMemo } from 'react';
 import { CSSTransition } from 'react-transition-group';
+import { EOLocale } from 'eo-locale';
 
 interface IProps {
   errors: string[];
@@ -54,13 +55,16 @@ export const InputErrors: React.FC<IProps> = props => {
             enterActive: css(animations.enterActive),
             exit: css(animations.exit),
             exitActive: css(animations.exitActive),
-          }}
-        >
+          }}>
           <div css={[styles.root, additionalRootStyle]} onClick={handleClick}>
             <ul>
               {errors.map((error, key) => {
                 if (error) {
-                  return <li key={key}>{error}</li>;
+                  return (
+                    <li key={key}>
+                      <EOLocale.Text id={error} />
+                    </li>
+                  );
                 } else {
                   return null;
                 }

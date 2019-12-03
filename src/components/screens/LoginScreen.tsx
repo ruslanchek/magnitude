@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { css, jsx, keyframes } from '@emotion/core';
+import { css, jsx } from '@emotion/core';
 import React, { useCallback, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { ScreenWrapper } from '../ScreenWrapper';
@@ -12,8 +12,10 @@ import { Button } from '../ui/form/Button';
 import { Col } from '../ui/grid/Col';
 import { AuthApi } from '../../api/AuthApi';
 import { AppController } from '../../controllers/AppController';
-import { FormValidatorEmail, FormValidatorMinLength } from "../ui/form/validators/FormValidator";
+import { FormValidatorEmail, FormValidatorMinLength } from '../ui/form/validators/FormValidator';
 import { useOnlyUnauthorizedRoute } from '../../hooks/useOnlyAuthorizedRoute';
+import { EOLocale } from 'eo-locale';
+import { appTranslator } from '../../App';
 
 interface IModel {
   email: string;
@@ -50,9 +52,11 @@ export const LoginScreen: React.FC = () => {
             <div className='form'>
               <div className='fields'>
                 <div className='header'>
-                  <h2>Login</h2>
-                  <a className='faded' href={PATHS.AUTH_REGISTER}>
-                    Sign up
+                  <h2>
+                    <EOLocale.Text id='AuthScreen::LoginHeader' />
+                  </h2>
+                  <a className='light' href={PATHS.AUTH_REGISTER}>
+                    <EOLocale.Text id='AuthScreen::SignUpHeader' />
                   </a>
                 </div>
 
@@ -62,8 +66,8 @@ export const LoginScreen: React.FC = () => {
                       type='email'
                       name='email'
                       autoComplete='username'
-                      placeholder='example@domain.com'
-                      validators={[new FormValidatorEmail('Email is wrong')]}
+                      placeholder={appTranslator.translate('InputPlaceholder::Email')}
+                      validators={[new FormValidatorEmail('ValidationError::Email')]}
                     />
                   </Row>
 
@@ -72,22 +76,22 @@ export const LoginScreen: React.FC = () => {
                       type='password'
                       name='password'
                       autoComplete='current-password'
-                      placeholder='Password'
-                      validators={[new FormValidatorMinLength('Password minimal length is 6 symbols', 6)]}
+                      placeholder={appTranslator.translate('InputPlaceholder::Password')}
+                      validators={[new FormValidatorMinLength('ValidationError::PasswordLength', 6)]}
                     />
                   </Row>
 
                   <Row>
                     <Col>
                       <Button loading={loading} type='submit' color='default'>
-                        Login
+                        <EOLocale.Text id='AuthScreen::LoginButton' />
                       </Button>
                     </Col>
                   </Row>
                 </Form>
 
-                <a className='faded underline' href={PATHS.AUTH_LOGIN}>
-                  Don't remember your password?
+                <a className='light underline' href={PATHS.AUTH_LOGIN}>
+                  <EOLocale.Text id='AuthScreen::RememberPasswordLink' />
                 </a>
               </div>
             </div>
@@ -103,9 +107,12 @@ export const LoginScreen: React.FC = () => {
             </div>
 
             <div className='footer'>
-              © 2019&ndash;{new Date().toLocaleDateString('en', { year: 'numeric' })} Magnitude Services LLC.
+              <EOLocale.Text
+                id='Common::Copyright'
+                currentYear={new Date().toLocaleDateString('en', { year: 'numeric' })}
+              />
               <br />
-              All rights reserved.
+              <EOLocale.Text id='Common::AllRightsReserved' />
             </div>
           </div>
         </div>
@@ -114,23 +121,13 @@ export const LoginScreen: React.FC = () => {
   );
 };
 
-const bgAnimation = keyframes`
-  from {
-    background-size: 105%;
-  }
-  
-  to {
-    background-size: 100%;
-  }
-`;
-
 const styles = {
   root: css`
     display: grid;
     grid-template-columns: minmax(380px, 600px) minmax(600px, 0.6fr);
     width: 100vw;
     height: 100vh;
-    background-color: rgb(var(--BACKGROUND));
+    background-color: rgb(var(--BG));
 
     .minor {
       background-color: #364fcc;
@@ -141,7 +138,6 @@ const styles = {
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      animation: ${bgAnimation} 1s;
 
       .center {
         color: #fff;
@@ -158,7 +154,7 @@ const styles = {
     }
 
     .major {
-      background-color: rgb(var(--BACKGROUND));
+      background-color: rgb(var(--BG));
       background-image: url(${require('../../assets/images/patterns/topography.svg')});
       display: flex;
       flex-direction: column;
@@ -221,7 +217,7 @@ const styles = {
             margin: 5px 0;
 
             .icon {
-              color: rgb(var(--TEXT_LIGHT));
+              color: rgb(var(--TEXT_FADED));
               font-size: var(--FONT_SIZE_LARGE);
               margin-right: 10px;
               transform: translateY(-1px);

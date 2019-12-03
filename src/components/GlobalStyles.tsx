@@ -52,7 +52,7 @@ const styles = css`
   body {
     font-family: var(--FONT_FAMILY);
     margin: 0;
-    background-color: rgb(var(--BACKGROUND));
+    background-color: rgb(var(--BG));
     color: rgb(var(--TEXT));
     font-size: var(--FONT_SIZE_BASE);
     line-height: var(--GLOBAL_LINE_HEIGHT);
@@ -73,11 +73,11 @@ const styles = css`
       border-bottom-color: rgba(var(--ACCENT), 0.35);
     }
 
-    &.faded {
-      color: rgb(var(--TEXT_FADED));
+    &.light {
+      color: rgb(var(--TEXT_LIGHT));
 
       &.underline {
-        border-bottom-color: rgba(var(--TEXT_FADED), 0.35);
+        border-bottom-color: rgba(var(--TEXT_LIGHT), 0.35);
       }
     }
   }
@@ -91,11 +91,11 @@ const styles = css`
       border-bottom-color: hsla(var(--ACCENT_HSL_LIGHTEN), 0.35);
     }
 
-    &.faded {
-      color: hsl(var(--TEXT_FADED_HSL_DARKEN));
+    &.light {
+      color: hsl(var(--TEXT_LIGHT_HSL_DARKEN));
       
       &.underline {
-        border-bottom-color: hsla(var(--TEXT_FADED_HSL_DARKEN), 0.35);
+        border-bottom-color: hsla(var(--TEXT_LIGHT_HSL_DARKEN), 0.35);
       }
     }
   }

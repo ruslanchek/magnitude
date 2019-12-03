@@ -155,7 +155,7 @@ const styles = {
     border-right: none;
     box-sizing: border-box;
     padding: 0 var(--INPUT_SIDE_PADDING);
-    background-color: rgb(var(--ELEMENT_BACKGROUND_TINT));
+    background-color: rgb(var(--ELEMENT_BG_TINT));
     justify-content: center;
     align-items: center;
     display: flex;
@@ -168,7 +168,7 @@ const styles = {
     border-left: none;
     box-sizing: border-box;
     padding: 0 var(--INPUT_SIDE_PADDING);
-    background-color: rgb(var(--ELEMENT_BACKGROUND_TINT));
+    background-color: rgb(var(--ELEMENT_BG_TINT));
     justify-content: center;
     align-items: center;
     display: flex;

@@ -1,7 +1,10 @@
 import { useStore } from 'react-stores';
-import { appStore } from "../stores/appStore";
+import { appStore } from '../stores/appStore';
 
 export function useAppReady(): boolean {
-  const appState = useStore(appStore);
-  return appState.isReady;
+  return useStore(appStore, {
+    mapState: state => {
+      return state.isReady;
+    },
+  });
 }

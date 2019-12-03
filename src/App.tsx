@@ -1,11 +1,12 @@
 import React from 'react';
 import { RootRouter } from './RootRouter';
-import { EOLocale } from 'eo-locale';
-import { en } from './locales/en';
+import { EOLocale, Translator } from 'eo-locale';
+import { locales } from './locales/locales';
 
+export const appTranslator = new Translator('en', locales);
 export const App: React.FC = () => {
   return (
-    <EOLocale.Provider language='en' locales={en}>
+    <EOLocale.Provider language='en' locales={locales}>
       <div className='App'>
         <RootRouter />
       </div>

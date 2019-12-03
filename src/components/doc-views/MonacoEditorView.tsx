@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, css } from '@emotion/core';
+import { jsx } from '@emotion/core';
 import React, { useState, useRef, ChangeEvent, useCallback } from 'react';
 import Editor from '@monaco-editor/react';
 import { Store, useStore } from 'react-stores';
@@ -78,14 +78,14 @@ interface ILanguage {
 interface IStoreState {
   code: string;
   language: ILanguage;
-  autosave: boolean;
+  autoSave: boolean;
 }
 
 const store = new Store<IStoreState>(
   {
     code: '',
     language: LANGUAGES.typescript,
-    autosave: false,
+    autoSave: false,
   },
   {
     persistence: true,
@@ -123,15 +123,15 @@ export const MonacoEditorView: React.FC = () => {
     }
   };
 
-  const handleValueAutosave = useCallback(() => {
-    if (storeState.autosave) {
+  const handleValueAutoSave = useCallback(() => {
+    if (storeState.autoSave) {
       handleSaveValueFromEditorRef();
     }
-  }, [storeState.autosave, handleSaveValueFromEditorRef]);
+  }, [storeState.autoSave, handleSaveValueFromEditorRef]);
 
-  const handleToggleAutosave = () => {
+  const handleToggleAutoSave = () => {
     store.setState({
-      autosave: !storeState.autosave,
+      autoSave: !storeState.autoSave,
     });
   };
 
@@ -150,7 +150,7 @@ export const MonacoEditorView: React.FC = () => {
     editorRef.current = editor;
 
     if (editorRef.current) {
-      (editorRef.current as any).onDidChangeModelContent(handleValueAutosave);
+      (editorRef.current as any).onDidChangeModelContent(handleValueAutoSave);
     }
   });
 
@@ -162,11 +162,11 @@ export const MonacoEditorView: React.FC = () => {
         Save
       </button>
 
-      <button onClick={handleToggleAutosave} disabled={!isEditorReady}>
+      <button onClick={handleToggleAutoSave} disabled={!isEditorReady}>
         Autosave
       </button>
 
-      {storeState.autosave ? 'autosave on' : 'autosave off'}
+      {storeState.autoSave ? 'autosave on' : 'autosave off'}
 
       <select disabled={!isEditorReady} value={storeState.language.name} onChange={handleSelectLanguage}>
         {Object.keys(LANGUAGES).map(key => {

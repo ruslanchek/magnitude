@@ -2,8 +2,8 @@ import Color from 'color';
 
 export const COLORS = {
   WHITE: Color('#fff'),
-  BACKGROUND: Color('#fff'),
-  BACKGROUND_TINT: Color('#F5F5FC'),
+  BG: Color('#fff'),
+  BG_TINT: Color('#F7F8F9'),
 
   ACCENT: Color('#364FCC'),
   ERROR: Color('#EA4C89'),
@@ -16,5 +16,5 @@ export const COLORS = {
 
   INPUT_BORDER: Color('#CDCDDD'),
 
-  ELEMENT_BACKGROUND_TINT: Color('#E9EDFC')
+  ELEMENT_BG_TINT: Color('#E9EDFC')
 };
