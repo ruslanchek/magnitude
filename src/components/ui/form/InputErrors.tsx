@@ -102,7 +102,7 @@ const styles = {
   root: css`
     width: auto;
     bottom: calc(100% + 7px);
-    left: 0;
+    right: 0;
     position: absolute;
 
     > ul {
@@ -111,7 +111,7 @@ const styles = {
       margin: 0;
       color: rgb(var(--TEXT_ACCENT));
       list-style: none;
-      padding: 6px 0 5px;
+      padding: 5px 0;
       font-size: var(--FONT_SIZE_SMALL);
 
       > li {
@@ -121,7 +121,7 @@ const styles = {
 
       &:after {
         top: 100%;
-        left: calc(var(--INPUT_SIDE_PADDING) + 6px);
+        right: var(--BORDER_RADIUS_MEDIUM);
         border: 5px solid transparent;
         content: ' ';
         height: 0;

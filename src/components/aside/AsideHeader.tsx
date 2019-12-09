@@ -11,7 +11,7 @@ interface IProps {
 export const AsideHeader: React.FC<IProps> = ({ showSidePanel }) => {
   return (
     <div css={styles.root} className={showSidePanel ? 'wide' : 'narrow'}>
-      <NavLink to={PATHS.HOME} className='logo' />
+      <NavLink to={PATHS.HOME.path} className='logo' />
     </div>
   );
 };
@@ -37,13 +37,13 @@ const styles = {
     &.narrow {
       padding: 0;
       justify-content: center;
-      
+
       .logo {
         width: 42px;
         height: 42px;
         background-size: 230px;
         background-position: 0;
-         transform: translateX(0);
+        transform: translateX(-1px);
       }
     }
   `,
