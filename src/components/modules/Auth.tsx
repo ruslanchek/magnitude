@@ -88,7 +88,6 @@ export const Auth: React.FC<IProps> = ({ mode }) => {
         ENotificationType.Danger,
         appTranslator.translate(text),
         appTranslator.translate(title),
-        10000000,
       );
     }
   };
