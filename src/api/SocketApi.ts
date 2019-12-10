@@ -53,12 +53,12 @@ export class SocketApi extends Api {
     action: ESocketAction,
     packet: ClientDto,
   ): Promise<ISocketServerPacket<ServerDto>> {
-    return new Promise(resolve => {
+    return new Promise((resolve, reject) => {
       const askPacket = this.formAskPacket<ClientDto>(packet);
       const askAction = `${action}_${askPacket.ns}`;
 
       this.socket.on(askAction, (data: ISocketServerPacket<ServerDto>) => {
-        if (data.error && data.error.code === ESocketError.InvalidToken) {
+        if (data?.error?.code === ESocketError.InvalidToken) {
           this.logout();
         }
 

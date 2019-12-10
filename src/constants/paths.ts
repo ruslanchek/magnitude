@@ -20,4 +20,4 @@ export const PATHS: Record<string, IPath> = {
 };
 
 export const AUTHORIZED_ENTRY_POINT = PATHS.HOME;
-export const UNAUTHORIZED_ENTRY_POINT = PATHS.AUTH_REGISTER;
+export const UNAUTHORIZED_ENTRY_POINT = PATHS.AUTH_LOGIN;

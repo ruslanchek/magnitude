@@ -20,7 +20,7 @@ export class AppController {
   }
 
   private static async initSocket() {
-    SocketApi.onConnectionChanged(async (isConnected) => {
+    SocketApi.onConnectionChanged(async isConnected => {
       console.log('isConnected', isConnected);
 
       if (isConnected && appStore.state.isReady) {
@@ -36,13 +36,15 @@ export class AppController {
   }
 
   public static async initAuth() {
-    const isAuthorized = await AuthApi.authorize();
+    const authorize = await AuthApi.authorize();
     const me = await AuthApi.me();
 
     authStore.setState({
-      isAuthorized,
-      me,
+      isAuthorized: authorize.error === null,
+      me: me.data?.user || undefined,
     });
+
+    console.log(authStore.state);
   }
 
   private static async initSubscriptions() {

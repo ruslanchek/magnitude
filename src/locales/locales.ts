@@ -25,6 +25,9 @@ export const locales = [
 
       'Common::Copyright': '© 2018–{currentYear} Magnitude Services LLC.',
       'Common::AllRightsReserved': 'All rights reserved.',
+
+      'FormErrorsTitle::UserAlreadyExists': 'Sign up failed',
+      'FormErrorsMessage::UserAlreadyExists': 'User already exists',
     },
   },
 ];

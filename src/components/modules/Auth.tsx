@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core';
-import React, { useCallback, useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { useHistory, NavLink } from 'react-router-dom';
 import { Form } from '../ui/form/Form';
 import { Input } from '../ui/form/Input';
@@ -14,6 +14,8 @@ import { AppController } from '../../controllers/AppController';
 import { FormValidatorEmail, FormValidatorMinLength } from '../ui/form/validators/FormValidator';
 import { EOLocale } from 'eo-locale';
 import { appTranslator } from '../../App';
+import { NotificationsContext, ENotificationType } from '../ui/notifications/Notifications';
+import { ISocketServerError } from '@ruslanchek/magnitude-shared';
 
 export enum EMode {
   Login,
@@ -70,6 +72,7 @@ const STATEFUL_PATHS = {
 };
 
 export const Auth: React.FC<IProps> = ({ mode }) => {
+  const notificationsContext = useContext(NotificationsContext);
   const [loading, setLoading] = useState(false);
   const history = useHistory();
   const headerToggleLink1Path = STATEFUL_PATHS[mode].headerToggleLink1;
@@ -77,17 +80,32 @@ export const Auth: React.FC<IProps> = ({ mode }) => {
   const headerToggleLink1Text = STATEFUL_TEXTS[mode].headerToggleLink1;
   const headerToggleLink2Text = STATEFUL_TEXTS[mode].headerToggleLink2;
 
-  const handleSubmitLogin = async (model: IModel): Promise<boolean> => {
+  const showApiError = (error: ISocketServerError | null) => {
+    if (error?.message) {
+      const text = `FormErrorsMessage::${appTranslator.translate(error.message)}`;
+      const title = `FormErrorsTitle::${appTranslator.translate(error.message)}`;
+      notificationsContext.addNotification(
+        ENotificationType.Danger,
+        appTranslator.translate(text),
+        appTranslator.translate(title),
+        10000000,
+      );
+    }
+  };
+
+  const handleSubmitLogin = async (model: IModel) => {
     const result = await AuthApi.login(model.email, model.password);
-    if (result && result.token) {
+    showApiError(result?.error);
+    if (result.data?.token) {
       return true;
     }
     return false;
   };
 
-  const handleSubmitRegister = async (model: IModel): Promise<boolean> => {
+  const handleSubmitRegister = async (model: IModel) => {
     const result = await AuthApi.register(model.email, model.password);
-    if (result && result.token) {
+    showApiError(result?.error);
+    if (result.data?.token) {
       return true;
     }
     return false;

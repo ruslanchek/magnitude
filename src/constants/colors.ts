@@ -6,7 +6,7 @@ export const COLORS = {
   BG_TINT: Color('#F7F8F9'),
 
   ACCENT: Color('#364FCC'),
-  ERROR: Color('#FB4345'),
+  ERROR: Color('#fe346e'),
   SUCCESS: Color('#25D086'),
 
   TEXT: Color('#1D3342'),

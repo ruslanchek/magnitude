@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
-import React, { useRef } from 'react';
-import { GlobalStyles } from './GlobalStyles';
+import React from 'react';
 import { MainHeader } from './MainHeader';
 import { AsideNav } from './aside/AsideNav';
 import { AsideHeader } from './aside/AsideHeader';
@@ -12,12 +11,6 @@ import { useStore } from 'react-stores';
 import { localStore } from '../stores/localStore';
 import { useAuthorizedRoute } from '../hooks/useAuthorizedRoute';
 import { ERouteType } from '../constants/paths';
-import {
-  NotificationsContainer,
-  ENotificationsContainerVerticalPosition,
-  ENotificationsContainerHorizontalPosition,
-  INotificationsContainerHandlers,
-} from './ui/notifications/NotificationsContainer';
 
 interface IProps {
   routeType: ERouteType;
@@ -27,7 +20,6 @@ interface IProps {
 export const ScreenWrapper: React.FC<IProps> = props => {
   const { children, raw, routeType } = props;
   const isAppReady = useAppReady();
-  const notifications = useRef<INotificationsContainerHandlers>(null);
   const showSidePanel = useStore(localStore, {
     mapState: storeState => storeState.showSidePanel,
   });
@@ -36,18 +28,6 @@ export const ScreenWrapper: React.FC<IProps> = props => {
 
   return (
     <React.Fragment>
-      <NotificationsContainer
-        verticalOffset='20px'
-        horizontalOffset='20px'
-        verticalPosition={ENotificationsContainerVerticalPosition.Top}
-        horizontalPosition={ENotificationsContainerHorizontalPosition.Right}
-        rootContainerSelector='#root-notifications'
-        width='220px'
-        ref={notifications}
-      />
-
-      <GlobalStyles />
-
       {isAppReady ? (
         <React.Fragment>
           {raw ? (
