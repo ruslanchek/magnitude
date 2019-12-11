@@ -2,14 +2,16 @@
 import { jsx, css } from '@emotion/core';
 import React from 'react';
 import { FiChevronsLeft, FiChevronsRight } from 'react-icons/all';
-import { appTranslator } from '../../App';
 import { localStore } from '../../stores/localStore';
+import { useTranslator } from 'eo-locale';
 
 interface IProps {
   showSidePanel: boolean;
 }
 
 export const AsideFooter: React.FC<IProps> = ({ showSidePanel }) => {
+  const translator = useTranslator();
+
   const handleAsideTogglerClick = () => {
     localStore.setState({
       showSidePanel: !showSidePanel,
@@ -20,7 +22,7 @@ export const AsideFooter: React.FC<IProps> = ({ showSidePanel }) => {
     <div css={styles.root}>
       <span
         css={styles.asideToggler}
-        title={appTranslator.translate('Aside::ToggleSidebar')}
+        title={translator.translate('Aside::ToggleSidebar')}
         onClick={handleAsideTogglerClick}>
         {showSidePanel ? <FiChevronsLeft /> : <FiChevronsRight />}
       </span>

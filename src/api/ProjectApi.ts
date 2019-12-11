@@ -7,6 +7,6 @@ export class ProjectApi extends SocketApi {
       title,
     });
 
-    console.log(result);
+    return result;
   }
 }

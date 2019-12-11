@@ -9,10 +9,11 @@ import {
   ENotificationsHorizontalPosition,
 } from './components/ui/notifications/Notifications';
 
-export const appTranslator = new Translator('en', locales);
+const currentLanguage = 'en';
+
 export const App: React.FC = () => {
   return (
-    <EOLocale.Provider language='en' locales={locales}>
+    <EOLocale.Provider language={currentLanguage} locales={locales}>
       <GlobalStyles />
       <Notifications
         verticalOffset='20px'

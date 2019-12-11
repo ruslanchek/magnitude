@@ -11,8 +11,7 @@ import { Button } from '../ui/form/Button';
 import { Col } from '../ui/grid/Col';
 import { AuthApi } from '../../api/AuthApi';
 import { FormValidatorEmail, FormValidatorMinLength } from '../ui/form/validators/FormValidator';
-import { EOLocale } from 'eo-locale';
-import { appTranslator } from '../../App';
+import { EOLocale, useTranslator } from 'eo-locale';
 import { NotificationsContext, ENotificationType } from '../ui/notifications/Notifications';
 import { ISocketServerError } from '@ruslanchek/magnitude-shared';
 import { AppController } from '../../controllers/AppController';
@@ -72,6 +71,7 @@ const STATEFUL_PATHS = {
 };
 
 export const Auth: React.FC<IProps> = ({ mode }) => {
+  const translator = useTranslator();
   const notificationsContext = useContext(NotificationsContext);
   const [loading, setLoading] = useState(false);
   const history = useHistory();
@@ -82,12 +82,12 @@ export const Auth: React.FC<IProps> = ({ mode }) => {
 
   const showApiError = (error: ISocketServerError | null) => {
     if (error?.message) {
-      const text = `FormErrorsMessage::${appTranslator.translate(error.message)}`;
-      const title = `FormErrorsTitle::${appTranslator.translate(error.message)}`;
+      const text = `FormErrorsMessage::${translator.translate(error.message)}`;
+      const title = `FormErrorsTitle::${translator.translate(error.message)}`;
       notificationsContext.addNotification(
         ENotificationType.Danger,
-        appTranslator.translate(text),
-        appTranslator.translate(title),
+        translator.translate(text),
+        translator.translate(title),
       );
     }
   };
@@ -170,7 +170,7 @@ export const Auth: React.FC<IProps> = ({ mode }) => {
                     type='email'
                     name='email'
                     autoComplete='username'
-                    placeholder={appTranslator.translate('InputPlaceholder::Email')}
+                    placeholder={translator.translate('InputPlaceholder::Email')}
                     validators={[new FormValidatorEmail('ValidationError::Email')]}
                   />
                 </Row>
@@ -181,7 +181,7 @@ export const Auth: React.FC<IProps> = ({ mode }) => {
                       type='password'
                       name='password'
                       autoComplete='current-password'
-                      placeholder={appTranslator.translate('InputPlaceholder::Password')}
+                      placeholder={translator.translate('InputPlaceholder::Password')}
                       validators={[new FormValidatorMinLength('ValidationError::PasswordLength', 6)]}
                     />
                   </Row>
