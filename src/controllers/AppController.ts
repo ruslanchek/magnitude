@@ -1,5 +1,5 @@
 import { SocketApi } from '../api/SocketApi';
-import { ESocketAction, IServerDtoAuthMe, IServerDtoGetProjects } from '@ruslanchek/magnitude-shared';
+import { ESocketAction, IServerDtoAuthMe, IServerDtoGetOwnProjects } from '@ruslanchek/magnitude-shared';
 import { AuthApi } from '../api/AuthApi';
 import { authStore } from '../stores/authStore';
 import { appStore } from '../stores/appStore';
@@ -19,7 +19,7 @@ export class AppController {
   }
 
   private static async initSubscriptions() {
-    SocketApi.on<IServerDtoGetProjects>(ESocketAction.ProjectGetOwnProjects, e => {
+    SocketApi.on<IServerDtoGetOwnProjects>(ESocketAction.ProjectGetOwnProjects, e => {
       if (e.data?.list) {
         projectStore.setState({
           ownProjects: e.data.list,

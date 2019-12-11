@@ -15,7 +15,7 @@ export const HomeScreen: React.FC = () => {
       <div css={styles.root}>
         <Button
           onClick={async () => {
-            await ProjectApi.create('Private 2212212');
+            await ProjectApi.create('Private 221221sdasd2');
           }}>
           Create project
         </Button>
