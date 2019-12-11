@@ -1,11 +1,23 @@
-export const PATHS = {
-  HOME: '/',
-  ME: '/me',
-  TEAMS: '/teams',
-  PROJECTS: '/projects',
-  AUTH_LOGIN: '/auth/login',
-  AUTH_REGISTER: '/auth/register',
+export enum ERouteType {
+  Public,
+  Authorized,
+  Unauthorized,
+}
+
+export interface IPath {
+  path: string;
+  type: ERouteType;
+}
+
+export const PATHS: Record<string, IPath> = {
+  HOME: { path: '/', type: ERouteType.Authorized },
+  ME: { path: '/me', type: ERouteType.Authorized },
+  TEAMS: { path: '/teams', type: ERouteType.Authorized },
+  PROJECTS: { path: '/projects', type: ERouteType.Authorized },
+  AUTH_LOGIN: { path: '/auth/login', type: ERouteType.Unauthorized },
+  AUTH_REGISTER: { path: '/auth/register', type: ERouteType.Unauthorized },
+  AUTH_REMEMBER_PASSWORD: { path: '/auth/password-reset', type: ERouteType.Unauthorized },
 };
 
-export const PROTECTED_PATHS = [PATHS.ME, PATHS.HOME];
-export const ONLY_UNPROTECTED_ROUTES = [PATHS.AUTH_LOGIN, PATHS.AUTH_REGISTER];
+export const AUTHORIZED_ENTRY_POINT = PATHS.HOME;
+export const UNAUTHORIZED_ENTRY_POINT = PATHS.AUTH_LOGIN;

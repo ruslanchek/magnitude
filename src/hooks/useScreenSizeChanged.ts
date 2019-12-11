@@ -14,7 +14,7 @@ const isSsr = (): boolean => {
   return typeof window === 'undefined';
 };
 
-const getDeviceOrientation = (): TScreenOrientation | undefined => {
+function getDeviceOrientation(): TScreenOrientation | undefined {
   if (isSsr()) {
     return undefined;
   } else {
@@ -26,32 +26,30 @@ const getDeviceOrientation = (): TScreenOrientation | undefined => {
 
     return undefined;
   }
-};
+}
 
-const getWindowDimensions = (): {
+function getWindowDimensions(): {
   width: number;
   height: number;
-} => {
+} {
   if (isSsr()) {
     return {
       width: 0,
       height: 0,
     };
   } else {
-    return { width: window.innerWidth, height: window.innerWidth };
+    return { width: window.innerWidth, height: window.innerHeight };
   }
-};
+}
 
-export const useScreenSizeChanged = (
-  throttleTime: number = DEFAULT_THROTTLE_TIME,
-): IScreenSize => {
+export function useScreenSizeChanged(throttleTime: number = DEFAULT_THROTTLE_TIME): IScreenSize {
   const [screenSize, setScreenSize] = useState({
     ...getWindowDimensions(),
     orientation: getDeviceOrientation(),
   });
 
   useEffect(() => {
-    let timeout: NodeJS.Timeout | null = null;
+    let timeout: number = -1;
 
     const handleResize = () => {
       if (throttleTime > 0) {
@@ -59,7 +57,7 @@ export const useScreenSizeChanged = (
           clearTimeout(timeout);
         }
 
-        timeout = setTimeout(() => {
+        timeout = window.setTimeout(() => {
           setScreenSize({
             ...getWindowDimensions(),
             orientation: getDeviceOrientation(),
@@ -85,4 +83,4 @@ export const useScreenSizeChanged = (
   }, [throttleTime]);
 
   return screenSize;
-};
+}

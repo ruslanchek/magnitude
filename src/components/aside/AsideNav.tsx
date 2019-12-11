@@ -18,19 +18,19 @@ interface ILink {
 
 const LINKS: ILink[] = [
   {
-    path: PATHS.HOME,
+    path: PATHS.HOME.path,
     title: 'Nav::Home',
     icon: <FiCoffee />,
   },
 
   {
-    path: PATHS.PROJECTS,
+    path: PATHS.PROJECTS.path,
     title: 'Nav::Projects',
     icon: <FiClipboard />,
   },
 
   {
-    path: PATHS.TEAMS,
+    path: PATHS.TEAMS.path,
     title: 'Nav::Teams',
     icon: <FiUsers />,
   },

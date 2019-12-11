@@ -4,11 +4,11 @@ import React from 'react';
 import { ScreenWrapper } from '../ScreenWrapper';
 import { SwaggerView } from '../doc-views/SwaggerView';
 import { MonacoEditorView } from '../doc-views/MonacoEditorView';
-import { useAuthorizedRoute } from "../../hooks/useAuthorizedRoute";
+import { ERouteType } from '../../constants/paths';
 
 export const TestScreen: React.FC = () => {
   return (
-    <ScreenWrapper>
+    <ScreenWrapper raw={false} routeType={ERouteType.Authorized}>
       <div css={styles.root}>
         <SwaggerView />
         <MonacoEditorView />
@@ -19,6 +19,5 @@ export const TestScreen: React.FC = () => {
 
 const styles = {
   root: css``,
-
   wrapper: css``,
 };

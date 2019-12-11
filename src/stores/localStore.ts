@@ -5,9 +5,11 @@ interface IState {
 }
 
 // TODO: user-related persistence
-export const localStore = new Store<IState>({
-  showSidePanel: true,
-}, {
-  persistence: true,
-});
-
+export const localStore = new Store<IState>(
+  {
+    showSidePanel: true,
+  },
+  {
+    persistence: true,
+  },
+);

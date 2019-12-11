@@ -1,12 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
-import React, {
-  ChangeEvent,
-  useState,
-  useContext,
-  useCallback,
-  useEffect,
-} from 'react';
+import React, { ChangeEvent, useState, useContext, useCallback, useEffect } from 'react';
 import { FormContext } from './Form';
 import { FormValidator } from './validators/FormValidator';
 import { InputErrors } from './InputErrors';
@@ -19,16 +13,7 @@ interface IProps {
   readOnly?: boolean;
   disabled?: boolean;
   size?: 'small' | 'large';
-  type?:
-    | 'password'
-    | 'text'
-    | 'number'
-    | 'email'
-    | 'tel'
-    | 'date'
-    | 'datetime'
-    | 'month'
-    | 'search';
+  type?: 'password' | 'text' | 'number' | 'email' | 'tel' | 'date' | 'datetime' | 'month' | 'search';
   tabIndex?: number;
   autoComplete?: string;
   prefix?: string | React.ReactNode;
@@ -185,7 +170,7 @@ const styles = {
     border-radius: var(--BORDER_RADIUS_SMALL);
     color: rgb(var(--TEXT));
     font-family: var(--FONT_FAMILY);
-    padding: 0 var(--INPUT_SIDE_PADDING);   
+    padding: 0 var(--INPUT_SIDE_PADDING);
     box-sizing: border-box;
     text-overflow: ellipsis;
     transition: border-color 0.2s, box-shadow 0.2s;
@@ -197,11 +182,15 @@ const styles = {
 
     &:focus {
       border-color: rgb(var(--ACCENT));
-      box-shadow: 0 0 0 3.5px rgba(var(--ACCENT), .2);
+      box-shadow: 0 0 0 3.5px rgba(var(--ACCENT), 0.2);
     }
 
     &.error {
       border-color: rgb(var(--ERROR));
+
+      &:focus {
+        box-shadow: 0 0 0 3.5px rgba(var(--ERROR), 0.2);
+      }
     }
 
     &:disabled {

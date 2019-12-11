@@ -40,15 +40,10 @@ export const Row: React.FC<IProps> = props => {
         styles.root,
         css`
           grid-template-columns: ${columnsStyleString};
-          margin-bottom: ${overrideMargin >= 0
-            ? overrideMargin
-            : 'var(--GRID_GAP_SIZE)'};
-          grid-gap: ${overrideGridGap >= 0
-            ? overrideGridGap
-            : 'var(--GRID_GAP_SIZE)'};
+          margin-bottom: ${overrideMargin >= 0 ? overrideMargin : 'var(--GRID_GAP_SIZE)'};
+          grid-gap: ${overrideGridGap >= 0 ? overrideGridGap : 'var(--GRID_GAP_SIZE)'};
         `,
-      ]}
-    >
+      ]}>
       {children}
     </div>
   );

@@ -1,5 +1,5 @@
 import { Store } from 'react-stores';
-import {IEntityUserShared} from "@ruslanchek/magnitude-shared";
+import { IEntityUserShared } from '@ruslanchek/magnitude-shared';
 
 interface IState {
   me: IEntityUserShared | null;

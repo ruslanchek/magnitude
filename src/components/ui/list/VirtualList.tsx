@@ -1,12 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import React, {
-  CSSProperties,
-  memo,
-  useRef,
-  useEffect,
-  useCallback,
-} from 'react';
+import React, { CSSProperties, memo, useRef, useEffect, useCallback } from 'react';
 import { FixedSizeList, Align } from 'react-window';
 import { CustomScrollbars } from '../scrollbars/CustomScrollbars';
 
@@ -20,10 +14,7 @@ interface IProps<TItemData> {
   onScroll?: () => void;
 }
 
-type TRenderRowFunction<TItemData> = (
-  itemData: TItemData,
-  index: number,
-) => React.ReactNode;
+type TRenderRowFunction<TItemData> = (itemData: TItemData, index: number) => React.ReactNode;
 
 interface IListRowDataProps<TItemData> {
   dataList: TItemData[];
@@ -41,15 +32,7 @@ const CustomScrollbarsVirtualList = React.forwardRef((props, ref) => (
 ));
 
 export function VirtualList<TItemData>(props: IProps<TItemData>) {
-  const {
-    dataList,
-    height,
-    width,
-    itemHeight,
-    renderRow,
-    scrollToIndex,
-    onScroll = () => {},
-  } = props;
+  const { dataList, height, width, itemHeight, renderRow, scrollToIndex, onScroll = () => {} } = props;
 
   const listRef = useRef<FixedSizeList>(null);
   const createItemData = useCallback(
@@ -91,8 +74,7 @@ export function VirtualList<TItemData>(props: IProps<TItemData>) {
       itemSize={itemHeight}
       ref={listRef}
       width={width}
-      outerElementType={CustomScrollbarsVirtualList}
-    >
+      outerElementType={CustomScrollbarsVirtualList}>
       {row.current}
     </FixedSizeList>
   );

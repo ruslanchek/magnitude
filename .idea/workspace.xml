@@ -1,8 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="623d3edf-0097-4e2f-bf2b-f411e4681eb2" name="Default Changelist" comment="">
+    <list default="true" id="623d3edf-0097-4e2f-bf2b-f411e4681eb2" name="Default Changelist" comment="Auth">
+      <change afterPath="$PROJECT_DIR$/../magnitude-api/src/models/Entity.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../magnitude-api/src/models/ProjectEntity.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../magnitude-api/src/models/UserEntity.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../magnitude-api/src/socket/project/project.messages.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../magnitude-api/src/socket/project/project.validators.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/ProjectApi.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hooks/useMe.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../magnitude-api/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../magnitude-api/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../magnitude-api/src/helpers/db.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../magnitude-api/src/helpers/db.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../magnitude-api/src/helpers/server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../magnitude-api/src/helpers/server.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../magnitude-api/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../magnitude-api/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../magnitude-api/src/models/ProjectModel.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../magnitude-api/src/models/UserModel.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../magnitude-api/src/services/SocketService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../magnitude-api/src/services/SocketService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../magnitude-api/src/socket/auth/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../magnitude-api/src/socket/auth/auth.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../magnitude-api/src/socket/auth/auth.validators.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../magnitude-api/src/socket/auth/auth.validators.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../magnitude-api/src/socket/project/project.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../magnitude-api/src/socket/project/project.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../magnitude-api/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../magnitude-api/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../magnitude-api/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../magnitude-api/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../magnitude-shared/src/common/socket.enums.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../magnitude-shared/src/common/socket.enums.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../magnitude-shared/src/common/socket.interfaces.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../magnitude-shared/src/common/socket.interfaces.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../magnitude-shared/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../magnitude-shared/src/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/Api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/Api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/SocketApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/SocketApi.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/router.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GlobalStyles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GlobalStyles.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainHeader.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/modules/Auth.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/modules/Auth.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/screens/HomeScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/screens/HomeScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/form/Checkbox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/form/Checkbox.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/form/validators/FormValidator.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/form/validators/FormValidator.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/grid/Divider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/grid/Divider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/grid/Row.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/grid/Row.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/list/VirtualList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/list/VirtualList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/loading/ActivityIndicator.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/loading/ActivityIndicator.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/scrollbars/CustomScrollbars.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/scrollbars/CustomScrollbars.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/AppController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/AppController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useBreakpoint.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useBreakpoint.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useCssVariableNumber.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useCssVariableNumber.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useCssVariableString.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useCssVariableString.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useDetectedScrollbarWidth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useDetectedScrollbarWidth.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useOnClickOutside.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useOnClickOutside.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/usePortal.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/usePortal.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useScreenSizeChanged.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useScreenSizeChanged.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/serviceWorker.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/serviceWorker.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stores/localStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/stores/localStore.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,7 +67,13 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../magnitude-api" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
   </component>
   <component name="ProjectId" id="1UOTjmZ60HCybsqh7xyEaSAEi8o" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -32,7 +88,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/stores" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../magnitude-api/src/socket/project" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -42,26 +98,26 @@
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-    <property name="ts.external.directory.path" value="$PROJECT_DIR$/../magnitude-api/node_modules/typescript/lib" />
+    <property name="settings.editor.selected.configurable" value="settings.typescriptcompiler" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/stores" />
-      <recent name="$PROJECT_DIR$/src/components" />
-      <recent name="$PROJECT_DIR$/src/hooks" />
-      <recent name="$PROJECT_DIR$/src/components/ui" />
-      <recent name="$PROJECT_DIR$/src/assets/images/patterns" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../magnitude-shared/src/modules/auth" />
+      <recent name="$PROJECT_DIR$/../magnitude-shared/src/modules" />
       <recent name="$PROJECT_DIR$/src/components/aside" />
       <recent name="$PROJECT_DIR$/src/assets/images/logos" />
       <recent name="$PROJECT_DIR$/src/components/ui" />
-      <recent name="$PROJECT_DIR$/src/components/ui/nav" />
-      <recent name="$PROJECT_DIR$/src/controllers" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../magnitude-api/src/socket/project" />
+      <recent name="$PROJECT_DIR$/src/api" />
+      <recent name="$PROJECT_DIR$/src/stores" />
+      <recent name="$PROJECT_DIR$/src/components" />
+      <recent name="$PROJECT_DIR$/src/hooks" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.frontend">
+  <component name="RunManager" selected="npm.backend">
     <configuration name="backend" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/../magnitude-api/package.json" />
       <command value="run" />
@@ -126,6 +182,10 @@
       <workItem from="1575371204182" duration="11922000" />
       <workItem from="1575397081341" duration="357000" />
       <workItem from="1575867845633" duration="46000" />
+      <workItem from="1575896550646" duration="5217000" />
+      <workItem from="1576061361776" duration="717000" />
+      <workItem from="1576062144725" duration="4538000" />
+      <workItem from="1576072663196" duration="12801000" />
     </task>
     <task id="LOCAL-00001" summary="Auth">
       <created>1575278797715</created>
@@ -162,7 +222,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575397217221</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Auth">
+      <created>1575896920732</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1575896920732</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,67 +247,73 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="360" y="222" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1575227280230" />
-    <state x="698" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1575281502786">
+    <state x="698" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1575902698005">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="698" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080/-1792.0.1792.1120@0.0.1920.1080" timestamp="1575281502786" />
-    <state x="507" y="147" key="CommitChangelistDialog2" timestamp="1575397216978">
-      <screen x="0" y="0" width="1792" height="1120" />
+    <state x="698" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080/-1792.0.1792.1120@0.0.1920.1080" timestamp="1575902698005" />
+    <state x="543" y="142" key="CommitChangelistDialog2" timestamp="1575903081911">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="507" y="147" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1575397216978" />
-    <state x="543" y="142" key="CommitChangelistDialog2/0.0.1920.1080/-1792.0.1792.1120@0.0.1920.1080" timestamp="1575282689337" />
-    <state width="1771" height="389" key="GridCell.Tab.0.bottom" timestamp="1575548763346">
-      <screen x="0" y="23" width="1792" height="1025" />
+    <state x="543" y="142" key="CommitChangelistDialog2/0.0.1920.1080/-1792.0.1792.1120@0.0.1920.1080" timestamp="1575903081911" />
+    <state width="1771" height="296" key="GridCell.Tab.0.bottom" timestamp="1576095385616">
+      <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1771" height="389" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1575397100997" />
-    <state width="1899" height="306" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1792.0.1792.1120@0.0.1920.1080" timestamp="1575301756803" />
+    <state width="1771" height="296" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1576095385616" />
+    <state width="1899" height="284" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1792.0.1792.1120@0.0.1920.1080" timestamp="1576080283381" />
     <state width="1899" height="374" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1575376753778" />
     <state width="1771" height="216" key="GridCell.Tab.0.bottom/0.0.2560.1440@0.0.2560.1440" timestamp="1575364532977" />
     <state width="1771" height="389" key="GridCell.Tab.0.bottom/0.23.1792.1025@0.23.1792.1025" timestamp="1575548763346" />
-    <state width="1899" height="197" key="GridCell.Tab.0.bottom/0.23.1920.981/-1792.23.1792.1097@0.23.1920.981" timestamp="1575280529422" />
-    <state width="1771" height="389" key="GridCell.Tab.0.center" timestamp="1575548763345">
-      <screen x="0" y="23" width="1792" height="1025" />
+    <state width="939" height="246" key="GridCell.Tab.0.bottom/0.23.1920.979/-1792.23.1792.1097@0.23.1920.979" timestamp="1575904309349" />
+    <state width="1899" height="284" key="GridCell.Tab.0.bottom/0.23.1920.981/-1792.23.1792.1097@0.23.1920.981" timestamp="1576072654218" />
+    <state width="1771" height="296" key="GridCell.Tab.0.center" timestamp="1576095385616">
+      <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1771" height="389" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1575397100996" />
-    <state width="1899" height="306" key="GridCell.Tab.0.center/0.0.1920.1080/-1792.0.1792.1120@0.0.1920.1080" timestamp="1575301756801" />
+    <state width="1771" height="296" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1576095385616" />
+    <state width="1899" height="284" key="GridCell.Tab.0.center/0.0.1920.1080/-1792.0.1792.1120@0.0.1920.1080" timestamp="1576080283380" />
     <state width="1899" height="374" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1575376753777" />
     <state width="1771" height="216" key="GridCell.Tab.0.center/0.0.2560.1440@0.0.2560.1440" timestamp="1575364532976" />
     <state width="1771" height="389" key="GridCell.Tab.0.center/0.23.1792.1025@0.23.1792.1025" timestamp="1575548763345" />
-    <state width="1899" height="197" key="GridCell.Tab.0.center/0.23.1920.981/-1792.23.1792.1097@0.23.1920.981" timestamp="1575280529421" />
-    <state width="1771" height="389" key="GridCell.Tab.0.left" timestamp="1575548763344">
-      <screen x="0" y="23" width="1792" height="1025" />
+    <state width="939" height="246" key="GridCell.Tab.0.center/0.23.1920.979/-1792.23.1792.1097@0.23.1920.979" timestamp="1575904309348" />
+    <state width="1899" height="284" key="GridCell.Tab.0.center/0.23.1920.981/-1792.23.1792.1097@0.23.1920.981" timestamp="1576072654217" />
+    <state width="1771" height="296" key="GridCell.Tab.0.left" timestamp="1576095385615">
+      <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1771" height="389" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1575397100996" />
-    <state width="1899" height="306" key="GridCell.Tab.0.left/0.0.1920.1080/-1792.0.1792.1120@0.0.1920.1080" timestamp="1575301756800" />
+    <state width="1771" height="296" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1576095385615" />
+    <state width="1899" height="284" key="GridCell.Tab.0.left/0.0.1920.1080/-1792.0.1792.1120@0.0.1920.1080" timestamp="1576080283378" />
     <state width="1899" height="197" key="GridCell.Tab.0.left/0.0.1920.1080/-1792.0.1792.1120@0.23.1920.981" timestamp="1575280529413" />
     <state width="1899" height="374" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1575376753776" />
     <state width="1771" height="216" key="GridCell.Tab.0.left/0.0.2560.1440@0.0.2560.1440" timestamp="1575364532975" />
     <state width="1771" height="389" key="GridCell.Tab.0.left/0.23.1792.1025@0.23.1792.1025" timestamp="1575548763344" />
-    <state width="1899" height="197" key="GridCell.Tab.0.left/0.23.1920.981/-1792.23.1792.1097@0.23.1920.981" timestamp="1575280529421" />
-    <state width="1771" height="389" key="GridCell.Tab.0.right" timestamp="1575548763345">
-      <screen x="0" y="23" width="1792" height="1025" />
+    <state width="939" height="246" key="GridCell.Tab.0.left/0.23.1920.979/-1792.23.1792.1097@0.23.1920.979" timestamp="1575904309348" />
+    <state width="1899" height="284" key="GridCell.Tab.0.left/0.23.1920.981/-1792.23.1792.1097@0.23.1920.981" timestamp="1576072654216" />
+    <state width="1771" height="296" key="GridCell.Tab.0.right" timestamp="1576095385616">
+      <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1771" height="389" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1575397100997" />
-    <state width="1899" height="306" key="GridCell.Tab.0.right/0.0.1920.1080/-1792.0.1792.1120@0.0.1920.1080" timestamp="1575301756802" />
+    <state width="1771" height="296" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1576095385616" />
+    <state width="1899" height="284" key="GridCell.Tab.0.right/0.0.1920.1080/-1792.0.1792.1120@0.0.1920.1080" timestamp="1576080283380" />
     <state width="1899" height="374" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1575376753778" />
     <state width="1771" height="216" key="GridCell.Tab.0.right/0.0.2560.1440@0.0.2560.1440" timestamp="1575364532976" />
     <state width="1771" height="389" key="GridCell.Tab.0.right/0.23.1792.1025@0.23.1792.1025" timestamp="1575548763345" />
-    <state width="1899" height="197" key="GridCell.Tab.0.right/0.23.1920.981/-1792.23.1792.1097@0.23.1920.981" timestamp="1575280529422" />
-    <state x="397" y="199" key="SettingsEditor" timestamp="1575867857162">
-      <screen x="0" y="0" width="1792" height="1120" />
+    <state width="939" height="246" key="GridCell.Tab.0.right/0.23.1920.979/-1792.23.1792.1097@0.23.1920.979" timestamp="1575904309348" />
+    <state width="1899" height="284" key="GridCell.Tab.0.right/0.23.1920.981/-1792.23.1792.1097@0.23.1920.981" timestamp="1576072654217" />
+    <state x="437" y="133" width="997" height="722" key="SettingsEditor" timestamp="1576068608305">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="397" y="199" key="SettingsEditor/0.0.1792.1120@0.0.1792.1120" timestamp="1575867857162" />
-    <state x="425" y="192" key="SettingsEditor/0.0.1920.1080/-1792.0.1792.1120@0.0.1920.1080" timestamp="1575301787517" />
+    <state x="437" y="133" width="997" height="746" key="SettingsEditor/0.0.1920.1080/-1792.0.1792.1120@0.0.1920.1080" timestamp="1576068608305" />
     <state x="425" y="192" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1575273669737" />
+    <state x="437" y="144" width="997" height="722" key="SettingsEditor/0.23.1920.979/-1792.23.1792.1097@0.23.1920.979" timestamp="1575904290996" />
     <state x="523" y="290" key="Vcs.Push.Dialog.v2" timestamp="1575397219208">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="523" y="290" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1575397219208" />
     <state x="560" y="280" key="Vcs.Push.Dialog.v2/0.0.1920.1080/-1792.0.1792.1120@0.0.1920.1080" timestamp="1575282693105" />
-    <state x="100" y="100" width="1592" height="920" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1575397156080">
-      <screen x="0" y="0" width="1792" height="1120" />
+    <state x="107" y="96" width="1706" height="888" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1576065424146">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="100" y="100" width="1592" height="920" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1575397156080" />
+    <state x="107" y="96" width="1706" height="888" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1080/-1792.0.1792.1120@0.0.1920.1080" timestamp="1576065424146" />
     <state x="100" y="100" width="1592" height="920" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1792.1025@0.23.1792.1025" timestamp="1575236301578" />
     <state x="594" y="196" width="897" height="689" key="find.popup" timestamp="1575390636011">
       <screen x="0" y="0" width="1920" height="1080" />
@@ -248,11 +321,11 @@
     <state x="554" y="203" width="837" height="714" key="find.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1575322637181" />
     <state x="594" y="196" width="732" height="689" key="find.popup/0.0.1920.1080/-1792.0.1792.1120@0.0.1920.1080" timestamp="1575293860500" />
     <state x="594" y="196" width="897" height="689" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1575390636011" />
-    <state x="561" y="251" width="670" height="676" key="search.everywhere.popup" timestamp="1575396541640">
-      <screen x="0" y="0" width="1792" height="1120" />
+    <state x="601" y="242" width="718" height="652" key="search.everywhere.popup" timestamp="1576081755671">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="561" y="251" width="670" height="676" key="search.everywhere.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1575396541640" />
-    <state x="601" y="242" width="718" height="652" key="search.everywhere.popup/0.0.1920.1080/-1792.0.1792.1120@0.0.1920.1080" timestamp="1575298104497" />
+    <state x="601" y="242" width="718" height="652" key="search.everywhere.popup/0.0.1920.1080/-1792.0.1792.1120@0.0.1920.1080" timestamp="1576081755671" />
     <state x="601" y="242" width="718" height="652" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1575391534187" />
   </component>
 </project>

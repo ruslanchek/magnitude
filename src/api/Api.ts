@@ -1,5 +1,5 @@
 import { cookieStorage } from '../common/cookie';
-import { authStore } from "../stores/authStore";
+import { authStore } from '../stores/authStore';
 
 export abstract class Api {
   public static getToken(): string | null {

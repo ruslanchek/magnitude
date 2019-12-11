@@ -50,7 +50,7 @@ export const Button: React.FC<IProps> = props => {
       }}
       css={[styles.root, styles.sizes[size || 'large'], styles.colors[color || 'default']]}
       onClick={handleClick}>
-      {loading ? <ActivityIndicator size='small' color="#fff"/> : children}
+      {loading ? <ActivityIndicator size='small' color='#fff' /> : children}
     </button>
   );
 };
@@ -59,7 +59,7 @@ const styles = {
   root: css`
     padding: 0 calc(var(--INPUT_SIDE_PADDING) * 1.5);
     font-family: var(--FONT_FAMILY);
-    width: 150px;
+    min-width: 180px;
     border: none;
     background: none;
     outline: none;

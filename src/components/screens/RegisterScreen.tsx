@@ -1,18 +1,14 @@
 /** @jsx jsx */
-import { css, jsx } from '@emotion/core';
+import { jsx } from '@emotion/core';
 import React from 'react';
 import { ScreenWrapper } from '../ScreenWrapper';
+import { Auth, EMode } from '../modules/Auth';
+import { ERouteType } from '../../constants/paths';
 
 export const RegisterScreen: React.FC = () => {
   return (
-    <ScreenWrapper>
-      <div css={styles.root}>Register</div>
+    <ScreenWrapper raw={true} routeType={ERouteType.Unauthorized}>
+      <Auth mode={EMode.Register} />
     </ScreenWrapper>
   );
-};
-
-const styles = {
-  root: css``,
-
-  wrapper: css``,
 };

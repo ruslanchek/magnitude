@@ -9,16 +9,11 @@ import {
   IServerDtoAuthLogin,
   IClientDtoAuthMe,
   IServerDtoAuthMe,
-  IEntityUserShared,
 } from '@ruslanchek/magnitude-shared';
 
 export class AuthApi extends SocketApi {
-  static async authorize(): Promise<boolean> {
-    const result = await this.ask<IClientDtoAuthAuthorize, IServerDtoAuthAuthorize>(ESocketAction.AuthAuthorize, {});
-
-    console.log(result);
-
-    return !result?.error;
+  static async authorize() {
+    return await this.ask<IClientDtoAuthAuthorize, IServerDtoAuthAuthorize>(ESocketAction.AuthAuthorize, {});
   }
 
   static async register(email: string, password: string) {
@@ -26,34 +21,24 @@ export class AuthApi extends SocketApi {
       email,
       password,
     });
-
     if (result.data) {
       this.setToken(result.data.token);
     }
-
-    console.log(result);
+    return result;
   }
 
-  static async login(email: string, password: string): Promise<IServerDtoAuthLogin | null> {
+  static async login(email: string, password: string) {
     const result = await this.ask<IClientDtoAuthLogin, IServerDtoAuthLogin>(ESocketAction.AuthLogin, {
       email,
       password,
     });
-
     if (result.data) {
       this.setToken(result.data.token);
     }
-
-    return result.data;
+    return result;
   }
 
-  static async me(): Promise<IEntityUserShared | null> {
-    const result = await this.ask<IClientDtoAuthMe, IServerDtoAuthMe>(ESocketAction.AuthMe, {});
-
-    if (result?.data) {
-      return result.data.user;
-    } else {
-      return null;
-    }
+  static async me() {
+    return await this.ask<IClientDtoAuthMe, IServerDtoAuthMe>(ESocketAction.AuthMe, {});
   }
 }

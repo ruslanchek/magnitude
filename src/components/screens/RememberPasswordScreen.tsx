@@ -5,10 +5,10 @@ import { ScreenWrapper } from '../ScreenWrapper';
 import { Auth, EMode } from '../modules/Auth';
 import { ERouteType } from '../../constants/paths';
 
-export const LoginScreen: React.FC = () => {
+export const RememberPasswordScreen: React.FC = () => {
   return (
     <ScreenWrapper raw={true} routeType={ERouteType.Unauthorized}>
-      <Auth mode={EMode.Login} />
+      <Auth mode={EMode.RememberPassword} />
     </ScreenWrapper>
   );
 };

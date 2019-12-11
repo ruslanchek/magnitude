@@ -1,12 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
-import React, {
-  CSSProperties,
-  useEffect,
-  useRef,
-  useCallback,
-  useMemo,
-} from 'react';
+import React, { CSSProperties, useEffect, useRef, useCallback, useMemo } from 'react';
 import { Scrollbars } from 'eo-react-custom-scrollbars';
 import { useDetectedScrollbarWidth } from '../../../hooks/useDetectedScrollbarWidth';
 
@@ -49,10 +43,7 @@ export const CustomScrollbars: React.FC<IProps> = props => {
   } = props;
   const scrollbarsRef = useRef<Scrollbars>(null);
   const scrollbarsNativeRef = useRef<HTMLDivElement>(null);
-  const detectedScrollbarWidth = useDetectedScrollbarWidth([
-    scrollbarsRef,
-    scrollbarsNativeRef,
-  ]);
+  const detectedScrollbarWidth = useDetectedScrollbarWidth([scrollbarsRef, scrollbarsNativeRef]);
   let { useNative: useNativeProps } = props;
 
   const [scrollbarWidth, useNative] = useMemo(() => {
@@ -72,10 +63,7 @@ export const CustomScrollbars: React.FC<IProps> = props => {
     if (!forwardedRef) {
       if (useNative) {
         if (scrollbarsNativeRef && scrollbarsNativeRef.current) {
-          let {
-            scrollTop: top,
-            scrollLeft: left,
-          } = scrollbarsNativeRef.current;
+          let { scrollTop: top, scrollLeft: left } = scrollbarsNativeRef.current;
 
           if (!scrollLeft && !scrollTop) {
             return;
@@ -132,8 +120,7 @@ export const CustomScrollbars: React.FC<IProps> = props => {
         onScroll={onScroll ? onScroll : () => {}}
         css={styles.rootNative}
         style={{ ...style }}
-        ref={forwardedRef ? refSetter : scrollbarsNativeRef}
-      >
+        ref={forwardedRef ? refSetter : scrollbarsNativeRef}>
         {children}
       </div>
     );
@@ -165,22 +152,11 @@ export const CustomScrollbars: React.FC<IProps> = props => {
         onScrollStart={onScrollStart ? onScrollStart : () => {}}
         onScrollFrame={onScrollFrame ? onScrollFrame : () => {}}
         onScrollStop={onScrollStop ? onScrollStop : () => {}}
-        renderView={style => (
-          <div css={[styles.view, viewStyles]} style={style} />
-        )}
-        renderTrackVertical={style => (
-          <div css={styles.trackVertical} style={style} />
-        )}
-        renderThumbVertical={style => (
-          <div css={styles.thumbVertical} style={style} />
-        )}
-        renderTrackHorizontal={style => (
-          <div css={styles.trackHorizontal} style={style} />
-        )}
-        renderThumbHorizontal={style => (
-          <div css={styles.thumbHorizontal} style={style} />
-        )}
-      >
+        renderView={style => <div css={[styles.view, viewStyles]} style={style} />}
+        renderTrackVertical={style => <div css={styles.trackVertical} style={style} />}
+        renderThumbVertical={style => <div css={styles.thumbVertical} style={style} />}
+        renderTrackHorizontal={style => <div css={styles.trackHorizontal} style={style} />}
+        renderThumbHorizontal={style => <div css={styles.thumbHorizontal} style={style} />}>
         <div css={viewInnerStyles}>{children}</div>
       </Scrollbars>
     );
