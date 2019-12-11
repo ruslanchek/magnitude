@@ -1,8 +1,9 @@
 import { SocketApi } from '../api/SocketApi';
-import { ESocketAction } from '@ruslanchek/magnitude-shared';
+import { ESocketAction, IServerDtoAuthMe, IServerDtoGetProjects } from '@ruslanchek/magnitude-shared';
 import { AuthApi } from '../api/AuthApi';
 import { authStore } from '../stores/authStore';
 import { appStore } from '../stores/appStore';
+import { projectStore } from '../stores/projectStore';
 
 export class AppController {
   static async init(): Promise<void> {
@@ -14,6 +15,24 @@ export class AppController {
     await Promise.all([this.initSubscriptions(), this.initAuth()]);
     appStore.setState({
       isReady: true,
+    });
+  }
+
+  private static async initSubscriptions() {
+    SocketApi.on<IServerDtoGetProjects>(ESocketAction.ProjectGetOwnProjects, e => {
+      if (e.data?.list) {
+        projectStore.setState({
+          ownProjects: e.data.list,
+        });
+      }
+    });
+
+    SocketApi.on<IServerDtoAuthMe>(ESocketAction.AuthMe, e => {
+      if (e.data?.user) {
+        authStore.setState({
+          me: e.data.user,
+        });
+      }
     });
   }
 
@@ -43,11 +62,5 @@ export class AppController {
     });
 
     console.log(authStore.state);
-  }
-
-  private static async initSubscriptions() {
-    SocketApi.on(ESocketAction.AuthMe, e => {
-      console.log(e);
-    });
   }
 }
