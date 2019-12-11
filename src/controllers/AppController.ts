@@ -60,7 +60,5 @@ export class AppController {
       isAuthorized: authorize.error === null,
       me: me?.data?.user || undefined,
     });
-
-    console.log(authStore.state);
   }
 }
