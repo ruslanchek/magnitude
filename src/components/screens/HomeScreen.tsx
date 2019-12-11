@@ -12,7 +12,7 @@ export const HomeScreen: React.FC = () => {
       <div css={styles.root}>
         <Button
           onClick={async () => {
-            await ProjectApi.create('Private');
+            await ProjectApi.create('Private 2212212');
           }}>
           Create project
         </Button>

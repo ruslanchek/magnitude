@@ -3,7 +3,6 @@ import { ESocketAction, IClientDtoProjectCreate, IServerDtoProjectCreate } from 
 
 export class ProjectApi extends SocketApi {
   static async create(title: string) {
-    console.log('xxx');
     const result = await this.ask<IClientDtoProjectCreate, IServerDtoProjectCreate>(ESocketAction.ProjectCreate, {
       title,
     });
