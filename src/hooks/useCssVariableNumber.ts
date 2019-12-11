@@ -1,14 +1,8 @@
 import { useMemo } from 'react';
 
-export const useCssVariableNumber = (
-  variableName: string,
-  deps: any[] = [],
-): number => {
+export function useCssVariableNumber(variableName: string, deps: any[] = []): number {
   return useMemo(() => {
-    let value = parseInt(
-      getComputedStyle(document.documentElement).getPropertyValue(variableName),
-      10,
-    );
+    let value = parseInt(getComputedStyle(document.documentElement).getPropertyValue(variableName), 10);
 
     if (isNaN(value)) {
       value = 0;
@@ -16,4 +10,4 @@ export const useCssVariableNumber = (
 
     return value;
   }, deps);
-};
+}

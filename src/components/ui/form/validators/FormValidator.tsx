@@ -2,9 +2,7 @@ export abstract class FormValidator {
   abstract readonly errorText: string;
   public isValid: boolean | undefined = undefined;
 
-  abstract validate(
-    value: string | undefined,
-  ): { isValid: boolean; errorText: string | null };
+  abstract validate(value: string | undefined): { isValid: boolean; errorText: string | null };
 
   modelGetter(): { [key: string]: string } {
     return {};

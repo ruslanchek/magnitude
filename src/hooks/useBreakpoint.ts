@@ -70,11 +70,11 @@ const calculateValue = <T>(
   }
 };
 
-export const useBreakpoint = <T = any>(
+export function useBreakpoint<T = any>(
   defaultValue: T,
   breakpoints: IBreakpoint<T>[] | undefined,
   throttleTime: number = DEFAULT_THROTTLE_TIME,
-): T | undefined => {
+): T | undefined {
   const screenSize = useScreenSizeChanged(throttleTime);
   const minMobile = useCssVariableNumber('--MOBILE_MIN');
   const maxMobile = useCssVariableNumber('--MOBILE_MAX');
@@ -84,4 +84,4 @@ export const useBreakpoint = <T = any>(
   return useMemo(() => {
     return calculateValue<T>(defaultValue, breakpoints, screenSize.width, minMobile, maxMobile, minDesktop, maxDesktop);
   }, [defaultValue, breakpoints, screenSize.width, minMobile, maxMobile, minDesktop, maxDesktop]);
-};
+}

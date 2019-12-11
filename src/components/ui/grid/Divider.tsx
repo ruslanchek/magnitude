@@ -16,14 +16,11 @@ export const Divider: React.FC<IProps> = props => {
       css={[
         styles.root,
         css`
-          margin-bottom: ${props.overrideMargin !== undefined &&
-          props.overrideMargin >= 0
+          margin-bottom: ${props.overrideMargin !== undefined && props.overrideMargin >= 0
             ? props.overrideMargin
             : gridGapSize}px;
 
-          border-top: ${props.noBorder
-            ? 'none'
-            : '1px solid rgb(var(--ELEMENT_BORDER));'};
+          border-top: ${props.noBorder ? 'none' : '1px solid rgb(var(--ELEMENT_BORDER));'};
         `,
       ]}
     />

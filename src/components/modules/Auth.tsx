@@ -10,12 +10,12 @@ import { PATHS } from '../../constants/paths';
 import { Button } from '../ui/form/Button';
 import { Col } from '../ui/grid/Col';
 import { AuthApi } from '../../api/AuthApi';
-import { AppController } from '../../controllers/AppController';
 import { FormValidatorEmail, FormValidatorMinLength } from '../ui/form/validators/FormValidator';
 import { EOLocale } from 'eo-locale';
 import { appTranslator } from '../../App';
 import { NotificationsContext, ENotificationType } from '../ui/notifications/Notifications';
 import { ISocketServerError } from '@ruslanchek/magnitude-shared';
+import { AppController } from '../../controllers/AppController';
 
 export enum EMode {
   Login,
@@ -95,19 +95,13 @@ export const Auth: React.FC<IProps> = ({ mode }) => {
   const handleSubmitLogin = async (model: IModel) => {
     const result = await AuthApi.login(model.email, model.password);
     showApiError(result?.error);
-    if (result.data?.token) {
-      return true;
-    }
-    return false;
+    return !!result?.data?.token;
   };
 
   const handleSubmitRegister = async (model: IModel) => {
     const result = await AuthApi.register(model.email, model.password);
     showApiError(result?.error);
-    if (result.data?.token) {
-      return true;
-    }
-    return false;
+    return !!result?.data?.token;
   };
 
   const handleSubmit = async (model: IModel) => {

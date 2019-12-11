@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 
-export const useDetectedScrollbarWidth = (deps: any[]): number | undefined => {
+export function useDetectedScrollbarWidth(deps: any[]): number | undefined {
   return useMemo(() => {
     try {
       const inner = document.createElement('p');
@@ -37,4 +37,4 @@ export const useDetectedScrollbarWidth = (deps: any[]): number | undefined => {
       return undefined;
     }
   }, deps);
-};
+}

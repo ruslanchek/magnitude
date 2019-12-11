@@ -1,9 +1,11 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
 import React from 'react';
+import { useMe } from '../hooks/useMe';
 
 export const MainHeader: React.FC = () => {
-  return <div css={styles.root}>MainHeader</div>;
+  const me = useMe();
+  return <div css={styles.root}>{me?.email}</div>;
 };
 
 const styles = {

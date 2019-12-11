@@ -11,9 +11,7 @@ export class AppController {
     }
 
     this.initSocket();
-
     await Promise.all([this.initSubscriptions(), this.initAuth()]);
-
     appStore.setState({
       isReady: true,
     });
@@ -41,7 +39,7 @@ export class AppController {
 
     authStore.setState({
       isAuthorized: authorize.error === null,
-      me: me.data?.user || undefined,
+      me: me?.data?.user || undefined,
     });
 
     console.log(authStore.state);

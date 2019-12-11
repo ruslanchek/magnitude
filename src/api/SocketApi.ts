@@ -4,31 +4,13 @@ import { Api } from './Api';
 import { ISocketClientPacket, ESocketAction, ISocketServerPacket, ESocketError } from '@ruslanchek/magnitude-shared';
 
 export class SocketApi extends Api {
-  protected static socket: any = io(process.env.REACT_APP_API_URL);
-  protected static isConnected: boolean = false;
-  protected static onConnectionChangedCallback = (isConnected: boolean) => {};
+  private static socket: any = io(process.env.REACT_APP_API_URL);
+  private static isConnected: boolean = false;
   private static currentNs: number = 0;
+  private static onConnectionChangedCallback = (isConnected: boolean) => {};
 
   public static onConnectionChanged(callback: (isConnected: boolean) => void) {
     this.onConnectionChangedCallback = callback;
-  }
-
-  protected static formAskPacket<T>(data: T): ISocketClientPacket<T> {
-    return {
-      data,
-      token: this.getToken(),
-      ns: this.generateNs(),
-    };
-  }
-
-  private static connectionChanged(connected: boolean) {
-    this.isConnected = connected;
-    this.onConnectionChangedCallback(this.isConnected);
-  }
-
-  private static generateNs(): string {
-    this.currentNs++;
-    return this.currentNs.toString();
   }
 
   public static connect() {
@@ -68,5 +50,23 @@ export class SocketApi extends Api {
 
       this.socket.emit(action, askPacket);
     });
+  }
+
+  private static formAskPacket<T>(data: T): ISocketClientPacket<T> {
+    return {
+      data,
+      token: this.getToken(),
+      ns: this.generateNs(),
+    };
+  }
+
+  private static connectionChanged(connected: boolean) {
+    this.isConnected = connected;
+    this.onConnectionChangedCallback(this.isConnected);
+  }
+
+  private static generateNs(): string {
+    this.currentNs++;
+    return this.currentNs.toString();
   }
 }

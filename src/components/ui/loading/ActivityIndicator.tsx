@@ -21,18 +21,17 @@ export const ActivityIndicator: React.FC<IProps> = props => {
       style={{
         width: size,
         height: size,
-      }}
-    >
-      <svg className="circular" viewBox="25 25 50 50">
+      }}>
+      <svg className='circular' viewBox='25 25 50 50'>
         <circle
-          className="path"
-          cx="50"
-          cy="50"
-          r="20"
-          fill="none"
+          className='path'
+          cx='50'
+          cy='50'
+          r='20'
+          fill='none'
           stroke={props.color}
-          strokeWidth="4"
-          strokeMiterlimit="10"
+          strokeWidth='4'
+          strokeMiterlimit='10'
         />
       </svg>
     </div>

@@ -105,9 +105,7 @@ export const Checkbox: React.FC<IProps> = props => {
           className={`${localValue ? 'active' : ''} ${isFocusMarked ? 'focused' : ''} ${
             errors.length > 0 ? 'error' : ''
           } ${disabled ? 'disabled' : ''}`}>
-          <i>
-            x
-          </i>
+          <i>x</i>
         </span>
         <input
           disabled={disabled}

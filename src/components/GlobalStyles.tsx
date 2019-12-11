@@ -86,14 +86,14 @@ const styles = css`
   a:active,
   a:focus {
     color: hsl(var(--ACCENT_HSL_LIGHTEN));
-    
+
     &.underline {
       border-bottom-color: hsla(var(--ACCENT_HSL_LIGHTEN), 0.35);
     }
 
     &.light {
       color: hsl(var(--TEXT_LIGHT_HSL_DARKEN));
-      
+
       &.underline {
         border-bottom-color: hsla(var(--TEXT_LIGHT_HSL_DARKEN), 0.35);
       }

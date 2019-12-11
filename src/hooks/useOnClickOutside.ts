@@ -1,9 +1,9 @@
 import React, { useEffect, useCallback } from 'react';
 
-export const useOnClickOutside = (
+export function useOnClickOutside(
   ref: React.MutableRefObject<HTMLElement>,
   handler: (event: React.MouseEvent) => void,
-) => {
+) {
   const listener = useCallback(
     event => {
       if (!ref.current || ref.current.contains(event.target)) {
@@ -24,4 +24,4 @@ export const useOnClickOutside = (
       document.removeEventListener('touchstart', listener);
     };
   }, [ref, handler]);
-};
+}
