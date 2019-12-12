@@ -1,6 +1,6 @@
 import React from 'react';
 import { RootRouter } from './RootRouter';
-import { EOLocale, Translator } from 'eo-locale';
+import { EOLocale } from 'eo-locale';
 import { locales } from './locales/locales';
 import { GlobalStyles } from './components/GlobalStyles';
 import {
@@ -8,6 +8,7 @@ import {
   ENotificationsVerticalPosition,
   ENotificationsHorizontalPosition,
 } from './components/ui/notifications/Notifications';
+import { Modals } from './components/ui/modal/Modals';
 
 const currentLanguage = 'en';
 
@@ -22,9 +23,11 @@ export const App: React.FC = () => {
         horizontalPosition={ENotificationsHorizontalPosition.Right}
         rootContainerSelector='#root-notifications'
         width='220px'>
-        <div className='App'>
-          <RootRouter />
-        </div>
+        <Modals rootContainerSelector='#root-modals'>
+          <div className='App'>
+            <RootRouter />
+          </div>
+        </Modals>
       </Notifications>
     </EOLocale.Provider>
   );

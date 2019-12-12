@@ -1,7 +1,7 @@
 import React, { useEffect, useCallback } from 'react';
 
 export function useOnClickOutside(
-  ref: React.MutableRefObject<HTMLElement>,
+  ref: React.MutableRefObject<HTMLElement | null>,
   handler: (event: React.MouseEvent) => void,
 ) {
   const listener = useCallback(
@@ -23,5 +23,5 @@ export function useOnClickOutside(
       document.removeEventListener('mousedown', listener);
       document.removeEventListener('touchstart', listener);
     };
-  }, [ref, handler]);
+  }, []);
 }
