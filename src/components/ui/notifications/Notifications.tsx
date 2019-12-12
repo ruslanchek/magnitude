@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom';
 import { usePortal } from '../../../hooks/usePortal';
 
 const DEFAULT_LIFETIME: number = 5000;
-const ANIMATION_TIME: number = 300;
+const ANIMATION_TIME: number = 180;
 const Z_INDEX: number = 3000;
 const MAX_HEIGHT: number = 300;
 

@@ -74,11 +74,10 @@ const styles = {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: var(--HEADER_HEIGHT) 1fr var(--FOOTER_HEIGHT);
-  `,
-
-  mainWrapper: css`
     background-color: rgb(var(--BG_TINT));
   `,
+
+  mainWrapper: css``,
 
   main: css``,
 };

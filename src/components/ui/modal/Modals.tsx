@@ -36,7 +36,7 @@ interface IModalOptions {
   onWillOpen?: (modalId: number) => void;
 }
 
-const ANIMATION_TIME: number = 200;
+const ANIMATION_TIME: number = 100;
 const BASE_Z: number = 1000;
 
 export interface IModalContext {

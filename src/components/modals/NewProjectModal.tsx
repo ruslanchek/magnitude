@@ -17,16 +17,24 @@ interface IModel {
 
 export const NewProjectModal: React.FC<IProps> = ({ closeHandler }) => {
   const notificationContext = useContext(NotificationsContext);
+  const [loading, setLoading] = useState(false);
   const [model, setModel] = useState<IModel>({
     title: '',
   });
 
   const handleSubmit = async (model: IModel) => {
+    setLoading(true);
     const result = await ProjectApi.create(model.title);
 
     if (result.error?.message) {
       notificationContext.addNotification(ENotificationType.Danger, result.error.message, result.error.message);
+    } else {
+      setModel({
+        title: '',
+      });
     }
+
+    setLoading(false);
   };
 
   return (
@@ -38,7 +46,9 @@ export const NewProjectModal: React.FC<IProps> = ({ closeHandler }) => {
 
       <Form<IModel> onSubmit={handleSubmit} onChange={setModel}>
         <Input name='title' value={model.title} />
-        <Button type='submit'>Create project</Button>
+        <Button loading={loading} type='submit'>
+          Create project
+        </Button>
       </Form>
     </div>
   );

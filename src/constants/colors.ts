@@ -3,7 +3,7 @@ import Color from 'color';
 export const COLORS = {
   WHITE: Color('#fff'),
   BG: Color('#fff'),
-  BG_TINT: Color('#F7F8F9'),
+  BG_TINT: Color('#F2F7FB'),
 
   ACCENT: Color('#364FCC'),
   ERROR: Color('#fe346e'),
