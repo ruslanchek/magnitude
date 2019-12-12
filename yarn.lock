@@ -1921,10 +1921,10 @@
   dependencies:
     typescript-collections "^1.2.5"
 
-"@ruslanchek/magnitude-shared@^0.0.37":
-  version "0.0.37"
-  resolved "https://npm.pkg.github.com/download/@ruslanchek/magnitude-shared/0.0.37/4dab8ecfc7b06e362d22478639f55245822558b9512e00283d30bbcedd53f198#f1e6f9616b8687edab40e6c18921e7c1c36c6a29"
-  integrity sha512-ZwcY4/mcd7d+6MzLG5PllBG45IlgTJa7oNxhK51oNvQ+UkquhqHRo5bzuhRFs8WMzNkSbnvacTzwO3hiDERsZg==
+"@ruslanchek/magnitude-shared@^0.0.39":
+  version "0.0.39"
+  resolved "https://npm.pkg.github.com/download/@ruslanchek/magnitude-shared/0.0.39/aece484a72b8436b704410a5e0445ae4bee74321fa2d7cefaf3ce322659807e7#4711a2d715927de891411c8fe4889845760ea223"
+  integrity sha512-ILHql9Cc8gLTpg0afNe0tsavqAWizd0l/YYSNcxGcy2ytoj2F7a0hqBne79raP8YMMahuQmGO99PdnYAyl2gWQ==
 
 "@svgr/babel-plugin-add-jsx-attribute@^4.2.0":
   version "4.2.0"
@@ -11702,6 +11702,11 @@ upath@^1.1.1:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/upath/-/upath-1.2.0.tgz#8f66dbcd55a883acdae4408af8b035a5044c1894"
   integrity sha512-aZwGpamFO61g3OlfT7OQCHqhGnW43ieH9WZeP7QxN/G/jS4jfqUkZxoryvJgVPEcrl5NL/ggHsSmLMHuH64Lhg==
+
+update-data@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/update-data/-/update-data-0.0.3.tgz#3e1bd842cee35da27452da6e731ded01bb4276e2"
+  integrity sha512-DBn2YpXy5ekbzpQVvYQ2s1ZbdRddPLQwDuRtv2JyvdBW6roGDr3WUlrPM5YlH5fj81nWfisGzVQQTxf8G9/DPA==
 
 upper-case@^1.1.1:
   version "1.1.3"

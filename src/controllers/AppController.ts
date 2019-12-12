@@ -4,6 +4,7 @@ import { AuthApi } from '../api/AuthApi';
 import { authStore } from '../stores/authStore';
 import { appStore } from '../stores/appStore';
 import { projectStore } from '../stores/projectStore';
+import { updateList } from 'update-data';
 
 export class AppController {
   static async init(): Promise<void> {
@@ -21,8 +22,21 @@ export class AppController {
   private static async initSubscriptions() {
     SocketApi.on<IServerDtoGetOwnProjects>(ESocketAction.ProjectGetOwnProjects, e => {
       if (e.data?.list) {
+        let ownProjects;
+
+        if (e.data.incremental) {
+          ownProjects = updateList(
+            projectStore.state.ownProjects,
+            e.data.list,
+            (a, b) => b.id === a.id,
+            (a, b) => new Date(b.updatedAt).getTime() > new Date(a.updatedAt).getTime(),
+          );
+        } else {
+          ownProjects = e.data.list;
+        }
+
         projectStore.setState({
-          ownProjects: e.data.list,
+          ownProjects,
         });
       }
     });

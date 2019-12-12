@@ -6,7 +6,7 @@
     "@css-blocks/webpack": "^0.24.0",
     "@emotion/core": "^10.0.22",
     "@monaco-editor/react": "^2.4.0",
-    "@ruslanchek/magnitude-shared": "^0.0.37",
+    "@ruslanchek/magnitude-shared": "^0.0.39",
     "@types/jest": "^24.0.23",
     "@types/node": "^12.12.17",
     "@types/react": "^16.9.16",
@@ -26,7 +26,8 @@
     "react-window": "^1.8.5",
     "socket.io-client": "^2.3.0",
     "ts-events": "^3.3.1",
-    "typescript": "^3.7.3"
+    "typescript": "^3.7.3",
+    "update-data": "^0.0.3"
   },
   "scripts": {
     "start": "react-scripts start",
