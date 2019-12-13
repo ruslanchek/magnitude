@@ -3,7 +3,7 @@ import Color from 'color';
 export const COLORS = {
   WHITE: Color('#fff'),
   BG: Color('#fff'),
-  BG_TINT: Color('#F2F7FB'),
+  BG_TINT: Color('#F7F8FC'),
 
   ACCENT: Color('#364fcc'),
   ERROR: Color('#fe346e'),
@@ -15,6 +15,7 @@ export const COLORS = {
   TEXT_PLACEHOLDER: Color('#B8B8C8'),
 
   INPUT_BORDER: Color('#CDCDDD'),
+  ELEMENT_BORDER: Color('#F3F3F8'),
 
   ELEMENT_BG_TINT: Color('#E9EDFC'),
 };

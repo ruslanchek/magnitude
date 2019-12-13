@@ -57,7 +57,7 @@ export const AsideNav: React.FC<IProps> = ({ showSidePanel }) => {
 
 const styles = {
   root: css`
-    padding: 0 10px;
+    padding: var(--PADDING_VERTICAL_GLOBAL) 10px;
 
     .link {
       padding: 10px;

@@ -72,7 +72,7 @@ const styles = {
     text-overflow: ellipsis;
     overflow: hidden;
     -webkit-appearance: none;
-    font-size: var(--FONT_SIZE_MEDIUM);
+    font-size: var(--FONT_SIZE_BASE);
     font-weight: 600;
     transition: background-color 0.2s, box-shadow 0.2s, transform 0.2s;
     transform: scale(0.99999);
@@ -301,10 +301,12 @@ const styles = {
   sizes: {
     large: css`
       height: var(--INPUT_HEIGHT_LARGE);
+      font-size: var(--FONT_SIZE_MEDIUM);
     `,
 
     small: css`
       height: var(--INPUT_HEIGHT_SMALL);
+      font-size: var(--FONT_SIZE_BASE);
     `,
 
     tiny: css`

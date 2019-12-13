@@ -32,6 +32,7 @@ const styles = {
     display: flex;
     align-items: center;
     padding: 0 var(--PADDING_HORIZONTAL_GLOBAL);
-    box-shadow: var(--ELEVATION_SHADOW_1);
+    border-bottom: 1px solid rgb(var(--ELEMENT_BORDER));
+    background-color: rgb(var(--BG));
   `,
 };

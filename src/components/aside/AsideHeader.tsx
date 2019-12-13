@@ -22,6 +22,7 @@ const styles = {
     display: flex;
     align-items: center;
     padding: 0 20px;
+    border-bottom: 1px solid rgb(var(--ELEMENT_BORDER));
 
     .logo {
       width: 150px;

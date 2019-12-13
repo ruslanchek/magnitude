@@ -4,6 +4,26 @@ import React from 'react';
 import { useOwnProjects } from '../../hooks/useOwnProjects';
 import { Avatar } from '../ui/avatars/Avatar';
 import { EOLocale } from 'eo-locale';
+import { IEntityProjectShared } from '@ruslanchek/magnitude-shared';
+
+interface IProjectProps {
+  index: number;
+  project: IEntityProjectShared;
+}
+
+const Project: React.FC<IProjectProps> = ({ index, project }) => {
+  return (
+    <div css={styles.item}>
+      <div className='info'>
+        <Avatar src={`https://picsum.photos/id/${index}/80/80`} size={40} title={project.title} />
+        <h2 className='title'>{project.title}</h2>
+        <span className='subtitle'>
+          <EOLocale.Date value={new Date(project.updatedAt)} />
+        </span>
+      </div>
+    </div>
+  );
+};
 
 export const Projects: React.FC = () => {
   const ownProjects = useOwnProjects();
@@ -11,19 +31,9 @@ export const Projects: React.FC = () => {
   return (
     <div css={styles.root}>
       <div css={styles.items}>
-        {ownProjects.map((item, i) => {
-          return (
-            <div css={styles.item} key={item.id}>
-              <Avatar src={`https://picsum.photos/id/${10 * i}/80/80`} size={40} title={item.title} />
-              <div className='info'>
-                <h4 className='title'>{item.title}</h4>
-                <span className='subtitle'>
-                  <EOLocale.Date value={new Date(item.updatedAt)} />
-                </span>
-              </div>
-            </div>
-          );
-        })}
+        {ownProjects.map((item, i) => (
+          <Project project={item} index={i} key={item.id} />
+        ))}
       </div>
     </div>
   );
@@ -35,10 +45,9 @@ const styles = {
   items: css``,
 
   item: css`
-    padding: var(--PADDING_VERTICAL_ELEMENT) var(--PADDING_HORIZONTAL_ELEMENT);
-    display: flex;
-    align-items: center;
+    padding: 30px;
     border-radius: var(--BORDER_RADIUS_MEDIUM);
+    background-color: rgb(var(--BG));
 
     &:hover {
       background-color: rgb(var(--BG_TINT));
@@ -48,9 +57,9 @@ const styles = {
       margin-left: var(--PADDING_VERTICAL_ELEMENT);
 
       .title {
-        font-size: var(--FONT_SIZE_BASE);
-        font-weight: 600;
-        margin: 0;
+        font-size: var(--FONT_SIZE_LARGE);
+        font-weight: 800;
+        margin: 10px 0 0 0;
       }
 
       .subtitle {
