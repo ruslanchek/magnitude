@@ -1,10 +1,12 @@
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core';
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import { useOwnProjects } from '../../hooks/useOwnProjects';
 import { Avatar } from '../ui/avatars/Avatar';
 import { EOLocale } from 'eo-locale';
 import { IEntityProjectShared } from '@ruslanchek/magnitude-shared';
+import { PATHS } from '../../constants/paths';
 
 interface IProjectProps {
   index: number;
@@ -12,8 +14,14 @@ interface IProjectProps {
 }
 
 const Project: React.FC<IProjectProps> = ({ index, project }) => {
+  const history = useHistory();
+
+  const handleRouteToProject = () => {
+    history.push(PATHS.PROJECT.path.replace(':id', project.id));
+  };
+
   return (
-    <div css={styles.item}>
+    <div css={styles.item} onClick={handleRouteToProject}>
       <div className='info'>
         <Avatar src={`https://picsum.photos/id/${index}/80/80`} size={40} title={project.title} />
         <h2 className='title'>{project.title}</h2>

@@ -14,6 +14,7 @@ export const PATHS: Record<string, IPath> = {
   ME: { path: '/me', type: ERouteType.Authorized },
   TEAMS: { path: '/teams', type: ERouteType.Authorized },
   PROJECTS: { path: '/projects', type: ERouteType.Authorized },
+  PROJECT: { path: '/projects/:id', type: ERouteType.Authorized },
   AUTH_LOGIN: { path: '/auth/login', type: ERouteType.Unauthorized },
   AUTH_REGISTER: { path: '/auth/register', type: ERouteType.Unauthorized },
   AUTH_REMEMBER_PASSWORD: { path: '/auth/password-reset', type: ERouteType.Unauthorized },

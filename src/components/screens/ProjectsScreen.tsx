@@ -5,10 +5,12 @@ import { ScreenWrapper } from '../ScreenWrapper';
 import { ERouteType } from '../../constants/paths';
 import { Projects } from '../modules/Projects';
 
-export const HomeScreen: React.FC = () => {
+export const ProjectsScreen: React.FC = () => {
   return (
-    <ScreenWrapper raw={false} routeType={ERouteType.Authorized} title={'Title::Home'}>
-      <div css={styles.root}></div>
+    <ScreenWrapper raw={false} routeType={ERouteType.Authorized} title={'Title::Projects'}>
+      <div css={styles.root}>
+        <Projects />
+      </div>
     </ScreenWrapper>
   );
 };
