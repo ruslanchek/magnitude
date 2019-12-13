@@ -17,6 +17,6 @@ export const HomeScreen: React.FC = () => {
 
 const styles = {
   root: css`
-    padding: var(--PADDING_VERTICAL_ELEMENT) var(--PADDING_HORIZONTAL_ELEMENT);
+    padding: var(--PADDING_VERTICAL_GLOBAL) var(--PADDING_HORIZONTAL_GLOBAL);
   `,
 };

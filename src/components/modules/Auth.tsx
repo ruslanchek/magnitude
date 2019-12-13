@@ -242,7 +242,7 @@ const styles = {
     }
 
     .minor {
-      background-color: #364fcc;
+      background-color: rgb(var(--ACCENT));
       background-image: url(${require('../../assets/images/patterns/topography.svg')});
       background-position: 50% 50%;
       background-size: 100%;

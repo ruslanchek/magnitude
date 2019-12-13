@@ -3,6 +3,7 @@ import { css, jsx } from '@emotion/core';
 import React from 'react';
 import { useOwnProjects } from '../../hooks/useOwnProjects';
 import { Avatar } from '../ui/avatars/Avatar';
+import { EOLocale } from 'eo-locale';
 
 export const Projects: React.FC = () => {
   const ownProjects = useOwnProjects();
@@ -13,10 +14,12 @@ export const Projects: React.FC = () => {
         {ownProjects.map((item, i) => {
           return (
             <div css={styles.item} key={item.id}>
-              <Avatar src={`https://picsum.photos/id/${100 * i}/80/80`} size={40} title={item.title} />
+              <Avatar src={`https://picsum.photos/id/${10 * i}/80/80`} size={40} title={item.title} />
               <div className='info'>
                 <h4 className='title'>{item.title}</h4>
-                <span className='subtitle'>{item.id}</span>
+                <span className='subtitle'>
+                  <EOLocale.Date value={new Date(item.updatedAt)} />
+                </span>
               </div>
             </div>
           );
@@ -32,9 +35,13 @@ const styles = {
   items: css``,
 
   item: css`
-    padding: var(--PADDING_VERTICAL_ELEMENT) 0;
-    border-bottom: 1px solid rgb(var(--INPUT_BORDER));
+    padding: var(--PADDING_VERTICAL_ELEMENT) var(--PADDING_HORIZONTAL_ELEMENT);
     display: flex;
+    border-radius: var(--BORDER_RADIUS_MEDIUM);
+
+    &:hover {
+      background-color: rgb(var(--BG_TINT));
+    }
 
     .info {
       margin-left: var(--PADDING_VERTICAL_ELEMENT);

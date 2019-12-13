@@ -78,7 +78,7 @@ const styles = {
         align-items: center;
         justify-content: center;
         font-size: 18px;
-        background-color: rgba(var(--ACCENT), 0.1);
+        background-color: rgba(var(--ACCENT), 0.08);
         color: rgb(var(--ACCENT));
       }
 
@@ -87,11 +87,11 @@ const styles = {
       }
 
       &:hover {
-        background-color: rgba(var(--ACCENT), 0.033);
+        background-color: rgba(var(--BG), 0.5);
       }
 
       &.active {
-        background-color: rgba(var(--ACCENT), 0.066);
+        background-color: rgba(var(--BG), 1);
       }
     }
   `,

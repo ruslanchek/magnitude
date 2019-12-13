@@ -5,7 +5,7 @@ export const COLORS = {
   BG: Color('#fff'),
   BG_TINT: Color('#F2F7FB'),
 
-  ACCENT: Color('#364FCC'),
+  ACCENT: Color('#364fcc'),
   ERROR: Color('#fe346e'),
   SUCCESS: Color('#25D086'),
 
