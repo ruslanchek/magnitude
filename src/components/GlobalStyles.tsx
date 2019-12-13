@@ -83,19 +83,24 @@ const styles = css`
   a:hover,
   a:active,
   a:focus {
-    color: hsl(var(--ACCENT_HSL_LIGHTEN));
+    color: hsl(var(--ACCENT_HSL_DARKEN));
 
     &.underline {
-      border-bottom-color: hsla(var(--ACCENT_HSL_LIGHTEN), 0.35);
+      border-bottom-color: hsla(var(--ACCENT_HSL_DARKEN), 0.35);
     }
 
     &.light {
-      color: hsl(var(--TEXT_LIGHT_HSL_LIGHTEN));
+      color: hsl(var(--TEXT_LIGHT_HSL_DARKEN));
 
       &.underline {
-        border-bottom-color: hsla(var(--ACCENT_HSL_LIGHTEN), 0.35);
+        border-bottom-color: hsla(var(--ACCENT_HSL_DARKEN), 0.35);
       }
     }
+  }
+
+  a:focus:not(:active) {
+    box-shadow: 0 0 0 3.5px rgba(var(--ACCENT), 0.2);
+    border-radius: 3px;
   }
 
   ul,
