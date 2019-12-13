@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4d37c90a-7d7f-469e-be30-bae2ccef9514/deploy-status)](https://app.netlify.com/sites/magnitude/deploys)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

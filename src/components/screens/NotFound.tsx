@@ -4,10 +4,10 @@ import React from 'react';
 import { ScreenWrapper } from '../ScreenWrapper';
 import { ERouteType } from '../../constants/paths';
 
-export const NoMatchPage: React.FC = () => {
+export const NotFound: React.FC = () => {
   return (
-    <ScreenWrapper raw={true} routeType={ERouteType.Public}>
-      <div css={styles.root}>NoMatchPage</div>
+    <ScreenWrapper raw={true} routeType={ERouteType.Public} title={'Title::NotFound'}>
+      <div css={styles.root}>Not Found</div>
     </ScreenWrapper>
   );
 };

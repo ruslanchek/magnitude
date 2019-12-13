@@ -7,7 +7,7 @@ import { ERouteType } from '../../constants/paths';
 
 export const LoginScreen: React.FC = () => {
   return (
-    <ScreenWrapper raw={true} routeType={ERouteType.Unauthorized}>
+    <ScreenWrapper raw={true} routeType={ERouteType.Unauthorized} title={'Title::Login'}>
       <Auth mode={EMode.Login} />
     </ScreenWrapper>
   );

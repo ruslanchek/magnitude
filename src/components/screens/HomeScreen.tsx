@@ -7,7 +7,7 @@ import { Projects } from '../modules/Projects';
 
 export const HomeScreen: React.FC = () => {
   return (
-    <ScreenWrapper raw={false} routeType={ERouteType.Authorized}>
+    <ScreenWrapper raw={false} routeType={ERouteType.Authorized} title={'Title::Home'}>
       <div css={styles.root}>
         <Projects />
       </div>

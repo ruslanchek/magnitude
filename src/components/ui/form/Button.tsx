@@ -104,7 +104,7 @@ const styles = {
       }
 
       &:active {
-        background-color: hsl(var(--ACCENT_HSL_LIGHTEN));
+        background-color: hsl(var(--ACCENT_HSL_DARKEN));
         box-shadow: 0 0 0 0 rgba(var(--ACCENT), 0);
       }
 
@@ -113,7 +113,7 @@ const styles = {
         box-shadow: 0 0 0 3.5px rgba(var(--ACCENT), 0.33);
 
         &:active {
-          background-color: hsl(var(--ACCENT_HSL_LIGHTEN));
+          background-color: hsl(var(--ACCENT_HSL_DARKEN));
           box-shadow: 0 0 0 3.5px rgba(var(--ACCENT), 0.33), 0 0 0 0 rgba(var(--ACCENT), 0);
         }
       }
@@ -128,7 +128,7 @@ const styles = {
       }
 
       &:active {
-        background-color: hsl(var(--SUCCESS_HSL_LIGHTEN));
+        background-color: hsl(var(--SUCCESS_HSL_DARKEN));
         box-shadow: 0 0 0 0 rgba(var(--SUCCESS), 0);
       }
 
@@ -137,7 +137,7 @@ const styles = {
         box-shadow: 0 0 0 3.5px rgba(var(--SUCCESS), 0.33);
 
         &:active {
-          background-color: hsl(var(--SUCCESS_HSL_LIGHTEN));
+          background-color: hsl(var(--SUCCESS_HSL_DARKEN));
           box-shadow: 0 0 0 3.5px rgba(var(--SUCCESS), 0.33), 0 0 0 0 rgba(var(--SUCCESS), 0);
         }
       }
@@ -151,7 +151,7 @@ const styles = {
       }
 
       &:active {
-        background-color: hsl(var(--BUTTON_ACCENT_HSL_LIGHTEN));
+        background-color: hsl(var(--BUTTON_ACCENT_HSL_DARKEN));
         box-shadow: 0 0 0 0 rgba(var(--BUTTON_ACCENT), 0);
       }
 
@@ -160,7 +160,7 @@ const styles = {
         box-shadow: 0 0 0 3.5px rgba(var(--BUTTON_ACCENT), 0.33);
 
         &:active {
-          background-color: hsl(var(--BUTTON_ACCENT_HSL_LIGHTEN));
+          background-color: hsl(var(--BUTTON_ACCENT_HSL_DARKEN));
           box-shadow: 0 0 0 3.5px rgba(var(--BUTTON_ACCENT), 0.33), 0 0 0 0 rgba(var(--BUTTON_ACCENT), 0);
         }
       }
@@ -174,7 +174,7 @@ const styles = {
       }
 
       &:active {
-        background-color: hsl(var(--BUTTON_FADED_HSL_LIGHTEN));
+        background-color: hsl(var(--BUTTON_FADED_HSL_DARKEN));
         box-shadow: 0 0 0 0 rgba(var(--BUTTON_FADED), 0);
       }
 
@@ -183,7 +183,7 @@ const styles = {
         box-shadow: 0 0 0 3.5px rgba(var(--BUTTON_FADED), 0.33);
 
         &:active {
-          background-color: hsl(var(--BUTTON_FADED_HSL_LIGHTEN));
+          background-color: hsl(var(--BUTTON_FADED_HSL_DARKEN));
           box-shadow: 0 0 0 3.5px rgba(var(--BUTTON_FADED), 0.33), 0 0 0 0 rgba(var(--BUTTON_FADED), 0);
         }
       }
@@ -197,7 +197,7 @@ const styles = {
       }
 
       &:active {
-        background-color: hsl(var(--BUTTON_DANGER_HSL_LIGHTEN));
+        background-color: hsl(var(--BUTTON_DANGER_HSL_DARKEN));
         box-shadow: 0 0 0 0 rgba(var(--BUTTON_DANGER), 0);
       }
 
@@ -206,7 +206,7 @@ const styles = {
         box-shadow: 0 0 0 3.5px rgba(var(--BUTTON_DANGER), 0.33);
 
         &:active {
-          background-color: hsl(var(--BUTTON_DANGER_HSL_LIGHTEN));
+          background-color: hsl(var(--BUTTON_DANGER_HSL_DARKEN));
           box-shadow: 0 0 0 3.5px rgba(var(--BUTTON_DANGER), 0.33), 0 0 0 0 rgba(var(--BUTTON_DANGER), 0);
         }
       }
@@ -221,7 +221,7 @@ const styles = {
       }
 
       &:active {
-        background-color: hsl(var(--WHITE_HSL_LIGHTEN));
+        background-color: hsl(var(--WHITE_HSL_DARKEN));
         box-shadow: 0 0 0 0 rgba(var(--WHITE), 0);
       }
 
@@ -230,7 +230,7 @@ const styles = {
         box-shadow: 0 0 0 3.5px rgba(var(--WHITE), 0.33);
 
         &:active {
-          background-color: hsl(var(--WHITE_HSL_LIGHTEN));
+          background-color: hsl(var(--WHITE_HSL_DARKEN));
           box-shadow: 0 0 0 3.5px rgba(var(--WHITE), 0.33), 0 0 0 0 rgba(var(--WHITE), 0);
         }
       }
@@ -244,7 +244,7 @@ const styles = {
       }
 
       &:active {
-        background-color: hsl(var(--BUTTON_FACEBOOK_HSL_LIGHTEN));
+        background-color: hsl(var(--BUTTON_FACEBOOK_HSL_DARKEN));
         box-shadow: 0 0 0 0 rgba(var(--BUTTON_FACEBOOK), 0);
       }
 
@@ -253,7 +253,7 @@ const styles = {
         box-shadow: 0 0 0 3.5px rgba(var(--BUTTON_FACEBOOK), 0.33);
 
         &:active {
-          background-color: hsl(var(--BUTTON_FACEBOOK_HSL_LIGHTEN));
+          background-color: hsl(var(--BUTTON_FACEBOOK_HSL_DARKEN));
           box-shadow: 0 0 0 3.5px rgba(var(--BUTTON_FACEBOOK), 0.33), 0 0 0 0 rgba(var(--BUTTON_FACEBOOK), 0);
         }
       }
@@ -282,7 +282,7 @@ const styles = {
       }
 
       &:active {
-        background-color: hsl(var(--BUTTON_GOOGLE_HSL_LIGHTEN));
+        background-color: hsl(var(--BUTTON_GOOGLE_HSL_DARKEN));
         box-shadow: 0 0 0 0 rgba(var(--BUTTON_GOOGLE), 0);
       }
 
@@ -291,7 +291,7 @@ const styles = {
         box-shadow: 0 0 0 3.5px rgba(var(--BUTTON_GOOGLE), 0.33);
 
         &:active {
-          background-color: hsl(var(--BUTTON_GOOGLE_HSL_LIGHTEN));
+          background-color: hsl(var(--BUTTON_GOOGLE_HSL_DARKEN));
           box-shadow: 0 0 0 3.5px rgba(var(--BUTTON_GOOGLE), 0.33), 0 0 0 0 rgba(var(--BUTTON_GOOGLE), 0);
         }
       }

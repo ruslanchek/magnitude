@@ -8,7 +8,7 @@ import { ERouteType } from '../../constants/paths';
 
 export const TestScreen: React.FC = () => {
   return (
-    <ScreenWrapper raw={false} routeType={ERouteType.Authorized}>
+    <ScreenWrapper raw={false} routeType={ERouteType.Authorized} title={'Title::Test'}>
       <div css={styles.root}>
         <SwaggerView />
         <MonacoEditorView />

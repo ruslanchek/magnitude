@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { PATHS } from './constants/paths';
 import { HomeScreen } from './components/screens/HomeScreen';
-import { NoMatchPage } from './components/screens/NoMatchPage';
+import { NotFound } from './components/screens/NotFound';
 import { TestScreen } from './components/screens/TestPage';
 import { LoginScreen } from './components/screens/LoginScreen';
 import { RegisterScreen } from './components/screens/RegisterScreen';
@@ -17,7 +17,7 @@ export const RootRouter: React.FC = () => {
         <Route exact path={PATHS.AUTH_REMEMBER_PASSWORD.path} component={RememberPasswordScreen} />
         <Route exact path={PATHS.HOME.path} component={HomeScreen} />
         <Route exact path={PATHS.ME.path} component={TestScreen} />
-        <Route exact component={NoMatchPage} />
+        <Route exact component={NotFound} />
       </Switch>
     </BrowserRouter>
   );

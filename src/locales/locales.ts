@@ -2,6 +2,15 @@ export const locales = [
   {
     language: 'en',
     messages: {
+      'Title::Test': 'Test',
+      'Title::NotFound': 'Not found',
+      'Title::Home': 'Home',
+      'Title::Projects': 'Projects',
+      'Title::Teams': 'Teams',
+      'Title::RememberPassword': 'Remember password',
+      'Title::Login': 'Login',
+      'Title::Register': 'Sign up',
+
       'Nav::Home': 'Home',
       'Nav::Projects': 'Projects',
       'Nav::Teams': 'Teams',

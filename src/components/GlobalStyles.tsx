@@ -12,8 +12,8 @@ export const GlobalStyles: React.FC = () => {
 
   for (const color in COLORS) {
     const rgb = (COLORS as any)[color];
-    const lighten = rgb.lighten(0.33).array();
-    const darken = rgb.darken(0.33).array();
+    const lighten = rgb.lighten(0.22).array();
+    const darken = rgb.darken(0.22).array();
 
     colors.push(
       `--${color}: ${rgb.array().join(',')}`,

@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { MainHeader } from './MainHeader';
 import { AsideNav } from './aside/AsideNav';
 import { AsideHeader } from './aside/AsideHeader';
@@ -11,19 +11,24 @@ import { useStore } from 'react-stores';
 import { localStore } from '../stores/localStore';
 import { useAuthorizedRoute } from '../hooks/useAuthorizedRoute';
 import { ERouteType } from '../constants/paths';
+import { useTranslator } from 'eo-locale';
+import { useTitle } from '../hooks/useTitle';
 
 interface IProps {
   routeType: ERouteType;
   raw: boolean;
+  title: string;
 }
 
 export const ScreenWrapper: React.FC<IProps> = props => {
-  const { children, raw, routeType } = props;
+  const { children, raw, routeType, title } = props;
+  const translator = useTranslator();
   const isAppReady = useAppReady();
   const showSidePanel = useStore(localStore, {
     mapState: storeState => storeState.showSidePanel,
   });
 
+  useTitle(translator.translate(title));
   useAuthorizedRoute(routeType);
 
   return (
@@ -31,7 +36,7 @@ export const ScreenWrapper: React.FC<IProps> = props => {
       {isAppReady ? (
         <React.Fragment>
           {raw ? (
-            <main css={styles.main}>{children}</main>
+            <main css={styles.mainRaw}>{children}</main>
           ) : (
             <div css={styles.root} className={showSidePanel ? 'wide' : 'narrow'}>
               <div css={styles.asideWrapper}>
@@ -73,11 +78,19 @@ const styles = {
     user-select: none;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: var(--HEADER_HEIGHT) 1fr var(--FOOTER_HEIGHT);
+    grid-template-rows: var(--HEADER_HEIGHT) auto var(--FOOTER_HEIGHT);
     background-color: rgb(var(--BG_TINT));
   `,
 
-  mainWrapper: css``,
+  mainWrapper: css`
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: var(--HEADER_HEIGHT) calc(100vh - var(--HEADER_HEIGHT));
+  `,
 
-  main: css``,
+  mainRaw: css``,
+
+  main: css`
+    overflow: auto;
+  `,
 };
