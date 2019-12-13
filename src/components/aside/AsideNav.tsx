@@ -41,7 +41,7 @@ export const AsideNav: React.FC<IProps> = ({ showSidePanel }) => {
     <div css={styles.root}>
       {LINKS.map(link => {
         return (
-          <NavLink key={link.path} to={link.path} exact className='link' activeClassName='active'>
+          <NavLink tabIndex={2} key={link.path} to={link.path} exact className='link' activeClassName='active'>
             <span className='icon-wrapper'>{link.icon}</span>
             {showSidePanel && (
               <span className='text'>

@@ -98,7 +98,7 @@ const styles = css`
     }
   }
 
-  a:focus:not(:active) {
+  a:focus:not(:active):not(:hover) {
     box-shadow: 0 0 0 3.5px rgba(var(--ACCENT), 0.2);
     border-radius: 3px;
   }

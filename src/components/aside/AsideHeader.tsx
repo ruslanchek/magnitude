@@ -11,7 +11,7 @@ interface IProps {
 export const AsideHeader: React.FC<IProps> = ({ showSidePanel }) => {
   return (
     <div css={styles.root} className={showSidePanel ? 'wide' : 'narrow'}>
-      <NavLink to={PATHS.HOME.path} className='logo' />
+      <NavLink tabIndex={1} to={PATHS.HOME.path} className='logo' />
     </div>
   );
 };

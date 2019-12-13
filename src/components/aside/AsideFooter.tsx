@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
-import React from 'react';
+import React, { MouseEvent } from 'react';
 import { FiChevronsLeft, FiChevronsRight } from 'react-icons/all';
 import { localStore } from '../../stores/localStore';
 import { useTranslator } from 'eo-locale';
@@ -12,7 +12,8 @@ interface IProps {
 export const AsideFooter: React.FC<IProps> = ({ showSidePanel }) => {
   const translator = useTranslator();
 
-  const handleAsideTogglerClick = () => {
+  const handleAsideTogglerClick = (event: MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
     localStore.setState({
       showSidePanel: !showSidePanel,
     });
@@ -20,12 +21,14 @@ export const AsideFooter: React.FC<IProps> = ({ showSidePanel }) => {
 
   return (
     <div css={styles.root}>
-      <span
+      <a
+        href='#'
+        tabIndex={3}
         css={styles.asideToggler}
         title={translator.translate('Aside::ToggleSidebar')}
         onClick={handleAsideTogglerClick}>
         {showSidePanel ? <FiChevronsLeft /> : <FiChevronsRight />}
-      </span>
+      </a>
     </div>
   );
 };
