@@ -4,8 +4,7 @@
     <list default="true" id="623d3edf-0097-4e2f-bf2b-f411e4681eb2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/GlobalStyles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GlobalStyles.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/modules/Projects.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/modules/Projects.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/ui-constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/ui-constants.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/modules/Auth.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/modules/Auth.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +156,7 @@
       <workItem from="1576072663196" duration="17349000" />
       <workItem from="1576100857047" duration="4253000" />
       <workItem from="1576107154754" duration="7137000" />
-      <workItem from="1576172111259" duration="9743000" />
+      <workItem from="1576172111259" duration="10991000" />
     </task>
     <task id="LOCAL-00001" summary="Auth">
       <created>1575278797715</created>
@@ -222,7 +221,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576227763532</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Auth">
+      <created>1576228448840</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1576228448840</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -252,12 +258,12 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="698" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080/-1792.0.1792.1120@0.0.1920.1080" timestamp="1575902698005" />
-    <state x="543" y="142" key="CommitChangelistDialog2" timestamp="1576227762271">
+    <state x="543" y="142" key="CommitChangelistDialog2" timestamp="1576228447717">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="507" y="147" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1576186819677" />
     <state x="543" y="142" key="CommitChangelistDialog2/0.0.1920.1080/-1792.0.1792.1120@0.0.1920.1080" timestamp="1575903081911" />
-    <state x="543" y="142" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1576227762271" />
+    <state x="543" y="142" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1576228447717" />
     <state width="1899" height="360" key="GridCell.Tab.0.bottom" timestamp="1576225125846">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -310,12 +316,12 @@
     <state x="437" y="133" width="997" height="746" key="SettingsEditor/0.0.1920.1080/-1792.0.1792.1120@0.0.1920.1080" timestamp="1576068608305" />
     <state x="425" y="192" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1576225122712" />
     <state x="437" y="144" width="997" height="722" key="SettingsEditor/0.23.1920.979/-1792.23.1792.1097@0.23.1920.979" timestamp="1575904290996" />
-    <state x="560" y="280" key="Vcs.Push.Dialog.v2" timestamp="1576227765351">
+    <state x="560" y="280" key="Vcs.Push.Dialog.v2" timestamp="1576228450204">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="523" y="290" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1576186824266" />
     <state x="560" y="280" key="Vcs.Push.Dialog.v2/0.0.1920.1080/-1792.0.1792.1120@0.0.1920.1080" timestamp="1575282693105" />
-    <state x="560" y="280" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1576227765351" />
+    <state x="560" y="280" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1576228450204" />
     <state x="107" y="96" width="1706" height="888" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1576065424146">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -328,12 +334,12 @@
     <state x="554" y="203" width="837" height="714" key="find.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1576186452861" />
     <state x="594" y="196" width="732" height="689" key="find.popup/0.0.1920.1080/-1792.0.1792.1120@0.0.1920.1080" timestamp="1575293860500" />
     <state x="594" y="196" width="897" height="689" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1576226278193" />
-    <state x="601" y="242" width="718" height="652" key="search.everywhere.popup" timestamp="1576228190805">
+    <state x="601" y="242" width="718" height="652" key="search.everywhere.popup" timestamp="1576229401410">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="561" y="251" width="670" height="676" key="search.everywhere.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1576185643687" />
     <state x="601" y="242" width="718" height="652" key="search.everywhere.popup/0.0.1920.1080/-1792.0.1792.1120@0.0.1920.1080" timestamp="1576169231474" />
-    <state x="601" y="242" width="718" height="652" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1576228190805" />
+    <state x="601" y="242" width="718" height="652" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1576229401410" />
     <state x="601" y="242" width="718" height="652" key="search.everywhere.popup/0.23.1920.981/-1792.23.1792.1097@0.23.1920.981" timestamp="1576168439011" />
   </component>
 </project>

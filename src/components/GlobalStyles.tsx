@@ -12,8 +12,8 @@ export const GlobalStyles: React.FC = () => {
 
   for (const color in COLORS) {
     const rgb = (COLORS as any)[color];
-    const lighten = rgb.lighten(0.2).array();
-    const darken = rgb.darken(0.1).array();
+    const lighten = rgb.lighten(0.33).array();
+    const darken = rgb.darken(0.33).array();
 
     colors.push(
       `--${color}: ${rgb.array().join(',')}`,
@@ -90,10 +90,10 @@ const styles = css`
     }
 
     &.light {
-      color: hsl(var(--ACCENT));
+      color: hsl(var(--TEXT_LIGHT_HSL_LIGHTEN));
 
       &.underline {
-        border-bottom-color: hsla(var(--TEXT_LIGHT_HSL_DARKEN), 0.35);
+        border-bottom-color: hsla(var(--ACCENT_HSL_LIGHTEN), 0.35);
       }
     }
   }
