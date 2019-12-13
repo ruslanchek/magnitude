@@ -247,11 +247,12 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="698" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080/-1792.0.1792.1120@0.0.1920.1080" timestamp="1575902698005" />
-    <state x="507" y="147" key="CommitChangelistDialog2" timestamp="1576186819677">
-      <screen x="0" y="0" width="1792" height="1120" />
+    <state x="543" y="142" key="CommitChangelistDialog2" timestamp="1576227762271">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="507" y="147" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1576186819677" />
     <state x="543" y="142" key="CommitChangelistDialog2/0.0.1920.1080/-1792.0.1792.1120@0.0.1920.1080" timestamp="1575903081911" />
+    <state x="543" y="142" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1576227762271" />
     <state width="1899" height="360" key="GridCell.Tab.0.bottom" timestamp="1576225125846">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -304,11 +305,12 @@
     <state x="437" y="133" width="997" height="746" key="SettingsEditor/0.0.1920.1080/-1792.0.1792.1120@0.0.1920.1080" timestamp="1576068608305" />
     <state x="425" y="192" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1576225122712" />
     <state x="437" y="144" width="997" height="722" key="SettingsEditor/0.23.1920.979/-1792.23.1792.1097@0.23.1920.979" timestamp="1575904290996" />
-    <state x="523" y="290" key="Vcs.Push.Dialog.v2" timestamp="1576186824266">
-      <screen x="0" y="0" width="1792" height="1120" />
+    <state x="560" y="280" key="Vcs.Push.Dialog.v2" timestamp="1576227765351">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="523" y="290" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1576186824266" />
     <state x="560" y="280" key="Vcs.Push.Dialog.v2/0.0.1920.1080/-1792.0.1792.1120@0.0.1920.1080" timestamp="1575282693105" />
+    <state x="560" y="280" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1576227765351" />
     <state x="107" y="96" width="1706" height="888" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1576065424146">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
