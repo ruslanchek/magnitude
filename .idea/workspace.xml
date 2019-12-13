@@ -3,11 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="623d3edf-0097-4e2f-bf2b-f411e4681eb2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/aside/AsideNav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/aside/AsideNav.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/modules/Auth.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/modules/Auth.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GlobalStyles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GlobalStyles.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/modules/Projects.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/modules/Projects.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/screens/HomeScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/screens/HomeScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/colors.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/colors.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants/ui-constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/ui-constants.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +157,7 @@
       <workItem from="1576072663196" duration="17349000" />
       <workItem from="1576100857047" duration="4253000" />
       <workItem from="1576107154754" duration="7137000" />
-      <workItem from="1576172111259" duration="9392000" />
+      <workItem from="1576172111259" duration="9743000" />
     </task>
     <task id="LOCAL-00001" summary="Auth">
       <created>1575278797715</created>
@@ -217,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576186821211</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Auth">
+      <created>1576227763532</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1576227763532</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -323,12 +328,12 @@
     <state x="554" y="203" width="837" height="714" key="find.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1576186452861" />
     <state x="594" y="196" width="732" height="689" key="find.popup/0.0.1920.1080/-1792.0.1792.1120@0.0.1920.1080" timestamp="1575293860500" />
     <state x="594" y="196" width="897" height="689" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1576226278193" />
-    <state x="601" y="242" width="718" height="652" key="search.everywhere.popup" timestamp="1576227546068">
+    <state x="601" y="242" width="718" height="652" key="search.everywhere.popup" timestamp="1576228190805">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="561" y="251" width="670" height="676" key="search.everywhere.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1576185643687" />
     <state x="601" y="242" width="718" height="652" key="search.everywhere.popup/0.0.1920.1080/-1792.0.1792.1120@0.0.1920.1080" timestamp="1576169231474" />
-    <state x="601" y="242" width="718" height="652" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1576227546068" />
+    <state x="601" y="242" width="718" height="652" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1576228190805" />
     <state x="601" y="242" width="718" height="652" key="search.everywhere.popup/0.23.1920.981/-1792.23.1792.1097@0.23.1920.981" timestamp="1576168439011" />
   </component>
 </project>

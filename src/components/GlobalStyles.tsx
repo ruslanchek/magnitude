@@ -47,8 +47,6 @@ export const GlobalStyles: React.FC = () => {
 };
 
 const styles = css`
-  @import url('https://fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,700,700i,800,900&display=swap');
-
   body {
     font-family: var(--FONT_FAMILY);
     margin: 0;
@@ -92,7 +90,7 @@ const styles = css`
     }
 
     &.light {
-      color: hsl(var(--TEXT_LIGHT_HSL_DARKEN));
+      color: hsl(var(--ACCENT));
 
       &.underline {
         border-bottom-color: hsla(var(--TEXT_LIGHT_HSL_DARKEN), 0.35);

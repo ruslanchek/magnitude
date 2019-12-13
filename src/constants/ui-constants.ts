@@ -1,5 +1,5 @@
 export const UI_CONSTANTS = {
-  FONT_FAMILY: '"Nunito Sans", -apple-system,  sans-serif',
+  FONT_FAMILY: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif',
 
   LOGO_PROPORTION: '0.167',
 

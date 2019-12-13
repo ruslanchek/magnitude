@@ -37,6 +37,7 @@ const styles = {
   item: css`
     padding: var(--PADDING_VERTICAL_ELEMENT) var(--PADDING_HORIZONTAL_ELEMENT);
     display: flex;
+    align-items: center;
     border-radius: var(--BORDER_RADIUS_MEDIUM);
 
     &:hover {
