@@ -63,7 +63,6 @@ const styles = {
     display: grid;
     width: 100vw;
     height: 100vh;
-    background-color: rgb(var(--BG_TINT));
 
     &.wide {
       grid-template-columns: var(--ASIDE_WIDTH_WIDE) 1fr;
@@ -79,13 +78,14 @@ const styles = {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: var(--HEADER_HEIGHT) auto var(--FOOTER_HEIGHT);
-    background-color: rgb(var(--BG));
+    background-color: rgb(var(--BG_CONTRAST));
   `,
 
   mainWrapper: css`
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: var(--HEADER_HEIGHT) calc(100vh - var(--HEADER_HEIGHT));
+    background-color: rgb(var(--BG_TINT));
   `,
 
   mainRaw: css``,

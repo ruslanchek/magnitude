@@ -25,14 +25,13 @@ const styles = {
     border-bottom: 1px solid rgb(var(--ELEMENT_BORDER));
 
     .logo {
-      width: 150px;
-      height: calc(150px * 0.167);
-      background-image: url(${require('../../assets/images/logos/logo.svg')});
+      width: 70px;
+      height: calc(70px * var(--LOGO_PROPORTION));
+      background-image: url(${require('../../assets/images/logos/jitsu.svg')});
       background-position: 50%;
       background-repeat: no-repeat;
-      background-size: 150px;
+      background-size: 70px;
       position: relative;
-      transform: translateX(2px);
     }
 
     &.narrow {

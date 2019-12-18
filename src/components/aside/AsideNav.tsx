@@ -57,18 +57,12 @@ export const AsideNav: React.FC<IProps> = ({ showSidePanel }) => {
 
 const styles = {
   root: css`
-    padding: var(--PADDING_VERTICAL_GLOBAL) 10px;
-
     .link {
-      padding: 10px;
-      border-radius: 5px;
-      margin-bottom: 5px;
+      padding: 6px 15px;
       display: flex;
       align-items: center;
-      color: rgb(var(--TEXT));
-      font-weight: 600;
+      color: rgb(var(--TEXT_FADED));
       transition: background-color 0.2s;
-      color: rgba(var(--TEXT));
 
       .icon-wrapper {
         width: var(--SQUARED_ICON_SIZE);
@@ -77,9 +71,7 @@ const styles = {
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 18px;
-        background-color: rgba(var(--ACCENT), 0.08);
-        color: rgb(var(--ACCENT));
+        font-size: 15.295px;
       }
 
       .text {
@@ -87,11 +79,11 @@ const styles = {
       }
 
       &:hover {
-        background-color: rgba(var(--BG), 0.5);
+        background-color: rgba(var(--ACCENT), 0.08);
       }
 
       &.active {
-        background-color: rgba(var(--BG), 1);
+        background-color: rgba(var(--ACCENT), 0.16);
       }
     }
   `,

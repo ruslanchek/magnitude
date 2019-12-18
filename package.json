@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@css-blocks/webpack": "^0.24.0",
     "@emotion/core": "^10.0.22",
     "@monaco-editor/react": "^2.4.0",
     "@ruslanchek/magnitude-shared": "^0.0.39",

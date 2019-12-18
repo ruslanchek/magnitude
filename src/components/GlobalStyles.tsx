@@ -54,6 +54,9 @@ const styles = css`
     color: rgb(var(--TEXT));
     font-size: var(--FONT_SIZE_BASE);
     line-height: var(--GLOBAL_LINE_HEIGHT);
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
   }
 
   a.underline {
@@ -66,6 +69,7 @@ const styles = css`
     color: rgb(var(--ACCENT));
     text-decoration: none;
     outline: none;
+    transition: box-shadow 0.2s;
 
     &.underline {
       border-bottom-color: rgba(var(--ACCENT), 0.35);

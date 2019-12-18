@@ -57,9 +57,7 @@ export const Button: React.FC<IProps> = props => {
 
 const styles = {
   root: css`
-    padding: 0 calc(var(--INPUT_SIDE_PADDING) * 1.5);
     font-family: var(--FONT_FAMILY);
-    min-width: 180px;
     border: none;
     background: none;
     outline: none;
@@ -302,16 +300,20 @@ const styles = {
     large: css`
       height: var(--INPUT_HEIGHT_LARGE);
       font-size: var(--FONT_SIZE_MEDIUM);
+      min-width: 180px;
+      padding: 0 calc(var(--INPUT_SIDE_PADDING) * 1.5);
     `,
 
     small: css`
       height: var(--INPUT_HEIGHT_SMALL);
       font-size: var(--FONT_SIZE_BASE);
+      padding: 0 calc(var(--INPUT_SIDE_PADDING));
     `,
 
     tiny: css`
       height: var(--INPUT_HEIGHT_TINY);
       font-size: var(--FONT_SIZE_SMALL);
+      padding: 0 calc(var(--INPUT_SIDE_PADDING));
     `,
   },
 };

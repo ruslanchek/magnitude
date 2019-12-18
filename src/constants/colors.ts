@@ -3,9 +3,9 @@ import Color from 'color';
 export const COLORS = {
   WHITE: Color('#fff'),
   BG: Color('#fff'),
-  BG_TINT: Color('#F7F8FC'),
+  BG_TINT: Color('#FAFAFB'),
 
-  ACCENT: Color('#364fcc'),
+  ACCENT: Color('#0062FF'),
   ERROR: Color('#fe346e'),
   SUCCESS: Color('#25D086'),
 

@@ -35,11 +35,8 @@ export const AsideFooter: React.FC<IProps> = ({ showSidePanel }) => {
 
 const styles = {
   root: css`
-    height: var(--HEADER_HEIGHT);
     display: flex;
     align-items: center;
-    padding: 0 20px;
-    border-top: 1px solid rgb(var(--BG_TINT));
   `,
 
   asideToggler: css`

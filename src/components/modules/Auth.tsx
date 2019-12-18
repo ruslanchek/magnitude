@@ -288,12 +288,12 @@ const styles = {
         flex-direction: column;
 
         .logo {
-          width: 250px;
-          height: calc(250px * var(--LOGO_PROPORTION));
-          background-image: url(${require('../../assets/images/logos/logo.svg')});
+          width: 160px;
+          height: calc(160px * var(--LOGO_PROPORTION));
+          background-image: url(${require('../../assets/images/logos/jitsu.svg')});
           background-position: 50% 50%;
           background-repeat: no-repeat;
-          background-size: 100%;
+          background-size: 160px;
           flex-shrink: 0;
         }
 

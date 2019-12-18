@@ -1,7 +1,7 @@
 export const UI_CONSTANTS = {
   FONT_FAMILY: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif',
 
-  LOGO_PROPORTION: '0.167',
+  LOGO_PROPORTION: '0.416',
 
   GLOBAL_LINE_HEIGHT: '1.5',
 
@@ -19,8 +19,8 @@ export const UI_CONSTANTS = {
   FONT_SIZE_SMALL: '12px',
   FONT_SIZE_TINY: '10px',
 
-  HEADER_HEIGHT: '65px',
-  FOOTER_HEIGHT: '65px',
+  HEADER_HEIGHT: '50px',
+  FOOTER_HEIGHT: '50px',
 
   ASIDE_WIDTH_WIDE: '200px',
   ASIDE_WIDTH_NARROW: '72px',
@@ -33,10 +33,9 @@ export const UI_CONSTANTS = {
   INPUT_SIDE_PADDING: '12px',
   INPUT_HEIGHT_SMALL: '40px',
   INPUT_HEIGHT_LARGE: '44px',
+  INPUT_HEIGHT_TINY: '30px',
 
   BORDER_RADIUS_SMALL: '4px',
   BORDER_RADIUS_MEDIUM: '8px',
   BORDER_RADIUS_LARGE: '12px',
-
-  SQUARED_ICON_SIZE: '32px',
 };
