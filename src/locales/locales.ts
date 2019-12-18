@@ -20,7 +20,7 @@ export const locales = [
 
       'AuthScreen::WelcomeTitle': 'Project Evolution Management On&nbsp;Steroids',
       'AuthScreen::WelcomeText':
-        'Magnitude helps professionals discover, organize and track projects, so nothing falls off the radar.',
+        'Jitsu helps professionals discover, organize and track projects, so nothing falls off the radar.',
       'AuthScreen::LoginHeader': 'Login',
       'AuthScreen::LoginButton': 'Login',
       'AuthScreen::RegisterHeader': 'Sign up',
@@ -32,7 +32,7 @@ export const locales = [
       'InputPlaceholder::Email': 'example@domain.com',
       'InputPlaceholder::Password': 'Password',
 
-      'Common::Copyright': '© 2018–{currentYear} Magnitude Services LLC.',
+      'Common::Copyright': '© 2018–{currentYear} Jitsu Services LLC.',
       'Common::AllRightsReserved': 'All rights reserved.',
 
       'FormErrorsTitle::UserAlreadyExists': 'Sign up failed',

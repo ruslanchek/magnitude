@@ -1,14 +1,11 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
-import React, { useEffect } from 'react';
+import React from 'react';
 import { MainHeader } from './MainHeader';
 import { AsideNav } from './aside/AsideNav';
 import { AsideHeader } from './aside/AsideHeader';
 import { useAppReady } from '../hooks/useAppReady';
 import { AppLoading } from './ui/loading/AppLoading';
-import { AsideFooter } from './aside/AsideFooter';
-import { useStore } from 'react-stores';
-import { localStore } from '../stores/localStore';
 import { useAuthorizedRoute } from '../hooks/useAuthorizedRoute';
 import { ERouteType } from '../constants/paths';
 import { useTranslator } from 'eo-locale';
@@ -24,9 +21,6 @@ export const ScreenWrapper: React.FC<IProps> = props => {
   const { children, raw, routeType, title } = props;
   const translator = useTranslator();
   const isAppReady = useAppReady();
-  const showSidePanel = useStore(localStore, {
-    mapState: storeState => storeState.showSidePanel,
-  });
 
   useTitle(translator.translate(title));
   useAuthorizedRoute(routeType);
@@ -38,11 +32,10 @@ export const ScreenWrapper: React.FC<IProps> = props => {
           {raw ? (
             <main css={styles.mainRaw}>{children}</main>
           ) : (
-            <div css={styles.root} className={showSidePanel ? 'wide' : 'narrow'}>
+            <div css={styles.root}>
               <div css={styles.asideWrapper}>
-                <AsideHeader showSidePanel={showSidePanel} />
-                <AsideNav showSidePanel={showSidePanel} />
-                <AsideFooter showSidePanel={showSidePanel} />
+                <AsideHeader />
+                <AsideNav />
               </div>
               <div css={styles.mainWrapper}>
                 <MainHeader />
@@ -63,14 +56,7 @@ const styles = {
     display: grid;
     width: 100vw;
     height: 100vh;
-
-    &.wide {
-      grid-template-columns: var(--ASIDE_WIDTH_WIDE) 1fr;
-    }
-
-    &.narrow {
-      grid-template-columns: var(--ASIDE_WIDTH_NARROW) 1fr;
-    }
+    grid-template-columns: var(--ASIDE_WIDTH_WIDE) 1fr;
   `,
 
   asideWrapper: css`

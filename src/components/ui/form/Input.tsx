@@ -12,7 +12,7 @@ interface IProps {
   placeholder?: string;
   readOnly?: boolean;
   disabled?: boolean;
-  size?: 'small' | 'large';
+  size?: 'small' | 'large' | 'tiny';
   type?: 'password' | 'text' | 'number' | 'email' | 'tel' | 'date' | 'datetime' | 'month' | 'search';
   tabIndex?: number;
   autoComplete?: string;
@@ -213,6 +213,11 @@ const styles = {
   `,
 
   sizes: {
+    tiny: css`
+      height: var(--INPUT_HEIGHT_TINY);
+      font-size: var(--FONT_SIZE_BASE);
+    `,
+
     small: css`
       height: var(--INPUT_HEIGHT_SMALL);
       font-size: var(--FONT_SIZE_BASE);
