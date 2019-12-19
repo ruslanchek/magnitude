@@ -8,8 +8,8 @@ export const UI_CONSTANTS = {
   GRID_GAP_SIZE: '20px',
 
   ELEVATION_SHADOW_1: '0 1px 3px 0 rgba(0, 0, 0, 0.1)',
-  ELEVATION_SHADOW_2: '0 2px 6px rgba(0, 0, 0, 0.15)',
-  ELEVATION_SHADOW_3: '0 5px 10px rgba(0, 0, 0, 0.15)',
+  ELEVATION_SHADOW_2: '0 3px 10px rgba(0, 0, 0, 0.05)',
+  ELEVATION_SHADOW_3: '0 5px 15px rgba(0, 0, 0, 0.05)',
 
   FONT_SIZE_HERO_LARGE: '46px',
 
@@ -19,8 +19,8 @@ export const UI_CONSTANTS = {
   FONT_SIZE_SMALL: '12px',
   FONT_SIZE_TINY: '10px',
 
-  HEADER_HEIGHT: '50px',
-  FOOTER_HEIGHT: '50px',
+  HEADER_HEIGHT: '56px',
+  FOOTER_HEIGHT: '56px',
 
   ASIDE_WIDTH_WIDE: '200px',
   ASIDE_WIDTH_NARROW: '72px',

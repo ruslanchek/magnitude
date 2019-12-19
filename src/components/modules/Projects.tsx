@@ -7,6 +7,7 @@ import { Avatar } from '../ui/avatars/Avatar';
 import { EOLocale } from 'eo-locale';
 import { IEntityProjectShared } from '@ruslanchek/magnitude-shared';
 import { PATHS } from '../../constants/paths';
+import { MdMoreVert } from 'react-icons/md';
 
 interface IProjectProps {
   index: number;
@@ -22,9 +23,15 @@ const Project: React.FC<IProjectProps> = ({ index, project }) => {
 
   return (
     <div css={styles.item} onClick={handleRouteToProject}>
-      <div className='info'>
-        <Avatar src={`https://picsum.photos/id/${index}/80/80`} size={40} title={project.title} />
+      <a href='#'>
+        <MdMoreVert />
+      </a>
+      <div className='header'>
+        <Avatar src={`https://picsum.photos/id/${index}/100/100`} size={50} title={project.title} />
         <h2 className='title'>{project.title}</h2>
+      </div>
+
+      <div className='info'>
         <span className='subtitle'>
           <EOLocale.Date value={new Date(project.updatedAt)} />
         </span>
@@ -50,26 +57,38 @@ export const Projects: React.FC = () => {
 const styles = {
   root: css``,
 
-  items: css``,
+  items: css`
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 25px;
+  `,
 
   item: css`
     padding: 30px;
-    border-radius: var(--BORDER_RADIUS_MEDIUM);
+    border-radius: var(--BORDER_RADIUS_SMALL);
     background-color: rgb(var(--BG));
+    box-shadow: var(--ELEVATION_SHADOW_2);
 
     &:hover {
       background-color: rgb(var(--BG_TINT));
     }
 
+    .header {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .title {
+      font-size: var(--FONT_SIZE_LARGE);
+      font-weight: 800;
+      margin: 10px 0 0 0;
+    }
+
     .info {
-      margin-left: var(--PADDING_VERTICAL_ELEMENT);
-
-      .title {
-        font-size: var(--FONT_SIZE_LARGE);
-        font-weight: 800;
-        margin: 10px 0 0 0;
-      }
-
       .subtitle {
         font-size: var(--FONT_SIZE_SMALL);
       }

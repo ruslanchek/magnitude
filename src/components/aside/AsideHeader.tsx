@@ -22,12 +22,12 @@ const styles = {
     box-sizing: border-box;
 
     .logo {
-      width: 80px;
-      height: calc(80px * var(--LOGO_PROPORTION));
+      width: 90px;
+      height: calc(90px * var(--LOGO_PROPORTION));
       background-image: url(${require('../../assets/images/logos/jitsu.svg')});
       background-position: 50%;
       background-repeat: no-repeat;
-      background-size: 80px;
+      background-size: 90px;
       position: relative;
       transform: translateX(-3px);
     }

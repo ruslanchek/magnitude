@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
 import React, { useContext } from 'react';
-import { useMe } from '../hooks/useMe';
+// import { useMe } from '../hooks/useMe';
 import { Button } from './ui/form/Button';
 import { ModalsContext } from './ui/modal/Modals';
 import { NewProjectModal } from './modals/NewProjectModal';
@@ -11,7 +11,7 @@ import { Input } from './ui/form/Input';
 
 export const MainHeader: React.FC = () => {
   const modalsContext = useContext(ModalsContext);
-  const me = useMe();
+  // const me = useMe();
 
   const handleOpenAddProjectModal = () => {
     modalsContext.openModal({
@@ -21,7 +21,7 @@ export const MainHeader: React.FC = () => {
 
   return (
     <div css={styles.root}>
-      <div css={styles.main}>{me?.email}</div>
+      <div css={styles.main} />
 
       <div css={styles.search}>
         <Input name='search' tabIndex={1} size='tiny' placeholder='Search' autoComplete='off' />
@@ -38,6 +38,8 @@ export const MainHeader: React.FC = () => {
 
         <Avatar src='https://i.pravatar.cc/60?img=3' title='User' size={30} />
       </div>
+
+      <div css={styles.sub}>ccc</div>
     </div>
   );
 };
@@ -51,6 +53,10 @@ const styles = {
     border-bottom: 1px solid rgb(var(--ELEMENT_BORDER));
     background-color: rgb(var(--BG));
     box-sizing: border-box;
+  `,
+
+  sub: css`
+    position: sticky;
   `,
 
   addIcon: css`
@@ -70,12 +76,12 @@ const styles = {
     line-height: 1;
 
     .new {
-      margin-right: 20px;
+      margin-right: var(--PADDING_HORIZONTAL_ELEMENT);
     }
   `,
 
   search: css`
-    margin-right: 20px;
+    margin-right: var(--PADDING_HORIZONTAL_ELEMENT);
     position: relative;
 
     .icon {
