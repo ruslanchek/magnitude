@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="623d3edf-0097-4e2f-bf2b-f411e4681eb2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MainHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainHeader.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/aside/AsideHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/aside/AsideHeader.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/modules/Projects.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/modules/Projects.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/ui-constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/ui-constants.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/logos/jitsu.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/logos/jitsu.svg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,6 +158,7 @@
       <workItem from="1576250556053" duration="826000" />
       <workItem from="1576588323053" duration="8640000" />
       <workItem from="1576674910696" duration="5119000" />
+      <workItem from="1577010589176" duration="2000" />
     </task>
     <task id="LOCAL-00001" summary="Auth">
       <created>1575278797715</created>
