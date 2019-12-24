@@ -1,7 +1,7 @@
 export const UI_CONSTANTS = {
   FONT_FAMILY: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif',
 
-  LOGO_PROPORTION: '0.416',
+  LOGO_PROPORTION: '0.2849',
 
   GLOBAL_LINE_HEIGHT: '1.5',
 
@@ -19,8 +19,8 @@ export const UI_CONSTANTS = {
   FONT_SIZE_SMALL: '12px',
   FONT_SIZE_TINY: '10px',
 
-  HEADER_HEIGHT: '56px',
-  FOOTER_HEIGHT: '56px',
+  HEADER_HEIGHT: '60px',
+  FOOTER_HEIGHT: '60px',
 
   ASIDE_WIDTH: '230px',
 

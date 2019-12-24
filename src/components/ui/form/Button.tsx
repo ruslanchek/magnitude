@@ -21,7 +21,7 @@ export const Button: React.FC<IProps> = props => {
     disabled = false,
     loading = false,
     onClick = () => {},
-    tabIndex = 1,
+    tabIndex = 0,
     children,
   } = props;
 
@@ -37,7 +37,7 @@ export const Button: React.FC<IProps> = props => {
     <button
       type={type}
       disabled={disabled || loading}
-      tabIndex={tabIndex || 1}
+      tabIndex={tabIndex}
       className={isFocusMarked ? 'focus' : ''}
       onKeyUp={() => {
         setFocusMarked(true);

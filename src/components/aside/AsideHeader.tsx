@@ -7,7 +7,9 @@ import { PATHS } from '../../constants/paths';
 export const AsideHeader: React.FC = () => {
   return (
     <div css={styles.root}>
-      <NavLink tabIndex={1} to={PATHS.HOME.path} className='logo' />
+      <NavLink to={PATHS.HOME.path} className='logo'>
+        <img width='118' title='Jitsu – Home' alt='Jitsu' src={require('../../assets/images/logos/jitsu-dark.svg')} />
+      </NavLink>
     </div>
   );
 };
@@ -18,17 +20,16 @@ const styles = {
     display: flex;
     align-items: center;
     padding: 0 18px;
-    box-sizing: border-box;
 
     .logo {
-      width: 90px;
-      height: calc(90px * var(--LOGO_PROPORTION));
-      background-image: url(${require('../../assets/images/logos/jitsu-dark.svg')});
-      background-position: 50%;
-      background-repeat: no-repeat;
-      background-size: 90px;
+      width: 118px;
+      padding: 6px 9px 6px 6px;
       position: relative;
-      transform: translateX(-2px);
+      transform: translateX(-12px);
+
+      > img {
+        display: block;
+      }
     }
   `,
 };

@@ -29,7 +29,7 @@ export const MainHeader: React.FC = () => {
       <div css={styles.main} />
 
       <div css={styles.search}>
-        <Input name='search' tabIndex={1} size='small' placeholder='Search' autoComplete='off' />
+        <Input name='search' size='small' placeholder='Search' autoComplete='off' />
         <MdSearch className='icon' />
       </div>
 

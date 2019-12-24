@@ -69,7 +69,6 @@ const styles = css`
     color: rgb(var(--ACCENT));
     text-decoration: none;
     outline: none;
-    transition: box-shadow 0.2s;
 
     &.underline {
       border-bottom-color: rgba(var(--ACCENT), 0.35);
@@ -103,8 +102,8 @@ const styles = css`
   }
 
   a:focus:not(:active):not(:hover) {
-    box-shadow: 0 0 0 3.5px rgba(var(--ACCENT), 0.2);
-    border-radius: 3px;
+    box-shadow: inset 0 0 0 3.5px rgba(var(--ACCENT), 0.2);
+    border-radius: 6px;
   }
 
   ul,

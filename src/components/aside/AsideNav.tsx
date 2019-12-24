@@ -3,8 +3,12 @@ import { jsx, css } from '@emotion/core';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { PATHS, IPath } from '../../constants/paths';
-import { MdHome, MdChromeReaderMode, MdRowing } from 'react-icons/md';
 import { EOLocale } from 'eo-locale';
+import { CategoryTitle } from '../ui/typographics/CategoryTitle';
+import { Marker } from '../ui/misc/Marker';
+import { MdBookmark } from 'react-icons/md';
+import { IoMdPricetag } from 'react-icons/io';
+import Color from 'color';
 
 interface ILink {
   path: string;
@@ -12,61 +16,95 @@ interface ILink {
   icon: React.ReactNode;
 }
 
+interface IFavorite {
+  id: string;
+  title: string;
+}
+
+interface ITag {
+  id: string;
+  title: string;
+  color: Color;
+}
+
 const LINKS: ILink[] = [
   {
     path: PATHS.HOME.path,
     title: 'Nav::Home',
-    icon: (
-      <svg width='24px' height='24px' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>
-        <path
-          fill='#CBD5E0'
-          d='M12 21a2 2 0 0 1-1.41-.59l-.83-.82A2 2 0 0 0 8.34 19H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h4a5 5 0 0 1 4 2v16z'></path>
-        <path
-          fill='#718096'
-          d='M12 21V5a5 5 0 0 1 4-2h4a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1h-4.34a2 2 0 0 0-1.42.59l-.83.82A2 2 0 0 1 12 21z'></path>
-      </svg>
-    ),
+    icon: <img src={require('../../assets/images/icons/book.svg')} />,
   },
 
   {
     path: PATHS.PROJECTS.path,
     title: 'Nav::Projects',
-    icon: (
-      <svg width='24px' height='24px' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>
-        <path
-          fill='#CBD5E0'
-          d='M3 6l9 4v12l-9-4V6zm14-3v2c0 1.1-2.24 2-5 2s-5-.9-5-2V3c0 1.1 2.24 2 5 2s5-.9 5-2z'></path>
-        <polygon fill='#718096' points='21 6 12 10 12 22 21 18'></polygon>
-      </svg>
-    ),
+    icon: <img src={require('../../assets/images/icons/brick.svg')} />,
   },
 
   {
     path: PATHS.TEAMS.path,
     title: 'Nav::Teams',
-    icon: (
-      <svg width='24px' height='24px' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>
-        <path
-          fill='#CBD5E0'
-          d='M9 22c.19-.14.37-.3.54-.46L17.07 14H20a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H9zM4 2h4a2 2 0 0 1 2 2v14a4 4 0 1 1-8 0V4c0-1.1.9-2 2-2zm2 17.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z'></path>
-        <path fill='#718096' d='M11 18.66V7.34l2.07-2.07a2 2 0 0 1 2.83 0l2.83 2.83a2 2 0 0 1 0 2.83L11 18.66z'></path>
-      </svg>
-    ),
+    icon: <img src={require('../../assets/images/icons/tags.svg')} />,
   },
 
   {
     path: PATHS.MESSAGES.path,
     title: 'Nav::Messages',
-    icon: (
-      <svg width='24px' height='24px' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>
-        <path
-          fill='#CBD5E0'
-          d='M20.3 12.04l1.01 3a1 1 0 0 1-1.26 1.27l-3.01-1a7 7 0 1 1 3.27-3.27zM11 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z'></path>
-        <path
-          fill='#718096'
-          d='M15.88 17.8a7 7 0 0 1-8.92 2.5l-3 1.01a1 1 0 0 1-1.27-1.26l1-3.01A6.97 6.97 0 0 1 5 9.1a9 9 0 0 0 10.88 8.7z'></path>
-      </svg>
-    ),
+    icon: <img src={require('../../assets/images/icons/chat.svg')} />,
+  },
+];
+
+const FAVORITES: IFavorite[] = [
+  {
+    id: '1',
+    title: 'EO Web',
+  },
+  {
+    id: '2',
+    title: 'EO Design',
+  },
+  {
+    id: '3',
+    title: 'EO Marketing Stuff',
+  },
+  {
+    id: '4',
+    title: 'EOP Site',
+  },
+  {
+    id: '5',
+    title: 'EOT Site',
+  },
+  {
+    id: '6',
+    title: 'EOT App',
+  },
+];
+
+const TAGS: ITag[] = [
+  {
+    id: '1',
+    title: 'Web',
+    color: Color('#D11C13'),
+  },
+  {
+    id: '2',
+    title: 'Mudules',
+    color: Color('#5E5AA0'),
+  },
+  {
+    id: '3',
+    title: 'Marketing',
+    color: Color('#6DC09E'),
+  },
+  {
+    id: '4',
+    title: 'Person',
+    color: Color('#75B01A'),
+  },
+  {
+    id: '5',
+    title: 'Important',
+    color: Color('#DA7F9D'),
   },
 ];
 
@@ -75,24 +113,67 @@ export const AsideNav: React.FC = () => {
 
   return (
     <div css={styles.root}>
-      {LINKS.map(link => {
-        return (
-          <NavLink tabIndex={2} key={link.path} to={link.path} exact className='link' activeClassName='active'>
-            <span className='icon-wrapper'>{link.icon}</span>
-            <span className='text'>
-              <EOLocale.Text id={link.title} />
+      <nav>
+        {LINKS.map(link => {
+          return (
+            <NavLink tabIndex={0} key={link.path} to={link.path} exact className='link'>
+              <span className='icon-wrapper'>{link.icon}</span>
+              <span className='text'>
+                <EOLocale.Text id={link.title} />
+              </span>
+              {attentionPath.path === link.path && <Marker />}
+            </NavLink>
+          );
+        })}
+      </nav>
+
+      <nav>
+        <div className='title'>
+          <CategoryTitle>Favorites</CategoryTitle>
+        </div>
+
+        {FAVORITES.map(favorite => (
+          <NavLink key={favorite.id} tabIndex={0} to={favorite.id} className='link'>
+            <span className='icon-wrapper'>
+              <MdBookmark />
             </span>
-            {attentionPath.path === link.path && <span className='notifications'>3</span>}
+            <span className='text'>{favorite.title}</span>
           </NavLink>
-        );
-      })}
+        ))}
+      </nav>
+
+      <nav>
+        <div className='title'>
+          <CategoryTitle>Tags</CategoryTitle>
+        </div>
+
+        {TAGS.map(tag => (
+          <NavLink key={tag.id} tabIndex={0} to={tag.id} className='link'>
+            <span
+              className='icon-wrapper'
+              css={css`
+                background-color: ${tag.color.alpha(0.15).toString()};
+                color: ${tag.color.toString()};
+              `}>
+              <IoMdPricetag />
+            </span>
+            <span className='text'>{tag.title}</span>
+          </NavLink>
+        ))}
+      </nav>
     </div>
   );
 };
 
 const styles = {
   root: css`
-    padding-top: 20px;
+    > nav {
+      padding-top: 20px;
+    }
+
+    .title {
+      padding: 0 17px;
+    }
 
     .link {
       display: flex;
@@ -105,6 +186,23 @@ const styles = {
       white-space: nowrap;
       line-height: 1;
 
+      .text {
+        margin-left: 15px;
+        flex-grow: 1;
+      }
+
+      &:hover {
+        color: rgb(var(--TEXT));
+      }
+
+      &.active {
+        color: rgb(var(--TEXT));
+
+        &:before {
+          background-color: rgb(var(--ACCENT));
+        }
+      }
+
       .icon-wrapper {
         width: var(--SQUARED_ICON_SIZE);
         height: var(--SQUARED_ICON_SIZE);
@@ -113,38 +211,6 @@ const styles = {
         align-items: center;
         justify-content: center;
         font-size: 18px;
-      }
-
-      .notifications {
-        border: 1px solid rgb(var(--ACCENT));
-        border-radius: 3px;
-        opacity: 0.25;
-        padding: 2px 4px;
-        color: rgb(var(--ACCENT));
-        font-size: var(--FONT_SIZE_SMALL);
-        font-weight: 600;
-      }
-
-      .text {
-        margin-left: 15px;
-        flex-grow: 1;
-      }
-
-      &:hover {
-        color: rgb(var(--TEXT));
-
-        .notifications {
-          opacity: 0.5;
-        }
-      }
-
-      &.active {
-        color: rgb(var(--TEXT));
-        font-weight: 600;
-
-        &:before {
-          background-color: rgb(var(--ACCENT));
-        }
       }
     }
   `,

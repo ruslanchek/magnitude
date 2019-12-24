@@ -152,13 +152,13 @@ export const Auth: React.FC<IProps> = ({ mode }) => {
                 </h2>
 
                 {headerToggleLink1Path && (
-                  <NavLink tabIndex={1} className='light' to={headerToggleLink1Path}>
+                  <NavLink tabIndex={0} className='light' to={headerToggleLink1Path}>
                     <EOLocale.Text id={headerToggleLink1Text} />
                   </NavLink>
                 )}
 
                 {headerToggleLink2Path && (
-                  <NavLink tabIndex={1} className='light' to={headerToggleLink2Path}>
+                  <NavLink tabIndex={0} className='light' to={headerToggleLink2Path}>
                     <EOLocale.Text id={headerToggleLink2Text} />
                   </NavLink>
                 )}
@@ -169,7 +169,6 @@ export const Auth: React.FC<IProps> = ({ mode }) => {
                   <Input
                     type='email'
                     name='email'
-                    tabIndex={2}
                     autoComplete='username'
                     placeholder={translator.translate('InputPlaceholder::Email')}
                     validators={[new FormValidatorEmail('ValidationError::Email')]}
@@ -179,7 +178,6 @@ export const Auth: React.FC<IProps> = ({ mode }) => {
                 {mode !== EMode.RememberPassword && (
                   <Row>
                     <Input
-                      tabIndex={2}
                       type='password'
                       name='password'
                       autoComplete='current-password'
@@ -192,7 +190,7 @@ export const Auth: React.FC<IProps> = ({ mode }) => {
                 <Row>
                   <Col>
                     <div>
-                      <Button tabIndex={3} loading={loading} type='submit' color='default'>
+                      <Button loading={loading} type='submit' color='default'>
                         <EOLocale.Text id={STATEFUL_TEXTS[mode].button} />
                       </Button>
                     </div>
@@ -200,10 +198,7 @@ export const Auth: React.FC<IProps> = ({ mode }) => {
                 </Row>
               </Form>
 
-              <NavLink
-                tabIndex={4}
-                className={mode === EMode.Login ? 'light' : 'hidden'}
-                to={PATHS.AUTH_REMEMBER_PASSWORD.path}>
+              <NavLink className={mode === EMode.Login ? 'light' : 'hidden'} to={PATHS.AUTH_REMEMBER_PASSWORD.path}>
                 <EOLocale.Text id='AuthScreen::RememberPasswordLink' />
               </NavLink>
             </div>

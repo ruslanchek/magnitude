@@ -32,7 +32,7 @@ export const Input: React.FC<IProps> = props => {
     disabled = false,
     size = 'large',
     type = 'text',
-    tabIndex = 1,
+    tabIndex = 0,
     autoComplete,
     prefix,
     suffix,

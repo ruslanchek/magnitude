@@ -22,7 +22,7 @@ export const Checkbox: React.FC<IProps> = props => {
     name,
     label,
     value,
-    tabIndex = 1,
+    tabIndex = 0,
     type = 'checkbox',
     validator = null,
     disabled = false,
