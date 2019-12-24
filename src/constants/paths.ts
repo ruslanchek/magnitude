@@ -13,6 +13,7 @@ export const PATHS: Record<string, IPath> = {
   HOME: { path: '/', type: ERouteType.Authorized },
   ME: { path: '/me', type: ERouteType.Authorized },
   TEAMS: { path: '/teams', type: ERouteType.Authorized },
+  MESSAGES: { path: '/messages', type: ERouteType.Authorized },
   PROJECTS: { path: '/projects', type: ERouteType.Authorized },
   PROJECT: { path: '/projects/:id', type: ERouteType.Authorized },
   AUTH_LOGIN: { path: '/auth/login', type: ERouteType.Unauthorized },

@@ -5,7 +5,7 @@ import { ActivityIndicator } from '../loading/ActivityIndicator';
 
 interface IProps {
   type?: 'submit' | 'button';
-  size?: 'small' | 'large' | 'tiny';
+  size?: 'small' | 'large';
   color?: 'default' | 'success' | 'accent' | 'faded' | 'danger' | 'white' | 'facebook' | 'google';
   disabled?: boolean;
   loading?: boolean;
@@ -74,7 +74,7 @@ const styles = {
     font-weight: 600;
     transition: background-color 0.2s, box-shadow 0.2s, transform 0.2s;
     transform: scale(0.99999);
-    border-radius: var(--BORDER_RADIUS_SMALL);
+    border-radius: var(--BORDER_RADIUS_MEDIUM);
 
     &:active {
       transform: scale(0.99);
@@ -98,11 +98,11 @@ const styles = {
       color: rgb(var(--WHITE));
 
       &:hover {
-        background-color: hsl(var(--ACCENT_HSL_DARKEN));
+        background-color: hsl(var(--ACCENT_DARKEN));
       }
 
       &:active {
-        background-color: hsl(var(--ACCENT_HSL_DARKEN));
+        background-color: hsl(var(--ACCENT_DARKEN));
         box-shadow: 0 0 0 0 rgba(var(--ACCENT), 0);
       }
 
@@ -111,7 +111,7 @@ const styles = {
         box-shadow: 0 0 0 3.5px rgba(var(--ACCENT), 0.33);
 
         &:active {
-          background-color: hsl(var(--ACCENT_HSL_DARKEN));
+          background-color: hsl(var(--ACCENT_DARKEN));
           box-shadow: 0 0 0 3.5px rgba(var(--ACCENT), 0.33), 0 0 0 0 rgba(var(--ACCENT), 0);
         }
       }
@@ -122,11 +122,11 @@ const styles = {
       color: rgb(var(--WHITE));
 
       &:hover {
-        background-color: hsl(var(--SUCCESS_HSL_DARKEN));
+        background-color: hsl(var(--SUCCESS_DARKEN));
       }
 
       &:active {
-        background-color: hsl(var(--SUCCESS_HSL_DARKEN));
+        background-color: hsl(var(--SUCCESS_DARKEN));
         box-shadow: 0 0 0 0 rgba(var(--SUCCESS), 0);
       }
 
@@ -135,7 +135,7 @@ const styles = {
         box-shadow: 0 0 0 3.5px rgba(var(--SUCCESS), 0.33);
 
         &:active {
-          background-color: hsl(var(--SUCCESS_HSL_DARKEN));
+          background-color: hsl(var(--SUCCESS_DARKEN));
           box-shadow: 0 0 0 3.5px rgba(var(--SUCCESS), 0.33), 0 0 0 0 rgba(var(--SUCCESS), 0);
         }
       }
@@ -145,11 +145,11 @@ const styles = {
       background-color: rgb(var(--BUTTON_ACCENT));
 
       &:hover {
-        background-color: hsl(var(--BUTTON_ACCENT_HSL_DARKEN));
+        background-color: hsl(var(--BUTTON_ACCENT_DARKEN));
       }
 
       &:active {
-        background-color: hsl(var(--BUTTON_ACCENT_HSL_DARKEN));
+        background-color: hsl(var(--BUTTON_ACCENT_DARKEN));
         box-shadow: 0 0 0 0 rgba(var(--BUTTON_ACCENT), 0);
       }
 
@@ -158,7 +158,7 @@ const styles = {
         box-shadow: 0 0 0 3.5px rgba(var(--BUTTON_ACCENT), 0.33);
 
         &:active {
-          background-color: hsl(var(--BUTTON_ACCENT_HSL_DARKEN));
+          background-color: hsl(var(--BUTTON_ACCENT_DARKEN));
           box-shadow: 0 0 0 3.5px rgba(var(--BUTTON_ACCENT), 0.33), 0 0 0 0 rgba(var(--BUTTON_ACCENT), 0);
         }
       }
@@ -168,11 +168,11 @@ const styles = {
       background-color: rgb(var(--BUTTON_FADED));
 
       &:hover {
-        background-color: hsl(var(--BUTTON_FADED_HSL_DARKEN));
+        background-color: hsl(var(--BUTTON_FADED_DARKEN));
       }
 
       &:active {
-        background-color: hsl(var(--BUTTON_FADED_HSL_DARKEN));
+        background-color: hsl(var(--BUTTON_FADED_DARKEN));
         box-shadow: 0 0 0 0 rgba(var(--BUTTON_FADED), 0);
       }
 
@@ -181,7 +181,7 @@ const styles = {
         box-shadow: 0 0 0 3.5px rgba(var(--BUTTON_FADED), 0.33);
 
         &:active {
-          background-color: hsl(var(--BUTTON_FADED_HSL_DARKEN));
+          background-color: hsl(var(--BUTTON_FADED_DARKEN));
           box-shadow: 0 0 0 3.5px rgba(var(--BUTTON_FADED), 0.33), 0 0 0 0 rgba(var(--BUTTON_FADED), 0);
         }
       }
@@ -191,11 +191,11 @@ const styles = {
       background-color: rgb(var(--BUTTON_DANGER));
 
       &:hover {
-        background-color: hsl(var(--BUTTON_DANGER_HSL_DARKEN));
+        background-color: hsl(var(--BUTTON_DANGER_DARKEN));
       }
 
       &:active {
-        background-color: hsl(var(--BUTTON_DANGER_HSL_DARKEN));
+        background-color: hsl(var(--BUTTON_DANGER_DARKEN));
         box-shadow: 0 0 0 0 rgba(var(--BUTTON_DANGER), 0);
       }
 
@@ -204,7 +204,7 @@ const styles = {
         box-shadow: 0 0 0 3.5px rgba(var(--BUTTON_DANGER), 0.33);
 
         &:active {
-          background-color: hsl(var(--BUTTON_DANGER_HSL_DARKEN));
+          background-color: hsl(var(--BUTTON_DANGER_DARKEN));
           box-shadow: 0 0 0 3.5px rgba(var(--BUTTON_DANGER), 0.33), 0 0 0 0 rgba(var(--BUTTON_DANGER), 0);
         }
       }
@@ -215,11 +215,11 @@ const styles = {
       color: rgb(var(--TEXT_ACTIVE));
 
       &:hover {
-        background-color: hsl(var(--WHITE_HSL_DARKEN));
+        background-color: hsl(var(--WHITE_DARKEN));
       }
 
       &:active {
-        background-color: hsl(var(--WHITE_HSL_DARKEN));
+        background-color: hsl(var(--WHITE_DARKEN));
         box-shadow: 0 0 0 0 rgba(var(--WHITE), 0);
       }
 
@@ -228,7 +228,7 @@ const styles = {
         box-shadow: 0 0 0 3.5px rgba(var(--WHITE), 0.33);
 
         &:active {
-          background-color: hsl(var(--WHITE_HSL_DARKEN));
+          background-color: hsl(var(--WHITE_DARKEN));
           box-shadow: 0 0 0 3.5px rgba(var(--WHITE), 0.33), 0 0 0 0 rgba(var(--WHITE), 0);
         }
       }
@@ -238,11 +238,11 @@ const styles = {
       background-color: rgb(var(--BUTTON_FACEBOOK));
 
       &:hover {
-        background-color: hsl(var(--BUTTON_FACEBOOK_HSL_DARKEN));
+        background-color: hsl(var(--BUTTON_FACEBOOK_DARKEN));
       }
 
       &:active {
-        background-color: hsl(var(--BUTTON_FACEBOOK_HSL_DARKEN));
+        background-color: hsl(var(--BUTTON_FACEBOOK_DARKEN));
         box-shadow: 0 0 0 0 rgba(var(--BUTTON_FACEBOOK), 0);
       }
 
@@ -251,7 +251,7 @@ const styles = {
         box-shadow: 0 0 0 3.5px rgba(var(--BUTTON_FACEBOOK), 0.33);
 
         &:active {
-          background-color: hsl(var(--BUTTON_FACEBOOK_HSL_DARKEN));
+          background-color: hsl(var(--BUTTON_FACEBOOK_DARKEN));
           box-shadow: 0 0 0 3.5px rgba(var(--BUTTON_FACEBOOK), 0.33), 0 0 0 0 rgba(var(--BUTTON_FACEBOOK), 0);
         }
       }
@@ -276,11 +276,11 @@ const styles = {
       color: rgb(var(--TEXT_FADED));
 
       &:hover {
-        background-color: hsl(var(--BUTTON_GOOGLE_HSL_DARKEN));
+        background-color: hsl(var(--BUTTON_GOOGLE_DARKEN));
       }
 
       &:active {
-        background-color: hsl(var(--BUTTON_GOOGLE_HSL_DARKEN));
+        background-color: hsl(var(--BUTTON_GOOGLE_DARKEN));
         box-shadow: 0 0 0 0 rgba(var(--BUTTON_GOOGLE), 0);
       }
 
@@ -289,7 +289,7 @@ const styles = {
         box-shadow: 0 0 0 3.5px rgba(var(--BUTTON_GOOGLE), 0.33);
 
         &:active {
-          background-color: hsl(var(--BUTTON_GOOGLE_HSL_DARKEN));
+          background-color: hsl(var(--BUTTON_GOOGLE_DARKEN));
           box-shadow: 0 0 0 3.5px rgba(var(--BUTTON_GOOGLE), 0.33), 0 0 0 0 rgba(var(--BUTTON_GOOGLE), 0);
         }
       }
@@ -307,13 +307,7 @@ const styles = {
     small: css`
       height: var(--INPUT_HEIGHT_SMALL);
       font-size: var(--FONT_SIZE_BASE);
-      padding: 0 calc(var(--INPUT_SIDE_PADDING));
-    `,
-
-    tiny: css`
-      height: var(--INPUT_HEIGHT_TINY);
-      font-size: var(--FONT_SIZE_SMALL);
-      padding: 0 calc(var(--INPUT_SIDE_PADDING));
+      padding: 0 calc(var(--INPUT_SIDE_PADDING) * 1.5);
     `,
   },
 };

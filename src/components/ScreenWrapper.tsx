@@ -56,7 +56,7 @@ const styles = {
     display: grid;
     width: 100vw;
     height: 100vh;
-    grid-template-columns: var(--ASIDE_WIDTH_WIDE) 1fr;
+    grid-template-columns: var(--ASIDE_WIDTH) 1fr;
   `,
 
   asideWrapper: css`
@@ -64,14 +64,14 @@ const styles = {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: var(--HEADER_HEIGHT) auto var(--FOOTER_HEIGHT);
-    background-color: rgb(var(--BG_CONTRAST));
+    background-color: rgb(var(--BG_TINT));
+    border-right: 1px solid rgb(var(--ELEMENT_BORDER));
   `,
 
   mainWrapper: css`
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: var(--HEADER_HEIGHT) calc(100vh - var(--HEADER_HEIGHT));
-    background-color: rgb(var(--BG_TINT));
   `,
 
   mainRaw: css``,

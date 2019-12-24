@@ -384,7 +384,7 @@ const styles = {
       background-color: rgb(var(--BG_TINT));
 
       &:hover {
-        background-color: hsl(var(--BG_TINT_HSL_DARKEN));
+        background-color: hsl(var(--BG_TINT_DARKEN));
       }
     `,
     [ENotificationType.Faded]: css`
@@ -392,7 +392,7 @@ const styles = {
       background-color: rgb(var(--BUTTON_FADED));
 
       &:hover {
-        background-color: hsl(var(--BUTTON_FADED_HSL_DARKEN));
+        background-color: hsl(var(--BUTTON_FADED_DARKEN));
       }
     `,
     [ENotificationType.Accent]: css`
@@ -400,7 +400,7 @@ const styles = {
       background-color: rgb(var(--ACCENT));
 
       &:hover {
-        background-color: hsl(var(--ACCENT_HSL_DARKEN));
+        background-color: hsl(var(--ACCENT_DARKEN));
       }
     `,
     [ENotificationType.Danger]: css`
@@ -408,7 +408,7 @@ const styles = {
       background-color: rgb(var(--ERROR));
 
       &:hover {
-        background-color: hsl(var(--ERROR_HSL_DARKEN));
+        background-color: hsl(var(--ERROR_DARKEN));
       }
     `,
     [ENotificationType.Success]: css`
@@ -416,7 +416,7 @@ const styles = {
       background-color: rgb(var(--SUCCESS));
 
       &:hover {
-        background-color: hsl(var(--SUCCESS_HSL_DARKEN));
+        background-color: hsl(var(--SUCCESS_DARKEN));
       }
     `,
   },

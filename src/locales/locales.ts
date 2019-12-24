@@ -14,6 +14,7 @@ export const locales = [
       'Nav::Home': 'Home',
       'Nav::Projects': 'Projects',
       'Nav::Teams': 'Teams',
+      'Nav::Messages': 'Messages',
 
       'ValidationError::Email': 'Email is incorrect',
       'ValidationError::PasswordLength': 'Password minimal length is 6 symbols',

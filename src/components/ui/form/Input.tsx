@@ -12,7 +12,7 @@ interface IProps {
   placeholder?: string;
   readOnly?: boolean;
   disabled?: boolean;
-  size?: 'small' | 'large' | 'tiny';
+  size?: 'small' | 'large';
   type?: 'password' | 'text' | 'number' | 'email' | 'tel' | 'date' | 'datetime' | 'month' | 'search';
   tabIndex?: number;
   autoComplete?: string;
@@ -144,7 +144,7 @@ const styles = {
     justify-content: center;
     align-items: center;
     display: flex;
-    border-radius: var(--BORDER_RADIUS_SMALL) 0 0 var(--BORDER_RADIUS_SMALL);
+    border-radius: var(--BORDER_RADIUS_MEDIUM) 0 0 var(--BORDER_RADIUS_MEDIUM);
     white-space: nowrap;
   `,
 
@@ -157,7 +157,7 @@ const styles = {
     justify-content: center;
     align-items: center;
     display: flex;
-    border-radius: 0 var(--BORDER_RADIUS_SMALL) var(--BORDER_RADIUS_SMALL) 0;
+    border-radius: 0 var(--BORDER_RADIUS_MEDIUM) var(--BORDER_RADIUS_MEDIUM) 0;
     white-space: nowrap;
   `,
 
@@ -167,7 +167,7 @@ const styles = {
     -webkit-appearance: none;
     border: 1px solid rgb(var(--INPUT_BORDER));
     background-color: rgb(var(--WHITE));
-    border-radius: var(--BORDER_RADIUS_SMALL);
+    border-radius: var(--BORDER_RADIUS_MEDIUM);
     color: rgb(var(--TEXT));
     font-family: var(--FONT_FAMILY);
     padding: 0 var(--INPUT_SIDE_PADDING);
@@ -177,7 +177,7 @@ const styles = {
     box-shadow: none; /* firefox fix for error highlighting */
 
     &:hover {
-      border-color: hsl(var(--INPUT_BORDER_HSL_DARKEN));
+      border-color: hsl(var(--INPUT_BORDER_DARKEN));
     }
 
     &:focus {
@@ -201,11 +201,11 @@ const styles = {
   `,
 
   inputPrefix: css`
-    border-radius: 0 var(--BORDER_RADIUS_SMALL) var(--BORDER_RADIUS_SMALL) 0;
+    border-radius: 0 var(--BORDER_RADIUS_MEDIUM) var(--BORDER_RADIUS_MEDIUM) 0;
   `,
 
   inputSuffix: css`
-    border-radius: var(--BORDER_RADIUS_SMALL) 0 0 var(--BORDER_RADIUS_SMALL);
+    border-radius: var(--BORDER_RADIUS_MEDIUM) 0 0 var(--BORDER_RADIUS_MEDIUM);
   `,
 
   inputPrefixSuffix: css`
@@ -213,14 +213,9 @@ const styles = {
   `,
 
   sizes: {
-    tiny: css`
-      height: var(--INPUT_HEIGHT_TINY);
-      font-size: var(--FONT_SIZE_BASE);
-    `,
-
     small: css`
       height: var(--INPUT_HEIGHT_SMALL);
-      font-size: var(--FONT_SIZE_BASE);
+      font-size: var(--FONT_SIZE_MEDIUM);
     `,
 
     large: css`

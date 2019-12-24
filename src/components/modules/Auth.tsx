@@ -247,7 +247,7 @@ const styles = {
     }
 
     .minor {
-      background-color: rgb(var(--ACCENT));
+      background-color: #0062ff;
       background-image: url(${require('../../assets/images/patterns/topography.svg')});
       background-position: 50% 50%;
       background-size: 100%;
@@ -290,7 +290,7 @@ const styles = {
         .logo {
           width: 160px;
           height: calc(160px * var(--LOGO_PROPORTION));
-          background-image: url(${require('../../assets/images/logos/jitsu.svg')});
+          background-image: url(${require('../../assets/images/logos/jitsu-dark.svg')});
           background-position: 50% 50%;
           background-repeat: no-repeat;
           background-size: 160px;
@@ -340,7 +340,6 @@ const styles = {
               color: rgb(var(--TEXT_FADED));
               font-size: var(--FONT_SIZE_LARGE);
               margin-right: 10px;
-              transform: translateY(-1px);
             }
           }
         }

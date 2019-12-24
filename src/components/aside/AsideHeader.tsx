@@ -17,19 +17,18 @@ const styles = {
     height: var(--HEADER_HEIGHT);
     display: flex;
     align-items: center;
-    padding: 0 20px;
-    border-bottom: 1px solid rgb(var(--ELEMENT_BORDER));
+    padding: 0 18px;
     box-sizing: border-box;
 
     .logo {
       width: 90px;
       height: calc(90px * var(--LOGO_PROPORTION));
-      background-image: url(${require('../../assets/images/logos/jitsu.svg')});
+      background-image: url(${require('../../assets/images/logos/jitsu-dark.svg')});
       background-position: 50%;
       background-repeat: no-repeat;
       background-size: 90px;
       position: relative;
-      transform: translateX(-3px);
+      transform: translateX(-2px);
     }
   `,
 };

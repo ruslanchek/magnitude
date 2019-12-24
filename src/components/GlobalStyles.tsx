@@ -17,8 +17,8 @@ export const GlobalStyles: React.FC = () => {
 
     colors.push(
       `--${color}: ${rgb.array().join(',')}`,
-      `--${color}_HSL_LIGHTEN: ${lighten[0]},${lighten[1]}%,${lighten[2]}%`,
-      `--${color}_HSL_DARKEN: ${darken[0]},${darken[1]}%,${darken[2]}%`,
+      `--${color}_LIGHTEN: ${lighten[0]},${lighten[1]}%,${lighten[2]}%`,
+      `--${color}_DARKEN: ${darken[0]},${darken[1]}%,${darken[2]}%`,
     );
   }
 
@@ -87,17 +87,17 @@ const styles = css`
   a:hover,
   a:active,
   a:focus {
-    color: hsl(var(--ACCENT_HSL_DARKEN));
+    color: hsl(var(--ACCENT_DARKEN));
 
     &.underline {
-      border-bottom-color: hsla(var(--ACCENT_HSL_DARKEN), 0.35);
+      border-bottom-color: hsla(var(--ACCENT_DARKEN), 0.35);
     }
 
     &.light {
-      color: hsl(var(--TEXT_LIGHT_HSL_DARKEN));
+      color: hsl(var(--TEXT_LIGHT_DARKEN));
 
       &.underline {
-        border-bottom-color: hsla(var(--ACCENT_HSL_DARKEN), 0.35);
+        border-bottom-color: hsla(var(--ACCENT_DARKEN), 0.35);
       }
     }
   }
@@ -117,7 +117,7 @@ const styles = css`
   }
 
   ::placeholder {
-    color: rgb(var(--TEXT_PLACEHOLDER));
+    color: rgb(var(--TEXT_FADED));
   }
 
   ::selection {
