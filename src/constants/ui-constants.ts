@@ -7,6 +7,8 @@ export const UI_CONSTANTS = {
 
   GRID_GAP_SIZE: '20px',
 
+  SHADOW_INSET: 'inset 0 1px 3px hsla(var(--INPUT_BORDER_DARK), .5)',
+
   ELEVATION_SHADOW_1: '0 1px 3px 0 rgba(0, 0, 0, 0.1)',
   ELEVATION_SHADOW_2: '0 3px 10px rgba(0, 0, 0, 0.05)',
   ELEVATION_SHADOW_3: '0 5px 15px rgba(0, 0, 0, 0.05)',

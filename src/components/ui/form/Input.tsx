@@ -177,12 +177,12 @@ const styles = {
     box-shadow: none; /* firefox fix for error highlighting */
 
     &:hover {
-      border-color: hsl(var(--INPUT_BORDER_DARKEN));
+      border-color: hsl(var(--INPUT_BORDER_DARK));
     }
 
     &:focus {
-      border-color: rgb(var(--ACCENT));
-      box-shadow: 0 0 0 3.5px rgba(var(--ACCENT), 0.2);
+      border-color: hsl(var(--INPUT_BORDER_DARK));
+      box-shadow: var(--SHADOW_INSET);
     }
 
     &.error {

@@ -5,9 +5,12 @@ export const COLORS = {
   BG: Color('#fff'),
   BG_TINT: Color('#F7FAFC'),
 
-  ACCENT: Color('#0062FF'),
+  ACCENT: Color('#5468FF'),
   ERROR: Color('#fe346e'),
   SUCCESS: Color('#25D086'),
+
+  POSITIVE: Color('#319795'),
+  POSITIVE_LIGHT: Color('#edfdfa'),
 
   TEXT: Color('#1D3342'),
   TEXT_LIGHT: Color('#718096'),
