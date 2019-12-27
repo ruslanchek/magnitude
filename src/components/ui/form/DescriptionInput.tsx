@@ -19,7 +19,6 @@ const styles = {
     outline: none;
     padding: calc(var(--INPUT_SIDE_PADDING) * 0.25) var(--INPUT_SIDE_PADDING);
     margin-left: calc(var(--INPUT_SIDE_PADDING) * -1);
-    margin-top: calc(var(--INPUT_SIDE_PADDING) * -0.25);
     border: 1px solid transparent;
     transition: border-color 0.2s, box-shadow 0.2s;
     border-radius: var(--BORDER_RADIUS_MEDIUM);

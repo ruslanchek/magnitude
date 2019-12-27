@@ -13,6 +13,13 @@ export const Document: React.FC<IProps> = props => {
   return (
     <div css={styles.root}>
       <TitleInput value='Create a new form at the marketing project' />
+      <div className='tools'>
+        <div className='due'>
+          <FiCalendar />
+
+          <div className='data'>Due to {new Date().toLocaleDateString()}</div>
+        </div>
+      </div>
       <DescriptionInput
         value='Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s
         standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
@@ -21,14 +28,6 @@ export const Document: React.FC<IProps> = props => {
         Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
         of Lorem Ipsum.'
       />
-
-      <div className='tools'>
-        <div className='due'>
-          <FiCalendar />
-
-          <div className='data'>Due to {new Date().toLocaleDateString()}</div>
-        </div>
-      </div>
     </div>
   );
 };
@@ -39,6 +38,7 @@ const styles = {
 
     .tools {
       display: flex;
+      margin-bottom: 20px;
 
       .due {
         padding: 6px 12px;
