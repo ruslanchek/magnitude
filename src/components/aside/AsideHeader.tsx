@@ -19,7 +19,7 @@ const styles = {
     height: var(--HEADER_HEIGHT);
     display: flex;
     align-items: center;
-    padding: 0 18px;
+    padding: 0 var(--PADDING_HORIZONTAL_GLOBAL);
 
     .logo {
       width: 118px;

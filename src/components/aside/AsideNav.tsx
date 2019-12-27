@@ -172,7 +172,7 @@ const styles = {
     }
 
     .title {
-      padding: 0 17px;
+      padding: 0 var(--PADDING_HORIZONTAL_GLOBAL);
     }
 
     .link {
@@ -182,7 +182,7 @@ const styles = {
       transition: background-color 0.2s;
       position: relative;
       justify-content: space-between;
-      padding: 8px 17px;
+      padding: 8px var(--PADDING_HORIZONTAL_GLOBAL);
       white-space: nowrap;
       line-height: 1;
 
