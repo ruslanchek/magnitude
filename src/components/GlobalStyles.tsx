@@ -13,7 +13,7 @@ export const GlobalStyles: React.FC = () => {
   for (const color in COLORS) {
     const rgb = (COLORS as any)[color];
     const lighten = rgb.lighten(0.22).array();
-    const dark = rgb.darken(0.15).array();
+    const dark = rgb.darken(0.1).array();
     const darken = rgb.darken(0.22).array();
 
     colors.push(
@@ -134,5 +134,38 @@ const styles = css`
   ::-moz-selection {
     background: rgb(var(--ACCENT));
     color: rgb(var(--WHITE));
+  }
+
+  .input-styles {
+    outline: none;
+    padding: calc(var(--INPUT_SIDE_PADDING) * 0.5) var(--INPUT_SIDE_PADDING);
+    transition: border-color 0.2s, box-shadow 0.2s;
+    border-radius: var(--BORDER_RADIUS_MEDIUM);
+    border: 1px solid rgb(var(--INPUT_BORDER));
+
+    &:hover {
+      border-color: hsl(var(--INPUT_BORDER_DARK));
+    }
+
+    &:focus,
+    &.focus {
+      border-color: rgb(var(--ACCENT));
+      border-color: hsl(var(--INPUT_BORDER_DARK));
+      box-shadow: var(--SHADOW_INSET);
+      box-sizing: border-box;
+    }
+
+    &.hidden {
+      border-color: transparent;
+
+      &:hover {
+        border-color: rgb(var(--INPUT_BORDER));
+      }
+
+      &:focus,
+      &.focus {
+        border-color: hsl(var(--INPUT_BORDER_DARK));
+      }
+    }
   }
 `;

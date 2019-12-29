@@ -35,6 +35,10 @@ interface IButtonProps {
   onMouseDown: (event: MouseEvent<HTMLButtonElement>) => void;
 }
 
+interface IToolbarProps {
+  focus: boolean;
+}
+
 interface IIconProps {
   name: EIcon;
 }
@@ -86,6 +90,7 @@ HOTKEYS_MAP.set('mod+`', EMarkFormat.Code);
 const LIST_TYPES = ['numbered-list', 'bulleted-list'];
 
 export const TextEditor: React.FC<IProps> = () => {
+  const [focus, setFocus] = useState(false);
   const [value, setValue] = useState<Node[]>([
     {
       type: 'paragraph',
@@ -95,36 +100,45 @@ export const TextEditor: React.FC<IProps> = () => {
   const renderElement = useCallback(props => <Element {...props} />, []);
   const renderLeaf = useCallback(props => <Leaf {...props} />, []);
   const editor = useMemo(() => withHistory(withReact(createEditor())), []);
+  const handleRootClick = () => {};
 
   return (
-    <Slate editor={editor} value={value} onChange={v => setValue(v)}>
-      <Toolbar>
-        <MarkButton format={EMarkFormat.Bold} icon={EIcon.Bold} />
-        <MarkButton format={EMarkFormat.Italic} icon={EIcon.Italic} />
-        <MarkButton format={EMarkFormat.Underlined} icon={EIcon.Underlined} />
-        <MarkButton format={EMarkFormat.Code} icon={EIcon.Code} />
-        <BlockButton format={EBlockFormat.HeadingOne} icon={EIcon.HeadingOne} />
-        <BlockButton format={EBlockFormat.HeadingTwo} icon={EIcon.HeadingTwo} />
-        <BlockButton format={EBlockFormat.BlockQuote} icon={EIcon.BlockQuote} />
-        <BlockButton format={EBlockFormat.NumberedList} icon={EIcon.NumberedList} />
-        <BlockButton format={EBlockFormat.BulletedList} icon={EIcon.BulletedList} />
-      </Toolbar>
-      <Editable
-        renderElement={renderElement}
-        renderLeaf={renderLeaf}
-        data-gramm='true'
-        spellCheck
-        autoFocus
-        onKeyDown={event => {
-          HOTKEYS_MAP.forEach((value, key) => {
-            if (isHotkey(key)(event as any)) {
-              event.preventDefault();
-              toggleMark(editor, value);
-            }
-          });
-        }}
-      />
-    </Slate>
+    <div css={styles.root} className={objstr({ focus, 'input-styles hidden': true })} onClick={handleRootClick}>
+      <Slate editor={editor} value={value} onChange={v => setValue(v)}>
+        <Editable
+          onFocus={() => {
+            setFocus(true);
+          }}
+          onBlur={() => {
+            setFocus(false);
+          }}
+          renderElement={renderElement}
+          renderLeaf={renderLeaf}
+          data-gramm='true'
+          spellCheck
+          autoFocus
+          onKeyDown={event => {
+            HOTKEYS_MAP.forEach((value, key) => {
+              if (isHotkey(key)(event as any)) {
+                event.preventDefault();
+                toggleMark(editor, value);
+              }
+            });
+          }}
+        />
+        <Toolbar focus={focus}>
+          <MarkButton format={EMarkFormat.Bold} icon={EIcon.Bold} />
+          <MarkButton format={EMarkFormat.Italic} icon={EIcon.Italic} />
+          <MarkButton format={EMarkFormat.Underlined} icon={EIcon.Underlined} />
+          <MarkButton format={EMarkFormat.Code} icon={EIcon.Code} />
+          <BlockButton format={EBlockFormat.HeadingOne} icon={EIcon.HeadingOne} />
+          <BlockButton format={EBlockFormat.HeadingTwo} icon={EIcon.HeadingTwo} />
+          <BlockButton format={EBlockFormat.BlockQuote} icon={EIcon.BlockQuote} />
+          <BlockButton format={EBlockFormat.NumberedList} icon={EIcon.NumberedList} />
+          <BlockButton format={EBlockFormat.BulletedList} icon={EIcon.BulletedList} />
+        </Toolbar>
+      </Slate>
+    </div>
   );
 };
 
@@ -170,8 +184,12 @@ const isMarkActive = (editor: Editor, format: EMarkFormat) => {
   return marks ? marks[format] === true : false;
 };
 
-const Toolbar: React.FC = ({ children }) => {
-  return <div>{children}</div>;
+const Toolbar: React.FC<IToolbarProps> = ({ focus, children }) => {
+  return (
+    <div css={styles.toolbar} className={objstr({ focus })}>
+      {children}
+    </div>
+  );
 };
 
 const Element: React.FC<IElementProps> = ({ attributes, element, children }) => {
@@ -297,9 +315,39 @@ const Icon: React.FC<IIconProps> = ({ name }) => {
 const styles = {
   root: css``,
 
+  toolbar: css`
+    opacity: 0;
+    transition: 0.2s;
+    display: flex;
+
+    &.focus {
+      opacity: 1;
+    }
+  `,
+
   button: css`
+    font-size: 40px;
+    outline: none;
+    -webkit-appearance: none;
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: none;
+    text-align: center;
+    margin: 0 10px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: rgb(var(--TEXT_LIGHT));
+
+    &:hover {
+      opacity: 1;
+      color: rgb(var(--TEXT));
+    }
+
     &.active {
-      background-color: red;
+      color: rgb(var(--ACCENT));
     }
   `,
 };
