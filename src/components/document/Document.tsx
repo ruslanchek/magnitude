@@ -4,6 +4,7 @@ import React from 'react';
 import { FiCalendar } from 'react-icons/fi';
 import { TitleInput } from '../ui/form/TitleInput';
 import { DescriptionInput } from '../ui/form/DescriptionInput';
+import { TextEditor } from '../ui/doc-views/TextEditor';
 
 interface IDocument {}
 
@@ -28,6 +29,7 @@ export const Document: React.FC<IProps> = props => {
         Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
         of Lorem Ipsum.'
       />
+      <TextEditor />
     </div>
   );
 };

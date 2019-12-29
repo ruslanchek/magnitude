@@ -8,7 +8,7 @@ export const AsideHeader: React.FC = () => {
   return (
     <div css={styles.root}>
       <NavLink to={PATHS.HOME.path} className='logo'>
-        <img width='118' title='Jitsu – Home' alt='Jitsu' src={require('../../assets/images/logos/jitsu-dark.svg')} />
+        <img width='100' title='Jitsu – Home' alt='Jitsu' src={require('../../assets/images/logos/jitsu-dark.svg')} />
       </NavLink>
     </div>
   );
@@ -22,10 +22,10 @@ const styles = {
     padding: 0 var(--PADDING_HORIZONTAL_GLOBAL);
 
     .logo {
-      width: 118px;
+      width: 100px;
       padding: 6px 9px 6px 6px;
       position: relative;
-      transform: translateX(-12px);
+      transform: translateX(-9px);
 
       > img {
         display: block;
