@@ -5,6 +5,18 @@ import { createEditor, Transforms, Editor, Node } from 'slate';
 import { Slate, Editable, withReact, useSlate } from 'slate-react';
 import { withHistory } from 'slate-history';
 import isHotkey from 'is-hotkey';
+import {
+  MdFormatQuote,
+  MdFormatBold,
+  MdFormatListBulleted,
+  MdFormatListNumbered,
+  MdLooksTwo,
+  MdLooksOne,
+  MdFormatItalic,
+  MdFormatUnderlined,
+  MdCode,
+} from 'react-icons/md';
+import objstr from 'obj-str';
 
 interface IProps {}
 
@@ -40,7 +52,7 @@ interface ILeafProps {
 enum EMarkFormat {
   Bold = 'bold',
   Italic = 'italic',
-  Underline = 'undefline',
+  Underlined = 'undeflined',
   Code = 'code',
 }
 
@@ -55,7 +67,7 @@ enum EBlockFormat {
 enum EIcon {
   Bold,
   Italic,
-  Underline,
+  Underlined,
   Code,
   HeadingOne,
   HeadingTwo,
@@ -68,7 +80,7 @@ const HOTKEYS_MAP = new Map<string, EMarkFormat>();
 
 HOTKEYS_MAP.set('mod+b', EMarkFormat.Bold);
 HOTKEYS_MAP.set('mod+i', EMarkFormat.Italic);
-HOTKEYS_MAP.set('mod+u', EMarkFormat.Underline);
+HOTKEYS_MAP.set('mod+u', EMarkFormat.Underlined);
 HOTKEYS_MAP.set('mod+`', EMarkFormat.Code);
 
 const LIST_TYPES = ['numbered-list', 'bulleted-list'];
@@ -89,7 +101,7 @@ export const TextEditor: React.FC<IProps> = () => {
       <Toolbar>
         <MarkButton format={EMarkFormat.Bold} icon={EIcon.Bold} />
         <MarkButton format={EMarkFormat.Italic} icon={EIcon.Italic} />
-        <MarkButton format={EMarkFormat.Underline} icon={EIcon.Underline} />
+        <MarkButton format={EMarkFormat.Underlined} icon={EIcon.Underlined} />
         <MarkButton format={EMarkFormat.Code} icon={EIcon.Code} />
         <BlockButton format={EBlockFormat.HeadingOne} icon={EIcon.HeadingOne} />
         <BlockButton format={EBlockFormat.HeadingTwo} icon={EIcon.HeadingTwo} />
@@ -230,14 +242,64 @@ const MarkButton: React.FC<IMarkButtonProps> = ({ format, icon }) => {
   );
 };
 
-const Button: React.FC<IButtonProps> = ({ children, onMouseDown }) => {
-  return <button onMouseDown={onMouseDown}>{children}</button>;
+const Button: React.FC<IButtonProps> = ({ active, onMouseDown, children }) => {
+  return (
+    <button className={objstr({ active })} css={styles.button} onMouseDown={onMouseDown}>
+      {children}
+    </button>
+  );
 };
 
 const Icon: React.FC<IIconProps> = ({ name }) => {
-  return <i>{name}</i>;
+  switch (name) {
+    case EIcon.BlockQuote: {
+      return <MdFormatQuote />;
+    }
+
+    case EIcon.Bold: {
+      return <MdFormatBold />;
+    }
+
+    case EIcon.BulletedList: {
+      return <MdFormatListBulleted />;
+    }
+
+    case EIcon.Code: {
+      return <MdCode />;
+    }
+
+    case EIcon.HeadingOne: {
+      return <MdLooksOne />;
+    }
+
+    case EIcon.HeadingTwo: {
+      return <MdLooksTwo />;
+    }
+
+    case EIcon.Italic: {
+      return <MdFormatItalic />;
+    }
+
+    case EIcon.Underlined: {
+      return <MdFormatUnderlined />;
+    }
+
+    case EIcon.NumberedList: {
+      return <MdFormatListNumbered />;
+    }
+
+    default: {
+      return null;
+    }
+  }
 };
 
 const styles = {
   root: css``,
+
+  button: css`
+    &.active {
+      background-color: red;
+    }
+  `,
 };
