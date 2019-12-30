@@ -12,7 +12,6 @@ interface IProps {}
 export const Document: React.FC<IProps> = props => {
   return (
     <div css={styles.root}>
-      <TitleInput value='Create a new form at the marketing project' />
       <div className='tools'>
         <div className='due'>
           <FiCalendar />
@@ -20,6 +19,7 @@ export const Document: React.FC<IProps> = props => {
           <div className='data'>Due to {new Date().toLocaleDateString()}</div>
         </div>
       </div>
+      <TitleInput value='Create a new form at the marketing project' />
       <TextEditor
         value={[
           {

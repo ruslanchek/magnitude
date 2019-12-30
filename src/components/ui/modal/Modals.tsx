@@ -367,7 +367,7 @@ const styles = {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(var(--BG), 0.8);
+    background-color: rgba(var(--TEXT), 0.5);
     will-change: opacity;
   `,
 };
