@@ -138,7 +138,7 @@ const styles = css`
 
   .input-styles {
     outline: none;
-    padding: calc(var(--INPUT_SIDE_PADDING) * 0.5) var(--INPUT_SIDE_PADDING);
+    padding: calc(var(--INPUT_SIDE_PADDING) * 0.75) var(--INPUT_SIDE_PADDING);
     transition: border-color 0.2s, box-shadow 0.2s;
     border-radius: var(--BORDER_RADIUS_MEDIUM);
     border: 1px solid rgb(var(--INPUT_BORDER));

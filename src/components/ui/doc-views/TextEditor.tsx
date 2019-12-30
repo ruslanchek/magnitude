@@ -18,7 +18,9 @@ import {
 } from 'react-icons/md';
 import objstr from 'obj-str';
 
-interface IProps {}
+interface IProps {
+  value: Node[];
+}
 
 interface IMarkButtonProps {
   format: EMarkFormat;
@@ -89,14 +91,9 @@ HOTKEYS_MAP.set('mod+`', EMarkFormat.Code);
 
 const LIST_TYPES = ['numbered-list', 'bulleted-list'];
 
-export const TextEditor: React.FC<IProps> = () => {
+export const TextEditor: React.FC<IProps> = ({ value }) => {
   const [focus, setFocus] = useState(false);
-  const [value, setValue] = useState<Node[]>([
-    {
-      type: 'paragraph',
-      children: [{ text: 'A line of text in a paragraph.' }],
-    },
-  ]);
+  const [localValue, setLocalValue] = useState<Node[]>(value);
   const renderElement = useCallback(props => <Element {...props} />, []);
   const renderLeaf = useCallback(props => <Leaf {...props} />, []);
   const editor = useMemo(() => withHistory(withReact(createEditor())), []);
@@ -104,7 +101,7 @@ export const TextEditor: React.FC<IProps> = () => {
 
   return (
     <div css={styles.root} className={objstr({ focus, 'input-styles hidden': true })} onClick={handleRootClick}>
-      <Slate editor={editor} value={value} onChange={v => setValue(v)}>
+      <Slate editor={editor} value={localValue} onChange={v => setLocalValue(v)}>
         <Editable
           onFocus={() => {
             setFocus(true);
@@ -116,7 +113,6 @@ export const TextEditor: React.FC<IProps> = () => {
           renderLeaf={renderLeaf}
           data-gramm='true'
           spellCheck
-          autoFocus
           onKeyDown={event => {
             HOTKEYS_MAP.forEach((value, key) => {
               if (isHotkey(key)(event as any)) {
@@ -313,33 +309,40 @@ const Icon: React.FC<IIconProps> = ({ name }) => {
 };
 
 const styles = {
-  root: css``,
+  root: css`
+    overflow: hidden;
+  `,
 
   toolbar: css`
     opacity: 0;
-    transition: 0.2s;
+    transition: opacity 0.1s, transform 0.1s;
     display: flex;
+    transform: translateY(30px);
 
     &.focus {
       opacity: 1;
+      transform: translateY(0);
     }
   `,
 
   button: css`
-    font-size: 40px;
+    font-size: 20px;
+    line-height: 15px;
     outline: none;
     -webkit-appearance: none;
-    width: 32px;
-    height: 32px;
+    width: 26px;
+    height: 26px;
+    text-align: center;
     border: none;
     background: none;
     text-align: center;
-    margin: 0 10px 0 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     overflow: hidden;
     color: rgb(var(--TEXT_LIGHT));
+    border-radius: 3px;
+    margin-right: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    padding: 0;
 
     &:hover {
       opacity: 1;
@@ -348,6 +351,7 @@ const styles = {
 
     &.active {
       color: rgb(var(--ACCENT));
+      background-color: rgba(var(--ACCENT), 0.1);
     }
   `,
 };
