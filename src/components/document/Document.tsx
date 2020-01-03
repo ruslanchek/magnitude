@@ -4,9 +4,10 @@ import React from 'react';
 import { FiCalendar } from 'react-icons/fi';
 import { TitleInput } from '../ui/form/TitleInput';
 import { TextEditor } from '../ui/doc-views/TextEditor';
-import { Story } from '../stories/Story';
+import { Story } from '../ui/stories/Story';
 import { GoGear, GoCheck, GoX } from 'react-icons/go';
 import { Tags } from '../ui/tags/Tags';
+import { ClickableLabel } from '../ui/labels/ClickableLabel';
 
 interface IDocument {}
 
@@ -20,12 +21,7 @@ export const Document: React.FC<IProps> = props => {
       <br />
 
       <div className='tools'>
-        <div className='due'>
-          <i>
-            <FiCalendar />
-          </i>
-          <div className='data'>Due to {new Date().toLocaleDateString()}</div>
-        </div>
+        <ClickableLabel icon={<FiCalendar />} onClick={() => {}} text={`Due to ${new Date().toLocaleDateString()}`} />
       </div>
 
       <br />
@@ -89,36 +85,6 @@ const styles = {
 
     .tools {
       display: flex;
-
-      .due {
-        padding: 6px 10px 6px 6px;
-        border-radius: 20px;
-        background-color: hsl(var(--POSITIVE_LIGHTEN), 0.2);
-        color: rgb(var(--POSITIVE));
-        font-weight: 600;
-        display: flex;
-        align-items: center;
-        cursor: pointer;
-
-        &:hover {
-          background-color: hsl(var(--POSITIVE_LIGHTEN), 0.3);
-        }
-
-        .data {
-          margin-left: 1ex;
-        }
-
-        > i {
-          width: 24px;
-          height: 24px;
-          border-radius: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          color: rgb(var(--WHITE));
-          background-color: rgb(var(--POSITIVE));
-        }
-      }
     }
   `,
 };

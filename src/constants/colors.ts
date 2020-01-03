@@ -8,9 +8,7 @@ export const COLORS = {
 
   ACCENT: Color('#4069ff'),
   ERROR: Color('#fe346e'),
-  SUCCESS: Color('#25D086'),
-
-  POSITIVE: Color('#319795'),
+  SUCCESS: Color('#26D6C5'),
 
   TEXT: Color('#1D3342'),
   TEXT_LIGHT: Color('#718096'),

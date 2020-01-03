@@ -36,6 +36,8 @@ const styles = {
     display: flex;
     flex-direction: column;
     margin-right: 20px;
+    border: 1px solid hsla(var(--BG_DARK_DARK), 0.4);
+    box-sizing: border-box;
 
     .body {
       background-color: rgb(var(--BG_TINT));
@@ -75,6 +77,7 @@ const styles = {
 
     &.active {
       background-color: rgb(var(--ACCENT));
+      border: none;
       color: rgb(var(--WHITE));
 
       .body {

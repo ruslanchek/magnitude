@@ -88,7 +88,7 @@ const TAGS: ITag[] = [
   },
   {
     id: '2',
-    title: 'Mudules',
+    title: 'Modules',
     color: Color('#5E5AA0'),
   },
   {
