@@ -8,7 +8,7 @@ interface IProps {
   size: number;
 }
 
-export const Avatar: React.FC<IProps> = ({ src, title, size }) => {
+export const ProjectAvatar: React.FC<IProps> = ({ src, title, size }) => {
   return (
     <div css={styles.root}>
       <img src={src} title={title} alt={title} width={size} height={size} />
@@ -18,12 +18,13 @@ export const Avatar: React.FC<IProps> = ({ src, title, size }) => {
 
 const styles = {
   root: css`
-    border-radius: 50%;
+    border-radius: var(--BORDER_RADIUS_MEDIUM);
     background-color: rgb(var(--BG_DARK));
+    box-shadow: 0 0 0 1px rgb(var(--BG_DARK));
 
     > img {
       display: block;
-      border-radius: 50%;
+      border-radius: var(--BORDER_RADIUS_MEDIUM);
     }
   `,
 };

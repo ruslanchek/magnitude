@@ -21,6 +21,8 @@ const styles = {
   root: css`
     padding: 3px;
     border-radius: 20px;
+    height: var(--SQUARED_ICON_SIZE);
+    line-height: var(--SQUARED_ICON_SIZE);
     background-color: hsl(var(--SUCCESS_HSL_L1), 0.1);
     color: hsl(var(--SUCCESS_HSL_D1));
     display: flex;
@@ -32,6 +34,7 @@ const styles = {
 
     .data {
       margin: 0 1ex;
+      white-space: nowrap;
     }
 
     > i {

@@ -28,7 +28,13 @@ export const Document: React.FC<IProps> = props => {
 
       <br />
 
-      <Tags suggestions={[{ id: 1, name: 'Tag' }]} />
+      <Tags
+        suggestions={[{ id: 1, name: 'Tag' }]}
+        tags={[
+          { id: 2, name: 'Web' },
+          { id: 3, name: 'Important' },
+        ]}
+      />
 
       <br />
 

@@ -8,7 +8,8 @@ import { CategoryTitle } from '../ui/typographics/CategoryTitle';
 import { Marker } from '../ui/misc/Marker';
 import { MdBookmark } from 'react-icons/md';
 import { IoMdPricetag } from 'react-icons/io';
-import Color from 'color';
+import { colorHash } from '../../common/colorHash';
+import { TagIcon } from '../ui/tags/TagIcon';
 
 interface ILink {
   path: string;
@@ -24,7 +25,6 @@ interface IFavorite {
 interface ITag {
   id: string;
   title: string;
-  color: Color;
 }
 
 const LINKS: ILink[] = [
@@ -84,27 +84,22 @@ const TAGS: ITag[] = [
   {
     id: '1',
     title: 'Web',
-    color: Color('#D11C13'),
   },
   {
     id: '2',
-    title: 'Modules',
-    color: Color('#5E5AA0'),
+    title: 'Backstage',
   },
   {
     id: '3',
-    title: 'Marketing',
-    color: Color('#6DC09E'),
+    title: 'Special',
   },
   {
     id: '4',
-    title: 'Person',
-    color: Color('#75B01A'),
+    title: 'Mobile',
   },
   {
     id: '5',
     title: 'Important',
-    color: Color('#DA7F9D'),
   },
 ];
 
@@ -147,19 +142,16 @@ export const AsideNav: React.FC = () => {
           <CategoryTitle>Tags</CategoryTitle>
         </div>
 
-        {TAGS.map(tag => (
-          <NavLink key={tag.id} tabIndex={0} to={tag.id} className='link'>
-            <span
-              className='icon-wrapper'
-              css={css`
-                background-color: ${tag.color.alpha(0.15).toString()};
-                color: ${tag.color.toString()};
-              `}>
-              <IoMdPricetag />
-            </span>
-            <span className='text'>{tag.title}</span>
-          </NavLink>
-        ))}
+        {TAGS.map(tag => {
+          const color = colorHash(tag.title);
+
+          return (
+            <NavLink key={tag.id} tabIndex={0} to={tag.id} className='link'>
+              <TagIcon color={color} />
+              <span className='text'>{tag.title}</span>
+            </NavLink>
+          );
+        })}
       </nav>
     </div>
   );
@@ -187,7 +179,7 @@ const styles = {
       line-height: 1;
 
       .text {
-        margin-left: 15px;
+        margin-left: 12px;
         flex-grow: 1;
       }
 

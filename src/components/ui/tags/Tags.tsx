@@ -1,25 +1,49 @@
 /** @jsx jsx */
-import React, { useState, useCallback, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { jsx, css } from '@emotion/core';
-import ReactTags, { Tag } from 'react-tag-autocomplete';
+import ReactTags, { Tag, TagComponentProps } from 'react-tag-autocomplete';
+import objstr from 'obj-str';
+import { useTranslator } from 'eo-locale';
+import { TagIcon } from './TagIcon';
+import Color from 'color';
+import { colorHash } from '../../../common/colorHash';
 
 interface IProps {
   suggestions?: Tag[];
   tags?: Tag[];
 }
 
+const TagComponent: React.FC<TagComponentProps> = ({ tag, classNames, onDelete }) => {
+  return (
+    <div css={styles.tag} onClick={e => onDelete(e as any)}>
+      <TagIcon color={colorHash(tag.name)} />
+      <span className='text'>{tag.name}</span>
+    </div>
+  );
+};
+
 export const Tags: React.FC<IProps> = ({ suggestions = [], tags = [] }) => {
   const [localTags, setLocalTags] = useState<Tag[]>(tags);
+  const [focus, setFocus] = useState(false);
+  const translator = useTranslator();
 
   const handleDelete = (index: number) => {
-    const newTags = tags.slice(0);
-    tags.splice(index, 1);
+    const newTags = localTags.slice(0);
+    newTags.splice(index, 1);
     setLocalTags(newTags);
   };
 
   const handleAddition = (tag: Tag) => {
-    const newTags = tags.concat(tag);
+    const newTags = localTags.concat([tag]);
     setLocalTags(newTags);
+  };
+
+  const handleFocus = () => {
+    setFocus(true);
+  };
+
+  const handleBlur = () => {
+    setFocus(false);
   };
 
   useEffect(() => {
@@ -37,17 +61,62 @@ export const Tags: React.FC<IProps> = ({ suggestions = [], tags = [] }) => {
   }, [localTags, suggestions]);
 
   return (
-    <div css={styles.root}>
+    <div css={styles.root} className={objstr({ focus })}>
       <ReactTags
+        allowNew
+        allowBackspace
         tags={localTags}
         suggestions={suggestionsFiltered}
         handleDelete={handleDelete}
         handleAddition={handleAddition}
+        handleFocus={handleFocus}
+        handleBlur={handleBlur}
+        tagComponent={TagComponent}
+        placeholder={translator.translate('InputPlaceholder::AddTag')}
       />
     </div>
   );
 };
 
 const styles = {
-  root: css``,
+  root: css`
+    .react-tags {
+      display: flex;
+
+      &__selected {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      &__search-input {
+        cursor: text;
+
+        > input {
+          font-family: var(--FONT_FAMILY);
+          font-size: var(--FONT_SIZE_BASE);
+          height: var(--SQUARED_ICON_SIZE);
+          line-height: var(--SQUARED_ICON_SIZE);
+          box-sizing: border-box;
+          outline: none;
+          background: none;
+          border: none;
+        }
+      }
+    }
+  `,
+
+  tag: css`
+    display: flex;
+    align-items: center;
+    height: var(--SQUARED_ICON_SIZE);
+    line-height: var(--SQUARED_ICON_SIZE);
+    border-radius: var(--BORDER_RADIUS_SMALL);
+    background: rgb(var(--BG_DARK));
+    margin-right: 1ex;
+    border: none;
+
+    .text {
+      padding: 0 1ex 0 0;
+    }
+  `,
 };

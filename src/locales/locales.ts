@@ -32,6 +32,7 @@ export const locales = [
 
       'InputPlaceholder::Email': 'example@domain.com',
       'InputPlaceholder::Password': 'Password',
+      'InputPlaceholder::AddTag': 'Type to add new tag',
 
       'Common::Copyright': '© 2018–{currentYear} Jitsu Services LLC.',
       'Common::AllRightsReserved': 'All rights reserved.',

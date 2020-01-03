@@ -66,6 +66,7 @@ const styles = css`
   h1 {
     margin: 0;
     font-weight: 600;
+    font-size: var(--FONT_SIZE_HUGE);
   }
 
   a.underline {
@@ -138,12 +139,15 @@ const styles = css`
     color: rgb(var(--WHITE));
   }
 
-  .input-styles {
+  .input-styles,
+  .react-tags {
     outline: none;
     padding: calc(var(--INPUT_SIDE_PADDING) * 0.5) var(--INPUT_SIDE_PADDING);
     transition: border-color 0.2s, box-shadow 0.2s;
     border-radius: var(--BORDER_RADIUS_MEDIUM);
     border: 1px solid rgb(var(--INPUT_BORDER));
+    font-family: var(--FONT_FAMILY);
+    box-sizing: border-box;
 
     &:hover {
       border-color: hsl(var(--INPUT_BORDER_HSL_D1));
@@ -154,7 +158,6 @@ const styles = css`
       border-color: rgb(var(--ACCENT));
       border-color: hsl(var(--INPUT_BORDER_HSL_D1));
       box-shadow: var(--SHADOW_INSET);
-      box-sizing: border-box;
     }
 
     &.hidden {

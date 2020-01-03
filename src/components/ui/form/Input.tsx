@@ -4,6 +4,7 @@ import React, { ChangeEvent, useState, useContext, useCallback, useEffect } from
 import { FormContext } from './Form';
 import { FormValidator } from './validators/FormValidator';
 import { InputErrors } from './InputErrors';
+import objstr from 'obj-str';
 
 interface IProps {
   name: string;
@@ -112,7 +113,7 @@ export const Input: React.FC<IProps> = props => {
         type={type}
         value={localValue}
         autoComplete={autoComplete}
-        className={errors.length > 0 ? 'error' : ''}
+        className={objstr({ error: errors.length > 0 })}
         css={[
           styles.input,
           styles.sizes[size],

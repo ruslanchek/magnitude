@@ -7,7 +7,7 @@ export const UI_CONSTANTS = {
 
   GRID_GAP_SIZE: '20px',
 
-  SHADOW_INSET: 'inset 0 1px 3px hsla(var(--INPUT_BORDER_DARK), .5)',
+  SHADOW_INSET: 'inset 0 1px 3px hsl(var(--INPUT_BORDER_HSL_D1), .5)',
 
   ELEVATION_SHADOW_1: '0 1px 3px 0 rgba(0, 0, 0, 0.1)',
   ELEVATION_SHADOW_2: '0 3px 10px rgba(0, 0, 0, 0.05)',
@@ -15,6 +15,7 @@ export const UI_CONSTANTS = {
 
   FONT_SIZE_HERO_LARGE: '46px',
 
+  FONT_SIZE_HUGE: '24px',
   FONT_SIZE_LARGE: '18px',
   FONT_SIZE_MEDIUM: '16px',
   FONT_SIZE_BASE: '14px',
