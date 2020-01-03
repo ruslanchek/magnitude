@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import React from 'react';
 import { jsx, css } from '@emotion/core';
-import objstr from 'obj-str';
 
 interface IProps {
   text: string;
@@ -20,38 +19,34 @@ export const ClickableLabel: React.FC<IProps> = ({ text, icon, onClick }) => {
 
 const styles = {
   root: css`
-    padding: 6px 10px 6px 6px;
+    padding: 3px;
     border-radius: 20px;
-    background-color: hsl(var(--SUCCESS_LIGHT), 0.1);
-    color: hsl(var(--SUCCESS_DARK));
+    background-color: hsl(var(--SUCCESS_HSL_L1), 0.1);
+    color: hsl(var(--SUCCESS_HSL_D1));
     display: flex;
     align-items: center;
     cursor: pointer;
     transition: background-color 0.2s;
-    border: 1px solid hsl(var(--SUCCESS_DARK), 0.1);
+    border: 1px solid hsl(var(--SUCCESS_HSL_D1), 0.1);
+    margin-right: 20px;
 
     .data {
-      margin-left: 1ex;
+      margin: 0 1ex;
     }
 
     > i {
-      width: 24px;
-      height: 24px;
+      width: var(--SQUARED_ICON_SIZE);
+      height: var(--SQUARED_ICON_SIZE);
       border-radius: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
       color: rgb(var(--WHITE));
       background-color: rgb(var(--SUCCESS));
-      transition: transform 0.2s, box-shadow 0.3s;
     }
 
     &:hover {
-      background-color: hsl(var(--SUCCESS_LIGHTEN), 0.25);
-
-      > i {
-        transform: scale(1.075);
-      }
+      background-color: hsl(var(--SUCCESS_HSL_L2), 0.25);
     }
   `,
 };

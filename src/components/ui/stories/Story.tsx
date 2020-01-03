@@ -7,7 +7,7 @@ interface IProps {
   active: boolean;
   pre: string;
   title: string;
-  status: string;
+  status: React.ReactNode;
   icon: React.ReactNode;
   iconColor: string;
 }
@@ -36,7 +36,7 @@ const styles = {
     display: flex;
     flex-direction: column;
     margin-right: 20px;
-    border: 1px solid hsla(var(--BG_DARK_DARK), 0.4);
+    border: 1px solid hsl(var(--BG_DARK_HSL_D1), 0.4);
     box-sizing: border-box;
 
     .body {
@@ -62,14 +62,14 @@ const styles = {
       > i {
         background-color: rgb(var(--WHITE));
         display: flex;
-        width: 25px;
-        height: 25px;
+        width: var(--SQUARED_ICON_SIZE);
+        height: var(--SQUARED_ICON_SIZE);
         border-radius: 100%;
         align-items: center;
         justify-content: center;
         margin-right: 1ex;
         font-style: normal;
-        font-size: 15px;
+        font-size: 14px;
         top: -1px;
         position: relative;
       }
@@ -81,7 +81,7 @@ const styles = {
       color: rgb(var(--WHITE));
 
       .body {
-        background-color: hsl(var(--ACCENT_LIGHT));
+        background-color: hsl(var(--ACCENT_HSL_L1));
 
         .pre {
           color: rgba(var(--WHITE), 0.5);

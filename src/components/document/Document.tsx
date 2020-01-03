@@ -8,6 +8,7 @@ import { Story } from '../ui/stories/Story';
 import { GoGear, GoCheck, GoX } from 'react-icons/go';
 import { Tags } from '../ui/tags/Tags';
 import { ClickableLabel } from '../ui/labels/ClickableLabel';
+import { UserLabel } from '../ui/labels/UserLabel';
 
 interface IDocument {}
 
@@ -22,6 +23,7 @@ export const Document: React.FC<IProps> = props => {
 
       <div className='tools'>
         <ClickableLabel icon={<FiCalendar />} onClick={() => {}} text={`Due to ${new Date().toLocaleDateString()}`} />
+        <UserLabel avatarSrc='https://i.pravatar.cc/60?img=3' title='Daniel Simpson' />
       </div>
 
       <br />
@@ -35,7 +37,7 @@ export const Document: React.FC<IProps> = props => {
           active={true}
           pre='Ongoing'
           title='Making onboarding videos for Jitsu app'
-          status='Working on'
+          status='In progress'
           icon={<GoGear />}
           iconColor='rgb(var(--WHITE))'
         />
@@ -43,7 +45,7 @@ export const Document: React.FC<IProps> = props => {
           active={false}
           pre='Completed'
           title='Design meeting'
-          status='Successfull'
+          status='Completed'
           icon={<GoCheck />}
           iconColor='rgb(var(--SUCCESS))'
         />
@@ -51,7 +53,7 @@ export const Document: React.FC<IProps> = props => {
           active={false}
           pre='Freezed'
           title='Website design'
-          status='Failed'
+          status='Rejected by owner'
           icon={<GoX />}
           iconColor='rgb(var(--ERROR))'
         />

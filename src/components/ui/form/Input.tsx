@@ -177,11 +177,11 @@ const styles = {
     box-shadow: none; /* firefox fix for error highlighting */
 
     &:hover {
-      border-color: hsl(var(--INPUT_BORDER_DARK));
+      border-color: hsl(var(--INPUT_BORDER_HSL_D1));
     }
 
     &:focus {
-      border-color: hsl(var(--INPUT_BORDER_DARK));
+      border-color: hsl(var(--INPUT_BORDER_HSL_D1));
       box-shadow: var(--SHADOW_INSET);
     }
 
@@ -215,7 +215,7 @@ const styles = {
   sizes: {
     small: css`
       height: var(--INPUT_HEIGHT_SMALL);
-      font-size: var(--FONT_SIZE_MEDIUM);
+      font-size: var(--FONT_SIZE_BASE);
     `,
 
     large: css`

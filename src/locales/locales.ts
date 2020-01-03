@@ -38,6 +38,9 @@ export const locales = [
 
       'FormErrorsTitle::UserAlreadyExists': 'Sign up failed',
       'FormErrorsMessage::UserAlreadyExists': 'User already exists',
+
+      'FormErrorsTitle::UserCredentialsWrong': 'Sign in failed',
+      'FormErrorsMessage::UserCredentialsWrong': 'User credentials are wrong',
     },
   },
 ];

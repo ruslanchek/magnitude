@@ -19,10 +19,10 @@ export const GlobalStyles: React.FC = () => {
 
     colors.push(
       `--${color}: ${rgb.array().join(',')}`,
-      `--${color}_LIGHT: ${light[0]},${light[1]}%,${light[2]}%`,
-      `--${color}_LIGHTEN: ${lighten[0]},${lighten[1]}%,${lighten[2]}%`,
-      `--${color}_DARK: ${dark[0]},${dark[1]}%,${dark[2]}%`,
-      `--${color}_DARKEN: ${darken[0]},${darken[1]}%,${darken[2]}%`,
+      `--${color}_HSL_L1: ${light[0]},${light[1]}%,${light[2]}%`,
+      `--${color}_HSL_L2: ${lighten[0]},${lighten[1]}%,${lighten[2]}%`,
+      `--${color}_HSL_D1: ${dark[0]},${dark[1]}%,${dark[2]}%`,
+      `--${color}_HSL_D2: ${darken[0]},${darken[1]}%,${darken[2]}%`,
     );
   }
 
@@ -95,17 +95,17 @@ const styles = css`
   a:hover,
   a:active,
   a:focus {
-    color: hsl(var(--ACCENT_DARKEN));
+    color: hsl(var(--ACCENT_HSL_D2));
 
     &.underline {
-      border-bottom-color: hsla(var(--ACCENT_DARKEN), 0.35);
+      border-bottom-color: hsl(var(--ACCENT_HSL_D2), 0.35);
     }
 
     &.light {
-      color: hsl(var(--TEXT_LIGHT_DARKEN));
+      color: hsl(var(--TEXT_LIGHT_HSL_D2));
 
       &.underline {
-        border-bottom-color: hsla(var(--ACCENT_DARKEN), 0.35);
+        border-bottom-color: hsl(var(--ACCENT_HSL_D2), 0.35);
       }
     }
   }
@@ -146,13 +146,13 @@ const styles = css`
     border: 1px solid rgb(var(--INPUT_BORDER));
 
     &:hover {
-      border-color: hsl(var(--INPUT_BORDER_DARK));
+      border-color: hsl(var(--INPUT_BORDER_HSL_D1));
     }
 
     &:focus,
     &.focus {
       border-color: rgb(var(--ACCENT));
-      border-color: hsl(var(--INPUT_BORDER_DARK));
+      border-color: hsl(var(--INPUT_BORDER_HSL_D1));
       box-shadow: var(--SHADOW_INSET);
       box-sizing: border-box;
     }
@@ -166,7 +166,7 @@ const styles = css`
 
       &:focus,
       &.focus {
-        border-color: hsl(var(--INPUT_BORDER_DARK));
+        border-color: hsl(var(--INPUT_BORDER_HSL_D1));
       }
     }
   }
