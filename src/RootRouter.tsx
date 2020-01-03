@@ -17,6 +17,7 @@ export const RootRouter: React.FC = () => {
         <Route exact path={PATHS.AUTH_REGISTER.path} component={RegisterScreen} />
         <Route exact path={PATHS.AUTH_REMEMBER_PASSWORD.path} component={RememberPasswordScreen} />
         <Route exact path={PATHS.HOME.path} component={HomeScreen} />
+        <Route exact path={PATHS.UI.path} component={HomeScreen} />
         <Route exact path={PATHS.PROJECTS.path} component={ProjectsScreen} />
         <Route exact path={PATHS.PROJECT.path} component={HomeScreen} />
         <Route exact path={PATHS.ME.path} component={TestScreen} />

@@ -4,13 +4,13 @@ export const COLORS = {
   WHITE: Color('#fff'),
   BG: Color('#fff'),
   BG_TINT: Color('#F7FAFC'),
+  BG_DARK: Color('#edf3f8'),
 
-  ACCENT: Color('#5468FF'),
+  ACCENT: Color('#4069ff'),
   ERROR: Color('#fe346e'),
   SUCCESS: Color('#25D086'),
 
   POSITIVE: Color('#319795'),
-  POSITIVE_LIGHT: Color('#edfdfa'),
 
   TEXT: Color('#1D3342'),
   TEXT_LIGHT: Color('#718096'),

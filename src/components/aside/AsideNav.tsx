@@ -47,7 +47,7 @@ const LINKS: ILink[] = [
   },
 
   {
-    path: PATHS.MESSAGES.path,
+    path: PATHS.UI.path,
     title: 'Nav::Messages',
     icon: <img src={require('../../assets/images/icons/chat.svg')} />,
   },

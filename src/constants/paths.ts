@@ -10,6 +10,7 @@ export interface IPath {
 }
 
 export const PATHS: Record<string, IPath> = {
+  UI: { path: '/ui', type: ERouteType.Public },
   HOME: { path: '/', type: ERouteType.Authorized },
   ME: { path: '/me', type: ERouteType.Authorized },
   TEAMS: { path: '/teams', type: ERouteType.Authorized },

@@ -12,12 +12,14 @@ export const GlobalStyles: React.FC = () => {
 
   for (const color in COLORS) {
     const rgb = (COLORS as any)[color];
+    const light = rgb.lighten(0.05).array();
     const lighten = rgb.lighten(0.22).array();
     const dark = rgb.darken(0.1).array();
     const darken = rgb.darken(0.22).array();
 
     colors.push(
       `--${color}: ${rgb.array().join(',')}`,
+      `--${color}_LIGHT: ${light[0]},${light[1]}%,${light[2]}%`,
       `--${color}_LIGHTEN: ${lighten[0]},${lighten[1]}%,${lighten[2]}%`,
       `--${color}_DARK: ${dark[0]},${dark[1]}%,${dark[2]}%`,
       `--${color}_DARKEN: ${darken[0]},${darken[1]}%,${darken[2]}%`,
