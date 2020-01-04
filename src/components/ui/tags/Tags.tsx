@@ -5,7 +5,6 @@ import ReactTags, { Tag, TagComponentProps } from 'react-tag-autocomplete';
 import objstr from 'obj-str';
 import { useTranslator } from 'eo-locale';
 import { TagIcon } from './TagIcon';
-import Color from 'color';
 import { colorHash } from '../../../common/colorHash';
 
 interface IProps {
@@ -61,9 +60,11 @@ export const Tags: React.FC<IProps> = ({ suggestions = [], tags = [] }) => {
   }, [localTags, suggestions]);
 
   return (
-    <div css={styles.root} className={objstr({ focus })}>
+    <div css={styles.root} className={objstr({ 'react-tags-wrapper': true, focus })}>
       <ReactTags
         allowNew
+        autofocus={false}
+        autoresize
         allowBackspace
         tags={localTags}
         suggestions={suggestionsFiltered}
@@ -72,7 +73,7 @@ export const Tags: React.FC<IProps> = ({ suggestions = [], tags = [] }) => {
         handleFocus={handleFocus}
         handleBlur={handleBlur}
         tagComponent={TagComponent}
-        placeholder={translator.translate('InputPlaceholder::AddTag')}
+        placeholder={focus ? translator.translate('InputPlaceholder::AddTag') : ''}
       />
     </div>
   );
@@ -111,13 +112,21 @@ const styles = {
     height: var(--SQUARED_ICON_SIZE);
     line-height: var(--SQUARED_ICON_SIZE);
     border-radius: var(--BORDER_RADIUS_SMALL);
-    background: rgb(var(--BG_DARK));
-    margin-right: 1ex;
+    background: rgb(var(--WHITE));
+    box-sizing: border-box;
+    margin-right: var(--INPUT_SIDE_PADDING);
     border: none;
-    border: 1px solid hsl(var(--BG_DARK_HSL_D2), 0.2);
+    cursor: pointer;
+    border: 1px solid rgb(var(--INPUT_BORDER));
+    transition: border-color 0.2s;
+    user-select: none;
 
     .text {
       padding: 0 1ex 0 0;
+    }
+
+    &:hover {
+      border-color: hsl(var(--INPUT_BORDER_HSL_D1));
     }
   `,
 };

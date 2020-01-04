@@ -142,7 +142,7 @@ const styles = css`
   .input-styles,
   .react-tags {
     outline: none;
-    padding: calc(var(--INPUT_SIDE_PADDING) * 0.5) var(--INPUT_SIDE_PADDING);
+    padding: var(--INPUT_SIDE_PADDING);
     transition: border-color 0.2s, box-shadow 0.2s;
     border-radius: var(--BORDER_RADIUS_MEDIUM);
     border: 1px solid rgb(var(--INPUT_BORDER));
@@ -151,13 +151,6 @@ const styles = css`
 
     &:hover {
       border-color: hsl(var(--INPUT_BORDER_HSL_D1));
-    }
-
-    &:focus,
-    &.focus {
-      border-color: rgb(var(--ACCENT));
-      border-color: hsl(var(--INPUT_BORDER_HSL_D1));
-      box-shadow: var(--SHADOW_INSET);
     }
 
     &.hidden {
@@ -172,5 +165,18 @@ const styles = css`
         border-color: hsl(var(--INPUT_BORDER_HSL_D1));
       }
     }
+  }
+
+  .react-tags-wrapper .react-tags {
+    border-color: transparent;
+    cursor: text;
+  }
+
+  .input-styles:focus,
+  .input-styles.focus,
+  .react-tags-wrapper.focus .react-tags {
+    border-color: rgb(var(--ACCENT));
+    border-color: hsl(var(--INPUT_BORDER_HSL_D1));
+    box-shadow: var(--SHADOW_INSET);
   }
 `;

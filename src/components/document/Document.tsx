@@ -29,7 +29,31 @@ export const Document: React.FC<IProps> = props => {
       <br />
 
       <Tags
-        suggestions={[{ id: 1, name: 'Tag' }]}
+        suggestions={[
+          { id: 1, name: 'Tag' },
+          { id: 2, name: 'Web' },
+          { id: 3, name: 'Main' },
+          { id: 4, name: 'Testing' },
+          { id: 5, name: 'Alabama' },
+          { id: 51, name: 'Alabama 1' },
+          { id: 52, name: 'Alabama 2' },
+          { id: 53, name: 'Alabama 4' },
+          { id: 6, name: 'California' },
+          { id: 7, name: 'Delaware' },
+          { id: 8, name: 'Florida' },
+          { id: 9, name: 'Kentucky' },
+          { id: 10, name: 'Louisiana' },
+          { id: 11, name: 'Massachusetts' },
+          { id: 12, name: 'Nevada' },
+          { id: 13, name: 'Oklahoma' },
+          { id: 14, name: 'Pennsylvania' },
+          { id: 15, name: 'Rhode Island' },
+          { id: 16, name: 'South Carolina' },
+          { id: 17, name: 'Tennessee' },
+          { id: 18, name: 'Utah' },
+          { id: 19, name: 'Vermont' },
+          { id: 20, name: 'Washington' },
+        ]}
         tags={[
           { id: 2, name: 'Web' },
           { id: 3, name: 'Main' },

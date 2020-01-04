@@ -15,5 +15,7 @@ export const TitleInput: React.FC<IProps> = ({ value }) => {
 };
 
 const styles = {
-  root: css``,
+  root: css`
+    padding: calc(var(--INPUT_SIDE_PADDING) * 0.5) var(--INPUT_SIDE_PADDING);
+  `,
 };
