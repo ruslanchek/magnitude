@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
 import React, { useContext } from 'react';
-// import { useMe } from '../hooks/useMe';
 import { Button } from './ui/form/Button';
 import { ModalsContext } from './ui/modal/Modals';
 import { NewProjectModal } from './modals/NewProjectModal';
@@ -16,8 +15,6 @@ export const MainHeader: React.FC = () => {
   const modalsContext = useContext(ModalsContext);
   const elementSize = useCssVariableNumber('--INPUT_HEIGHT_SMALL');
   const avatarSize = useDpr() * elementSize;
-
-  // const me = useMe();
 
   const handleOpenAddProjectModal = () => {
     modalsContext.openModal({
