@@ -183,7 +183,6 @@ const styles = {
 
     &:focus {
       border-color: hsl(var(--INPUT_BORDER_HSL_D1));
-      box-shadow: var(--SHADOW_INSET);
     }
 
     &.error {

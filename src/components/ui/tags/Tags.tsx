@@ -103,6 +103,12 @@ const styles = {
           border: none;
         }
       }
+
+      &__suggestions {
+        position: absolute;
+        top: 0;
+        background-color: red;
+      }
     }
   `,
 

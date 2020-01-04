@@ -170,6 +170,10 @@ const styles = css`
   .react-tags-wrapper .react-tags {
     border-color: transparent;
     cursor: text;
+
+    &:hover {
+      border-color: rgb(var(--INPUT_BORDER));
+    }
   }
 
   .input-styles:focus,
@@ -177,6 +181,5 @@ const styles = css`
   .react-tags-wrapper.focus .react-tags {
     border-color: rgb(var(--ACCENT));
     border-color: hsl(var(--INPUT_BORDER_HSL_D1));
-    box-shadow: var(--SHADOW_INSET);
   }
 `;
