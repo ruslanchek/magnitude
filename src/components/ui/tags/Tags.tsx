@@ -114,6 +114,7 @@ const styles = {
     background: rgb(var(--BG_DARK));
     margin-right: 1ex;
     border: none;
+    border: 1px solid hsl(var(--BG_DARK_HSL_D2), 0.2);
 
     .text {
       padding: 0 1ex 0 0;

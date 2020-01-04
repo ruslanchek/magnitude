@@ -2,7 +2,7 @@
 import { css, jsx } from '@emotion/core';
 import React from 'react';
 import Color from 'color';
-import { GoTag } from 'react-icons/go';
+import { IoMdPricetag } from 'react-icons/io';
 
 interface IProps {
   color: Color;
@@ -15,7 +15,7 @@ export const TagIcon: React.FC<IProps> = ({ color }) => {
         style={{
           color: color.toString(),
         }}>
-        <GoTag />
+        <IoMdPricetag />
       </span>
     </div>
   );
