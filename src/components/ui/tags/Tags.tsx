@@ -104,6 +104,10 @@ const styles = {
         }
       }
 
+      &__search {
+        position: relative;
+      }
+
       &__suggestions {
         position: absolute;
         top: 0;
