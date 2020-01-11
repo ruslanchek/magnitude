@@ -130,7 +130,7 @@ export function Dropdown<T = any>(props: IProps<T>) {
   const formContext = useContext(FormContext);
   const errors = formContext.getFieldErrors(name);
   const sizeVarName = size === 'large' ? '--INPUT_HEIGHT_LARGE' : '--INPUT_HEIGHT_SMALL';
-  const rowHeight = useCssVariableNumber(sizeVarName, [sizeVarName, isOpened]);
+  const rowHeight = useCssVariableNumber(sizeVarName);
   const dropdownHeight = maxItemsCounted * rowHeight;
 
   let highlightedItemIndex: number | undefined = undefined;

@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core';
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import { NavLink, useHistory } from 'react-router-dom';
 import { Form } from '../ui/form/Form';
 import { Input } from '../ui/form/Input';
@@ -9,12 +9,9 @@ import { FiServer, FiShield } from 'react-icons/fi';
 import { PATHS } from '../../constants/paths';
 import { Button } from '../ui/form/Button';
 import { Col } from '../ui/grid/Col';
-import { AuthApi } from '../../api/AuthApi';
 import { FormValidatorEmail, FormValidatorMinLength } from '../ui/form/validators/FormValidator';
 import { EOLocale, useTranslator } from 'eo-locale';
-import { ENotificationType, NotificationsContext } from '../ui/notifications/Notifications';
-import { ISocketServerError } from '@ruslanchek/magnitude-shared';
-import { AppController } from '../../controllers/AppController';
+// import { NotificationsContext } from '../ui/notifications/Notifications';
 
 export enum EMode {
   Login,
@@ -72,7 +69,7 @@ const STATEFUL_PATHS = {
 
 export const Auth: React.FC<IProps> = ({ mode }) => {
   const translator = useTranslator();
-  const notificationsContext = useContext(NotificationsContext);
+  // const notificationsContext = useContext(NotificationsContext);
   const [loading, setLoading] = useState(false);
   const history = useHistory();
   const headerToggleLink1Path = STATEFUL_PATHS[mode].headerToggleLink1;
@@ -80,40 +77,40 @@ export const Auth: React.FC<IProps> = ({ mode }) => {
   const headerToggleLink1Text = STATEFUL_TEXTS[mode].headerToggleLink1;
   const headerToggleLink2Text = STATEFUL_TEXTS[mode].headerToggleLink2;
 
-  const showApiError = (error: ISocketServerError | null) => {
-    if (error?.message) {
-      const text = `FormErrorsMessage::${translator.translate(error.message)}`;
-      const title = `FormErrorsTitle::${translator.translate(error.message)}`;
-      notificationsContext.addNotification(
-        ENotificationType.Danger,
-        translator.translate(text),
-        translator.translate(title),
-      );
-    }
-  };
+  // const showApiError = (error: ISocketServerError | null) => {
+  //   if (error?.message) {
+  //     const text = `FormErrorsMessage::${translator.translate(error.message)}`;
+  //     const title = `FormErrorsTitle::${translator.translate(error.message)}`;
+  //     notificationsContext.addNotification(
+  //       ENotificationType.Danger,
+  //       translator.translate(text),
+  //       translator.translate(title),
+  //     );
+  //   }
+  // };
 
-  const handleSubmitLogin = async (model: IModel) => {
-    const result = await AuthApi.login(model.email, model.password);
-    showApiError(result?.error);
-    return !!result?.data?.token;
-  };
+  // const handleSubmitLogin = async (model: IModel) => {
+  // const result = await AuthApi.login(model.email, model.password);
+  // showApiError(result?.error);
+  // return !!result?.data?.token;
+  // };
 
-  const handleSubmitRegister = async (model: IModel) => {
-    const result = await AuthApi.register(model.email, model.password);
-    showApiError(result?.error);
-    return !!result?.data?.token;
-  };
+  // const handleSubmitRegister = async (model: IModel) => {
+  // const result = await AuthApi.register(model.email, model.password);
+  // showApiError(result?.error);
+  // return !!result?.data?.token;
+  // };
 
   const handleSubmit = async (model: IModel) => {
     setLoading(true);
     let isAuthSuccessful = false;
     switch (mode) {
       case EMode.Login: {
-        isAuthSuccessful = await handleSubmitLogin(model);
+        // isAuthSuccessful = await handleSubmitLogin(model);
         break;
       }
       case EMode.Register: {
-        isAuthSuccessful = await handleSubmitRegister(model);
+        // isAuthSuccessful = await handleSubmitRegister(model);
         break;
       }
       case EMode.RememberPassword: {
@@ -121,7 +118,7 @@ export const Auth: React.FC<IProps> = ({ mode }) => {
       }
     }
     if (isAuthSuccessful) {
-      await AppController.initAuth();
+      // await AppController.initAuth();
       history.replace(PATHS.HOME.path);
     }
     setLoading(false);

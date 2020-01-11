@@ -121,7 +121,7 @@ export const Notifications: React.FC<IProps> = props => {
     [allowIdentical],
   );
 
-  const removeNotification = useCallback((id: number) => {
+  const removeNotification = (id: number) => {
     const notification = notificationsRef.current.get(id);
 
     if (notification) {
@@ -129,7 +129,7 @@ export const Notifications: React.FC<IProps> = props => {
       update[1](Date.now());
       clearTimeout(notification.timeout);
     }
-  }, []);
+  };
 
   const addNotification = useCallback(
     (
@@ -191,23 +191,23 @@ export const Notifications: React.FC<IProps> = props => {
     }
   }, [horizontalPosition]);
 
-  const rootTop = useMemo((): string => {
+  const rootTop = (): string => {
     if (verticalPosition === ENotificationsVerticalPosition.Top) {
       return '-10px';
     } else {
       return 'auto';
     }
-  }, [verticalPosition, verticalOffset]);
+  };
 
-  const rootBottom = useMemo((): string => {
+  const rootBottom = (): string => {
     if (verticalPosition === ENotificationsVerticalPosition.Bottom) {
       return '-10px';
     } else {
       return 'auto';
     }
-  }, [verticalPosition, verticalOffset]);
+  };
 
-  const rootLeft = useMemo((): string => {
+  const rootLeft = (): string => {
     if (horizontalPosition === ENotificationsHorizontalPosition.Left) {
       return '-10px';
     } else if (horizontalPosition === ENotificationsHorizontalPosition.Right) {
@@ -215,9 +215,9 @@ export const Notifications: React.FC<IProps> = props => {
     } else {
       return '50%';
     }
-  }, [horizontalPosition]);
+  };
 
-  const rootRight = useMemo((): string => {
+  const rootRight = (): string => {
     if (horizontalPosition === ENotificationsHorizontalPosition.Left) {
       return 'auto';
     } else if (horizontalPosition === ENotificationsHorizontalPosition.Right) {
@@ -225,9 +225,9 @@ export const Notifications: React.FC<IProps> = props => {
     } else {
       return 'auto';
     }
-  }, [horizontalPosition]);
+  };
 
-  const translateX = useMemo((): string => {
+  const translateX = (): string => {
     if (horizontalPosition === ENotificationsHorizontalPosition.Left) {
       return horizontalOffset;
     } else if (horizontalPosition === ENotificationsHorizontalPosition.Right) {
@@ -235,15 +235,15 @@ export const Notifications: React.FC<IProps> = props => {
     } else {
       return '-50%';
     }
-  }, [horizontalPosition, horizontalOffset]);
+  };
 
-  const translateY = useMemo((): string => {
+  const translateY = (): string => {
     if (verticalPosition === ENotificationsVerticalPosition.Top) {
       return verticalOffset;
     } else {
       return `-${verticalOffset}`;
     }
-  }, [verticalPosition, verticalOffset]);
+  };
 
   return (
     <NotificationsContext.Provider
@@ -261,11 +261,11 @@ export const Notifications: React.FC<IProps> = props => {
                   css={[
                     styles.root,
                     css`
-                      top: ${rootTop};
-                      bottom: ${rootBottom};
-                      left: ${rootLeft};
-                      right: ${rootRight};
-                      transform: translate(${translateX}, ${translateY});
+                      top: ${rootTop()};
+                      bottom: ${rootBottom()};
+                      left: ${rootLeft()};
+                      right: ${rootRight()};
+                      transform: translate(${translateX()}, ${translateY()});
                       max-height: calc(100vh - ${verticalOffset});
                     `,
                   ]}>

@@ -16,7 +16,7 @@ import {
   MdLooksOne,
   MdLooksTwo,
 } from 'react-icons/md';
-import objstr from 'obj-str';
+import classnames from 'classnames';
 
 interface IProps {
   value: Node[];
@@ -100,7 +100,7 @@ export const TextEditor: React.FC<IProps> = ({ value }) => {
   const handleRootClick = () => {};
 
   return (
-    <div css={styles.root} className={objstr({ focus, 'input-styles hidden': true })} onClick={handleRootClick}>
+    <div css={styles.root} className={classnames('input-styles hidden', { focus })} onClick={handleRootClick}>
       <Slate editor={editor} value={localValue} onChange={v => setLocalValue(v)}>
         <Editable
           onFocus={() => {
@@ -182,7 +182,7 @@ const isMarkActive = (editor: Editor, format: EMarkFormat) => {
 
 const Toolbar: React.FC<IToolbarProps> = ({ focus, children }) => {
   return (
-    <div css={styles.toolbar} className={objstr({ focus })}>
+    <div css={styles.toolbar} className={classnames({ focus })}>
       {children}
     </div>
   );
@@ -258,7 +258,7 @@ const MarkButton: React.FC<IMarkButtonProps> = ({ format, icon }) => {
 
 const Button: React.FC<IButtonProps> = ({ active, onMouseDown, children }) => {
   return (
-    <button className={objstr({ active })} css={styles.button} onMouseDown={onMouseDown}>
+    <button className={classnames({ active })} css={styles.button} onMouseDown={onMouseDown}>
       {children}
     </button>
   );

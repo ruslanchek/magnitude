@@ -30,25 +30,25 @@ const LINKS: ILink[] = [
   {
     path: PATHS.HOME.path,
     title: 'Nav::Home',
-    icon: <img src={require('../../assets/images/icons/book.svg')} />,
+    icon: <img alt='' src={require('../../assets/images/icons/book.svg')} />,
   },
 
   {
     path: PATHS.PROJECTS.path,
     title: 'Nav::Projects',
-    icon: <img src={require('../../assets/images/icons/brick.svg')} />,
+    icon: <img alt='' src={require('../../assets/images/icons/brick.svg')} />,
   },
 
   {
     path: PATHS.TEAMS.path,
     title: 'Nav::Teams',
-    icon: <img src={require('../../assets/images/icons/tags.svg')} />,
+    icon: <img alt='' src={require('../../assets/images/icons/tags.svg')} />,
   },
 
   {
     path: PATHS.UI.path,
     title: 'Nav::Messages',
-    icon: <img src={require('../../assets/images/icons/chat.svg')} />,
+    icon: <img alt='' src={require('../../assets/images/icons/chat.svg')} />,
   },
 ];
 

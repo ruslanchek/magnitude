@@ -1,11 +1,10 @@
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core';
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import { Form } from '../ui/form/Form';
 import { Input } from '../ui/form/Input';
 import { Button } from '../ui/form/Button';
-import { ProjectApi } from '../../api/ProjectApi';
-import { ENotificationType, NotificationsContext } from '../ui/notifications/Notifications';
+// import { NotificationsContext } from '../ui/notifications/Notifications';
 
 interface IProps {
   closeHandler: () => void;
@@ -16,7 +15,7 @@ interface IModel {
 }
 
 export const NewProjectModal: React.FC<IProps> = ({ closeHandler }) => {
-  const notificationContext = useContext(NotificationsContext);
+  // const notificationContext = useContext(NotificationsContext);
   const [loading, setLoading] = useState(false);
   const [model, setModel] = useState<IModel>({
     title: '',
@@ -24,24 +23,22 @@ export const NewProjectModal: React.FC<IProps> = ({ closeHandler }) => {
 
   const handleSubmit = async (model: IModel) => {
     setLoading(true);
-    const result = await ProjectApi.create(model.title);
+    // const result = await ProjectApi.create(model.title);
 
-    if (result.error?.message) {
-      notificationContext.addNotification(ENotificationType.Danger, result.error.message, result.error.message);
-    } else {
-      setModel({
-        title: '',
-      });
-    }
+    // if (result.error?.message) {
+    //   notificationContext.addNotification(ENotificationType.Danger, result.error.message, result.error.message);
+    // } else {
+    //   setModel({
+    //     title: '',
+    //   });
+    // }
 
     setLoading(false);
   };
 
   return (
     <div css={styles.root}>
-      <a href='#' onClick={closeHandler}>
-        Close
-      </a>
+      <button onClick={closeHandler}>Close</button>
       <h2>New Project</h2>
 
       <Form<IModel> onSubmit={handleSubmit} onChange={setModel}>

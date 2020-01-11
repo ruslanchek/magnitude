@@ -1,21 +1,12 @@
-import { useStore } from 'react-stores';
-import { authStore } from '../stores/authStore';
 import { useHistory, useRouteMatch } from 'react-router-dom';
 import { AUTHORIZED_ENTRY_POINT, ERouteType, PATHS, UNAUTHORIZED_ENTRY_POINT } from '../constants/paths';
-import { appStore } from '../stores/appStore';
 import { useMemo } from 'react';
+import { useAppReady } from './useAppReady';
+import { useAuthorized } from './useAuthorized';
 
 export function useAuthorizedRoute(type: ERouteType) {
-  const isAuthorized = useStore(authStore, {
-    mapState: state => {
-      return state.isAuthorized;
-    },
-  });
-  const isAppReady = useStore(appStore, {
-    mapState: state => {
-      return state.isReady;
-    },
-  });
+  const isAuthorized = useAuthorized();
+  const isAppReady = useAppReady();
   const match = useRouteMatch();
   const history = useHistory();
   const isPathMatchType = useMemo(() => {

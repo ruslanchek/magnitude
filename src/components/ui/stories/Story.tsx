@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import React from 'react';
 import { css, jsx } from '@emotion/core';
-import objstr from 'obj-str';
+import classnames from 'classnames';
 
 interface IProps {
   active: boolean;
@@ -14,7 +14,7 @@ interface IProps {
 
 export const Story: React.FC<IProps> = ({ active, pre, title, status, icon, iconColor }) => {
   return (
-    <div css={styles.root} className={objstr({ active })}>
+    <div css={styles.root} className={classnames({ active })}>
       <div className='body'>
         <div className='pre'>{pre}</div>
         <div className='title'>{title}</div>

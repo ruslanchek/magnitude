@@ -2,7 +2,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { css, jsx } from '@emotion/core';
 import ReactTags, { Tag, TagComponentProps } from 'react-tag-autocomplete';
-import objstr from 'obj-str';
+import classnames from 'classnames';
 import { useTranslator } from 'eo-locale';
 import { TagIcon } from './TagIcon';
 import { colorHash } from '../../../common/colorHash';
@@ -60,7 +60,7 @@ export const Tags: React.FC<IProps> = ({ suggestions = [], tags = [] }) => {
   }, [localTags, suggestions]);
 
   return (
-    <div css={styles.root} className={objstr({ 'react-tags-wrapper': true, focus })}>
+    <div css={styles.root} className={classnames('react-tags-wrapper', { focus })}>
       <ReactTags
         allowNew
         autofocus={false}

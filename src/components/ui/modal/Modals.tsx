@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { ClassNames, css, jsx } from '@emotion/core';
-import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import ReactDOM from 'react-dom';
 import { CSSTransition } from 'react-transition-group';
 import { usePortal } from '../../../hooks/usePortal';
@@ -80,7 +80,7 @@ export const Modals: React.FC<IProps> = props => {
    */
   const [update, setUpdate] = useState(Date.now());
 
-  const isShowOverlay = useMemo(() => {
+  const isShowOverlay = () => {
     let isAnyModalOpened = false;
     let showOverlay = false;
 
@@ -99,7 +99,7 @@ export const Modals: React.FC<IProps> = props => {
     }
 
     return showOverlay;
-  }, [update]);
+  };
 
   const isOpened = useCallback((modalId: number) => {
     const modal = modalsRef.current.get(modalId);
@@ -196,35 +196,35 @@ export const Modals: React.FC<IProps> = props => {
     setUpdate(Date.now());
   }, []);
 
-  const handleKeyUp = (e: KeyboardEvent) => {
-    if (topModalIdRef.current !== null) {
-      const modal = modalsRef.current.get(topModalIdRef.current);
+  useEffect(() => {
+    function handleKeyUp(event: KeyboardEvent) {
+      if (topModalIdRef.current !== null) {
+        const modal = modalsRef.current.get(topModalIdRef.current);
 
-      if (modal) {
-        switch (e.keyCode) {
-          // ESC
-          case 27: {
-            if (modal?.closeByEscapeKey) {
-              closeModal(topModalIdRef.current);
+        if (modal) {
+          switch (event.keyCode) {
+            // ESC
+            case 27: {
+              if (modal?.closeByEscapeKey) {
+                closeModal(topModalIdRef.current);
+              }
+
+              break;
             }
 
-            break;
-          }
+            // Return
+            case 13: {
+              if (modal?.closeByEnterKey) {
+                closeModal(topModalIdRef.current);
+              }
 
-          // Return
-          case 13: {
-            if (modal?.closeByEnterKey) {
-              closeModal(topModalIdRef.current);
+              break;
             }
-
-            break;
           }
         }
       }
     }
-  };
 
-  useEffect(() => {
     document.addEventListener('keyup', handleKeyUp, false);
 
     return () => {
@@ -281,7 +281,7 @@ export const Modals: React.FC<IProps> = props => {
 
                   <CSSTransition
                     timeout={ANIMATION_TIME}
-                    in={isShowOverlay}
+                    in={isShowOverlay()}
                     unmountOnExit
                     classNames={{
                       enter: css(animationsOverlay.enter),
