@@ -1,5 +1,5 @@
 export const UI_CONSTANTS = {
-  FONT_FAMILY: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif',
+  FONT_FAMILY: "'Source Sans Pro', sans-serif;",
 
   LOGO_PROPORTION: '0.2849',
 
@@ -18,7 +18,7 @@ export const UI_CONSTANTS = {
   FONT_SIZE_HUGE: '22px',
   FONT_SIZE_LARGE: '18px',
   FONT_SIZE_MEDIUM: '16px',
-  FONT_SIZE_BASE: '14px',
+  FONT_SIZE_BASE: '15px',
   FONT_SIZE_SMALL: '12px',
   FONT_SIZE_TINY: '10px',
 

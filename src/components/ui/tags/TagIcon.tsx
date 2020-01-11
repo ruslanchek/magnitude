@@ -5,15 +5,17 @@ import Color from 'color';
 import { IoMdPricetag } from 'react-icons/io';
 
 interface IProps {
+  background?: boolean;
   color: Color;
 }
 
-export const TagIcon: React.FC<IProps> = ({ color }) => {
+export const TagIcon: React.FC<IProps> = ({ color, background }) => {
   return (
     <div css={styles.root}>
       <span
         style={{
           color: color.toString(),
+          background: background ? color.alpha(0.2).toString() : 'transparent',
         }}>
         <IoMdPricetag />
       </span>

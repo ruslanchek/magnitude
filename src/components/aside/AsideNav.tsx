@@ -147,7 +147,7 @@ export const AsideNav: React.FC = () => {
 
           return (
             <NavLink key={tag.id} tabIndex={0} to={tag.id} className='link'>
-              <TagIcon color={color} />
+              <TagIcon color={color} background />
               <span className='text'>{tag.title}</span>
             </NavLink>
           );
