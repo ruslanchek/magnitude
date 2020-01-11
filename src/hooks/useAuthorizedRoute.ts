@@ -1,7 +1,7 @@
 import { useStore } from 'react-stores';
 import { authStore } from '../stores/authStore';
-import { useRouteMatch, useHistory } from 'react-router-dom';
-import { ERouteType, AUTHORIZED_ENTRY_POINT, PATHS, UNAUTHORIZED_ENTRY_POINT } from '../constants/paths';
+import { useHistory, useRouteMatch } from 'react-router-dom';
+import { AUTHORIZED_ENTRY_POINT, ERouteType, PATHS, UNAUTHORIZED_ENTRY_POINT } from '../constants/paths';
 import { appStore } from '../stores/appStore';
 import { useMemo } from 'react';
 

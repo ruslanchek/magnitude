@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import React, { useState, useRef, ChangeEvent, useCallback } from 'react';
+import React, { ChangeEvent, useCallback, useRef, useState } from 'react';
 import Editor from '@monaco-editor/react';
 import { Store, useStore } from 'react-stores';
 

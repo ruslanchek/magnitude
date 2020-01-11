@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, css } from '@emotion/core';
+import { css, jsx } from '@emotion/core';
 import React, { useContext } from 'react';
 import { Button } from './ui/form/Button';
 import { ModalsContext } from './ui/modal/Modals';

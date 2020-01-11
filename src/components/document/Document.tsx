@@ -1,11 +1,11 @@
 /** @jsx jsx */
-import { jsx, css } from '@emotion/core';
+import { css, jsx } from '@emotion/core';
 import React from 'react';
 import { FiCalendar } from 'react-icons/fi';
 import { TitleInput } from '../ui/form/TitleInput';
 import { TextEditor } from '../ui/doc-views/TextEditor';
 import { Story } from '../ui/stories/Story';
-import { GoGear, GoCheck, GoX } from 'react-icons/go';
+import { GoCheck, GoGear, GoX } from 'react-icons/go';
 import { Tags } from '../ui/tags/Tags';
 import { ClickableLabel } from '../ui/labels/ClickableLabel';
 import { UserLabel } from '../ui/labels/UserLabel';

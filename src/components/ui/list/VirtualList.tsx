@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import React, { CSSProperties, memo, useRef, useEffect, useCallback } from 'react';
-import { FixedSizeList, Align } from 'react-window';
+import React, { CSSProperties, memo, useCallback, useEffect, useRef } from 'react';
+import { Align, FixedSizeList } from 'react-window';
 import { CustomScrollbars } from '../scrollbars/CustomScrollbars';
 
 interface IProps<TItemData> {

@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import React from 'react';
-import { jsx, css, keyframes } from '@emotion/core';
+import { css, jsx, keyframes } from '@emotion/core';
 
 const SIZES = {
   small: 26,

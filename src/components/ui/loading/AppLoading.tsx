@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import React from 'react';
-import { jsx, css } from '@emotion/core';
+import { css, jsx } from '@emotion/core';
 import { ActivityIndicator } from './ActivityIndicator';
 
 export const AppLoading: React.FC = () => {

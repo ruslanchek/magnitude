@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, css, SerializedStyles } from '@emotion/core';
+import { css, jsx, SerializedStyles } from '@emotion/core';
 import React, { useMemo } from 'react';
 
 interface IProps {

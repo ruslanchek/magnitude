@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import { jsx, css, ClassNames } from '@emotion/core';
-import React, { ChangeEvent, useState, useEffect, useRef, useContext, useMemo, useCallback } from 'react';
+import { ClassNames, css, jsx } from '@emotion/core';
+import React, { ChangeEvent, useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import { ActivityIndicator } from '../loading/ActivityIndicator';
 import { FormContext } from './Form';

@@ -30,7 +30,6 @@
     "slate": "^0.57.1",
     "slate-history": "^0.57.1",
     "slate-react": "^0.57.1",
-    "socket.io-client": "^2.3.0",
     "string-to-color": "^2.1.1",
     "ts-events": "^3.3.1",
     "typescript": "^3.7.4",

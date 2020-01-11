@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, css, ClassNames } from '@emotion/core';
+import { ClassNames, css, jsx } from '@emotion/core';
 import React, { useMemo } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import { EOLocale } from 'eo-locale';

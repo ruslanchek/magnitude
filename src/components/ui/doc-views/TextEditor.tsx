@@ -1,20 +1,20 @@
 /** @jsx jsx */
-import { jsx, css } from '@emotion/core';
-import React, { useMemo, useState, useCallback, MouseEvent } from 'react';
-import { createEditor, Transforms, Editor, Node } from 'slate';
-import { Slate, Editable, withReact, useSlate } from 'slate-react';
+import { css, jsx } from '@emotion/core';
+import React, { MouseEvent, useCallback, useMemo, useState } from 'react';
+import { createEditor, Editor, Node, Transforms } from 'slate';
+import { Editable, Slate, useSlate, withReact } from 'slate-react';
 import { withHistory } from 'slate-history';
 import isHotkey from 'is-hotkey';
 import {
-  MdFormatQuote,
+  MdCode,
   MdFormatBold,
+  MdFormatItalic,
   MdFormatListBulleted,
   MdFormatListNumbered,
-  MdLooksTwo,
-  MdLooksOne,
-  MdFormatItalic,
+  MdFormatQuote,
   MdFormatUnderlined,
-  MdCode,
+  MdLooksOne,
+  MdLooksTwo,
 } from 'react-icons/md';
 import objstr from 'obj-str';
 

@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, css } from '@emotion/core';
+import { css, jsx } from '@emotion/core';
 import React from 'react';
 import { MainHeader } from './MainHeader';
 import { AsideNav } from './aside/AsideNav';

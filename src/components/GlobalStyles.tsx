@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import React from 'react';
-import { jsx, css, Global } from '@emotion/core';
+import { css, Global, jsx } from '@emotion/core';
 import { COLORS } from '../constants/colors';
 import { BREAKPOINTS } from '../constants/breakpoints';
 import { UI_CONSTANTS } from '../constants/ui-constants';

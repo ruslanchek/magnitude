@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import { jsx, css } from '@emotion/core';
-import React, { CSSProperties, useEffect, useRef, useCallback, useMemo } from 'react';
+import { css, jsx } from '@emotion/core';
+import React, { CSSProperties, useCallback, useEffect, useMemo, useRef } from 'react';
 import { Scrollbars } from 'eo-react-custom-scrollbars';
 import { useDetectedScrollbarWidth } from '../../../hooks/useDetectedScrollbarWidth';
 

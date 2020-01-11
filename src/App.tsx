@@ -4,9 +4,9 @@ import { EOLocale } from 'eo-locale';
 import { locales } from './locales/locales';
 import { GlobalStyles } from './components/GlobalStyles';
 import {
-  Notifications,
-  ENotificationsVerticalPosition,
   ENotificationsHorizontalPosition,
+  ENotificationsVerticalPosition,
+  Notifications,
 } from './components/ui/notifications/Notifications';
 import { Modals } from './components/ui/modal/Modals';
 

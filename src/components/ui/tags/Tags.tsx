@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import React, { useState, useEffect, useMemo } from 'react';
-import { jsx, css } from '@emotion/core';
+import React, { useEffect, useMemo, useState } from 'react';
+import { css, jsx } from '@emotion/core';
 import ReactTags, { Tag, TagComponentProps } from 'react-tag-autocomplete';
 import objstr from 'obj-str';
 import { useTranslator } from 'eo-locale';

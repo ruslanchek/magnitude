@@ -1,13 +1,12 @@
 /** @jsx jsx */
-import { jsx, css } from '@emotion/core';
+import { css, jsx } from '@emotion/core';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { PATHS, IPath } from '../../constants/paths';
+import { IPath, PATHS } from '../../constants/paths';
 import { EOLocale } from 'eo-locale';
 import { CategoryTitle } from '../ui/typographics/CategoryTitle';
 import { Marker } from '../ui/misc/Marker';
 import { MdBookmark } from 'react-icons/md';
-import { IoMdPricetag } from 'react-icons/io';
 import { colorHash } from '../../common/colorHash';
 import { TagIcon } from '../ui/tags/TagIcon';
 

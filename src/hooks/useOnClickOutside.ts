@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback } from 'react';
+import React, { useCallback, useEffect } from 'react';
 
 export function useOnClickOutside(
   ref: React.MutableRefObject<HTMLElement | null>,

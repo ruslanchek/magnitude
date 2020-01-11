@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import { jsx, ClassNames, css } from '@emotion/core';
-import React, { useCallback, useMemo, useRef, useState, useEffect } from 'react';
+import { ClassNames, css, jsx } from '@emotion/core';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import ReactDOM from 'react-dom';
 import { usePortal } from '../../../hooks/usePortal';

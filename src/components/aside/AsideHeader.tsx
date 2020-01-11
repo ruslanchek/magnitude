@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, css } from '@emotion/core';
+import { css, jsx } from '@emotion/core';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { PATHS } from '../../constants/paths';

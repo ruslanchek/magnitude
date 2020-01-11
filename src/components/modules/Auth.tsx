@@ -1,18 +1,18 @@
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core';
-import React, { useState, useContext } from 'react';
-import { useHistory, NavLink } from 'react-router-dom';
+import React, { useContext, useState } from 'react';
+import { NavLink, useHistory } from 'react-router-dom';
 import { Form } from '../ui/form/Form';
 import { Input } from '../ui/form/Input';
 import { Row } from '../ui/grid/Row';
-import { FiShield, FiServer } from 'react-icons/fi';
+import { FiServer, FiShield } from 'react-icons/fi';
 import { PATHS } from '../../constants/paths';
 import { Button } from '../ui/form/Button';
 import { Col } from '../ui/grid/Col';
 import { AuthApi } from '../../api/AuthApi';
 import { FormValidatorEmail, FormValidatorMinLength } from '../ui/form/validators/FormValidator';
 import { EOLocale, useTranslator } from 'eo-locale';
-import { NotificationsContext, ENotificationType } from '../ui/notifications/Notifications';
+import { ENotificationType, NotificationsContext } from '../ui/notifications/Notifications';
 import { ISocketServerError } from '@ruslanchek/magnitude-shared';
 import { AppController } from '../../controllers/AppController';
 

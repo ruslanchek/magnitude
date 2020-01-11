@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import React, { useMemo } from 'react';
-import { jsx, css } from '@emotion/core';
-import { useBreakpoint, IBreakpoint } from '../../../hooks/useBreakpoint';
+import { css, jsx } from '@emotion/core';
+import { IBreakpoint, useBreakpoint } from '../../../hooks/useBreakpoint';
 
 interface IProps {
   columns?: string[];

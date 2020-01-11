@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import React from 'react';
-import { jsx, css } from '@emotion/core';
+import { css, jsx } from '@emotion/core';
 import { Avatar } from '../avatars/Avatar';
 import { useCssVariableNumber } from '../../../hooks/useCssVariableNumber';
 
